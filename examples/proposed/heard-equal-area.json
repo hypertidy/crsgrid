@@ -1,0 +1,54 @@
+{
+  "crsgrid": "0.1",
+  "name": "heard-equal-area",
+  "title": "Proposed grid for [72.56, 73.9, -53.2, -52.95]",
+  "family": {
+    "crs": {
+      "proj": "+proj=laea +lat_0=-53 +lon_0=73 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs"
+    },
+    "assign": {
+      "method": "single"
+    }
+  },
+  "lattice": {
+    "units": "m",
+    "quantum": 1,
+    "origin": [
+      0,
+      0
+    ],
+    "index": {
+      "row_direction": "up",
+      "edge_rule": "half_open",
+      "negative": true
+    },
+    "tiling": {
+      "tile_px": 512
+    },
+    "resolutions": {
+      "listed": [
+        100
+      ]
+    }
+  },
+  "domain": {
+    "extent": [
+      -51200,
+      102400,
+      -51200,
+      51200
+    ]
+  },
+  "ids": {
+    "template": "R{res}_{col:04!sign=E,W}_{row:04!sign=N,S}"
+  },
+  "provenance": {
+    "derived_from": "tools/propose.py",
+    "notes": [
+      "AOI [72.56, 73.9, -53.2, -52.95]: spherical centroid 73.2300, -53.0761; spans 1.34 x 0.25 degrees (~90 x 28 km, wide); property equal_area.",
+      "family: small (under 1000 km) region: laea on the AOI's spherical centroid.",
+      "rounded to 1 degree steps (lat_0 -53.0761 -> -53, lon_0 73.2300 -> 73): max scale error 0.002% vs 0.001% exact; the coarsest step within 50% of exact, capped at 0.1 and floored at 0.01 percentage points.",
+      "domain: AOI's projected bounds padded 5% and snapped out to whole 512 px tiles at 100 m; tile_px 512 keeps every tile edge a whole metre at [100]."
+    ]
+  }
+}

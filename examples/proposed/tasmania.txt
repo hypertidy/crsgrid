@@ -1,0 +1,6 @@
+$ python3 tools/propose.py --bbox=143.5,148.5,-43.7,-39.5 --res 10,20,60 --name tasmania --out examples/proposed/tasmania.json
+AOI [143.5, 148.5, -43.7, -39.5]: spherical centroid 146.0000, -41.6152; spans 5 x 4.2 degrees (~416 x 464 km, square); property conformal.
+family: AOI lies within UTM zone 55 (central meridian 147, +-3.5 degrees).
+  UTM zone 55S (EPSG:32755): max scale error over the AOI 0.072%
+  no well-known conformal CRS does as well; closest: EPSG:3112 3.29%; EPSG:3994 4.37%; EPSG:2193 8.09%
+  wrote examples/proposed/tasmania.json

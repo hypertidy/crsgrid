@@ -1,0 +1,15 @@
+$ python3 tools/propose.py --bbox=44,160,-90,-60 --res 1000 --property equal_area --name aat-equal-area --out examples/proposed/aat-equal-area.json
+AOI [44.0, 160.0, -90.0, -60.0]: spherical centroid 102.0000, -78.8943; spans 116 x 30 degrees (~2487 x 3317 km, square, polar south); property equal_area.
+family: polar (south): laea on the pole. lon_0 only rotates a polar map (distortion is unchanged), so it is 0 as in EPSG:3031/3413-style grids; use 100 instead to put the AOI upright.
+  exact parameters: lat_0=-90, lon_0=0 -> max scale error 3.526%
+  rounding step   parameters                                        max scale error
+        10 deg   lat_0=-90, lon_0=0                                 3.526%  <- chosen
+         5 deg   lat_0=-90, lon_0=0                                 3.526%
+         1 deg   lat_0=-90, lon_0=0                                 3.526%
+       0.5 deg   lat_0=-90, lon_0=0                                 3.526%
+      0.25 deg   lat_0=-90, lon_0=0                                 3.526%
+       0.1 deg   lat_0=-90, lon_0=0                                 3.526%
+      0.05 deg   lat_0=-90, lon_0=0                                 3.526%
+      0.01 deg   lat_0=-90, lon_0=0                                 3.526%
+  known CRS EPSG:6932 (WGS 84 / NSIDC EASE-Grid 2.0 South) does as well over this AOI: 3.526% -> use the code
+  wrote examples/proposed/aat-equal-area.json

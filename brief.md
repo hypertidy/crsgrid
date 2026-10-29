@@ -116,6 +116,22 @@ Findings worth keeping:
 
 Still to come: ID width vs index range, the proposer's rounding suggestions, a land-only variant of `max-scale`, and matrix-set names that misstate their cell size (GIBS "250m" is 256 m).
 
+## Proposer (first cut)
+
+`tools/propose.py --bbox=W,E,S,N --res 10,20,60 [--property conformal|equal_area|equidistant] [--align SPEC.json]` describes the AOI (spherical centroid, spans, size, polar), picks a family (UTM if it fits a zone, then tmerc, polar stereo/laea/aeqd, conic for large wide mid-latitude regions, else azimuthal on the centroid), rounds parameters to the coarsest *natural* step (10, 5, 1, 0.5, 0.25, 0.1 ... degrees) within 50% of the exact distortion (capped at 0.1, floored at 0.01 percentage points), prefers a well-known CRS *with the requested property* when it does as well, builds a spec (lattice at CRS (0, 0) or on the `--align` target's pixel lattice; domain padded and snapped out to whole tiles) and lints it. Worked examples, with transcripts, in `examples/proposed/`:
+
+| AOI | property | proposal | why |
+|---|---|---|---|
+| Tasmania | conformal | EPSG:32755 (UTM 55S) | fits the zone ±3.5°; 0.07% max scale error |
+| centred 145.2827°E, 37.2°S (the brief's question) | equal area | laea lat_0 −37, lon_0 145 | 1° rounding costs 0.016% vs 0.011% exact; 5° would cost 0.053% |
+| Heard Island | conformal | EPSG:32743, origin (0, 40) with `--align s2mgrs` | aligned with Sentinel-2 at 10/20/60 m, verified by the lint |
+| Heard Island | equal area | laea lat_0 −53, lon_0 73 | small region: azimuthal, not a degenerate conic |
+| whole AAT | conformal | EPSG:3976 | polar stereo with lat_ts −70 beats 3031's −71 over an AOI reaching 60°S (3.94% vs 4.26%) |
+| whole AAT | equal area | EPSG:6932 (EASE-Grid 2.0 South) | equals the proposed laea |
+| Europe | equal area | EPSG:3035 | 3.71% vs 4.01% for the rounded centroid laea |
+
+Lessons: on a polar map lon_0 only rotates (it is set to 0, with the "AOI upright" value offered); known-CRS matching must respect the property (an equal-area CRS once "won" a conformal request); the spherical centroid is not the minimax centre (a rounded centre beat it for Europe, and 3035's 52°N beats both), so a minimax centre search is a natural next step.
+
 ## Getting to a spec: interpretation + proposal
 
 Inputs, roughly in order of ambition:

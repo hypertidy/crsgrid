@@ -1,0 +1,73 @@
+{
+  "crsgrid": "0.1",
+  "name": "heard-s2",
+  "title": "Proposed grid for [72.56, 73.9, -53.2, -52.95]",
+  "family": {
+    "crs": {
+      "authority": "EPSG:32743",
+      "proj": "+proj=utm +zone=43 +south +datum=WGS84 +units=m +no_defs"
+    },
+    "assign": {
+      "method": "single"
+    }
+  },
+  "lattice": {
+    "units": "m",
+    "quantum": 1,
+    "origin": [
+      0,
+      40
+    ],
+    "index": {
+      "row_direction": "up",
+      "edge_rule": "half_open",
+      "negative": true
+    },
+    "tiling": {
+      "tile_px": 512
+    },
+    "resolutions": {
+      "listed": [
+        60,
+        20,
+        10
+      ]
+    }
+  },
+  "domain": {
+    "extent": [
+      307200,
+      460800,
+      4055080,
+      4147240
+    ]
+  },
+  "ids": {
+    "template": "R{res}_{col:04!sign=E,W}_{row:04!sign=N,S}"
+  },
+  "provenance": {
+    "derived_from": "tools/propose.py",
+    "notes": [
+      "AOI [72.56, 73.9, -53.2, -52.95]: spherical centroid 73.2300, -53.0761; spans 1.34 x 0.25 degrees (~90 x 28 km, wide); property conformal.",
+      "family: AOI lies within UTM zone 43 (central meridian 75, +-3.5 degrees).",
+      "UTM zone 43S: max scale error 0.033% over the AOI.",
+      "domain: AOI's projected bounds padded 5% and snapped out to whole 512 px tiles at 60 m; tile_px 512 keeps every tile edge a whole metre at [10, 20, 60].",
+      "--align s2mgrs: origin moved to (0, 40), s2mgrs's 60 m pixel lattice (43S) reduced modulo 60 m; domain re-snapped to whole tiles from that origin."
+    ]
+  },
+  "alignment": [
+    {
+      "target": "s2mgrs",
+      "resolutions": [
+        10,
+        20,
+        60
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "note": "origin moved onto s2mgrs's 60 m pixel lattice"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "crsgrid": "0.1",
+  "name": "aat-equal-area",
+  "title": "Proposed grid for [44.0, 160.0, -90.0, -60.0]",
+  "family": {
+    "crs": {
+      "authority": "EPSG:6932"
+    },
+    "assign": {
+      "method": "single"
+    }
+  },
+  "lattice": {
+    "units": "m",
+    "quantum": 1,
+    "origin": [
+      0,
+      0
+    ],
+    "index": {
+      "row_direction": "up",
+      "edge_rule": "half_open",
+      "negative": true
+    },
+    "tiling": {
+      "tile_px": 512
+    },
+    "resolutions": {
+      "listed": [
+        1000
+      ]
+    }
+  },
+  "domain": {
+    "extent": [
+      -512000,
+      3584000,
+      -3584000,
+      3072000
+    ]
+  },
+  "ids": {
+    "template": "R{res}_{col:04!sign=E,W}_{row:04!sign=N,S}"
+  },
+  "provenance": {
+    "derived_from": "tools/propose.py",
+    "notes": [
+      "AOI [44.0, 160.0, -90.0, -60.0]: spherical centroid 102.0000, -78.8943; spans 116 x 30 degrees (~2487 x 3317 km, square, polar south); property equal_area.",
+      "family: polar (south): laea on the pole. lon_0 only rotates a polar map (distortion is unchanged), so it is 0 as in EPSG:3031/3413-style grids; use 100 instead to put the AOI upright.",
+      "rounded to 10 degree steps (): max scale error 3.526% vs 3.526% exact; the coarsest step within 50% of exact, capped at 0.1 and floored at 0.01 percentage points.",
+      "EPSG:6932 (WGS 84 / NSIDC EASE-Grid 2.0 South) does as well over the AOI (3.526%), so the spec uses it.",
+      "domain: AOI's projected bounds padded 5% and snapped out to whole 512 px tiles at 1000 m; tile_px 512 keeps every tile edge a whole metre at [1000]."
+    ]
+  }
+}

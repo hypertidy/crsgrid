@@ -1,0 +1,55 @@
+{
+  "crsgrid": "0.1",
+  "name": "aat-conformal",
+  "title": "Proposed grid for [44.0, 160.0, -90.0, -60.0]",
+  "family": {
+    "crs": {
+      "authority": "EPSG:3976"
+    },
+    "assign": {
+      "method": "single"
+    }
+  },
+  "lattice": {
+    "units": "m",
+    "quantum": 1,
+    "origin": [
+      0,
+      0
+    ],
+    "index": {
+      "row_direction": "up",
+      "edge_rule": "half_open",
+      "negative": true
+    },
+    "tiling": {
+      "tile_px": 512
+    },
+    "resolutions": {
+      "listed": [
+        1000
+      ]
+    }
+  },
+  "domain": {
+    "extent": [
+      -512000,
+      3584000,
+      -3584000,
+      3072000
+    ]
+  },
+  "ids": {
+    "template": "R{res}_{col:04!sign=E,W}_{row:04!sign=N,S}"
+  },
+  "provenance": {
+    "derived_from": "tools/propose.py",
+    "notes": [
+      "AOI [44.0, 160.0, -90.0, -60.0]: spherical centroid 102.0000, -78.8943; spans 116 x 30 degrees (~2487 x 3317 km, square, polar south); property conformal.",
+      "family: polar (south): stere on the pole. lon_0 only rotates a polar map (distortion is unchanged), so it is 0 as in EPSG:3031/3413-style grids; use 100 instead to put the AOI upright.",
+      "rounded to 10 degree steps (): max scale error 4.255% vs 4.255% exact; the coarsest step within 50% of exact, capped at 0.1 and floored at 0.01 percentage points.",
+      "EPSG:3976 (WGS 84 / NSIDC Sea Ice Polar Stereographic South) does as well over the AOI (3.943%), so the spec uses it.",
+      "domain: AOI's projected bounds padded 5% and snapped out to whole 512 px tiles at 1000 m; tile_px 512 keeps every tile edge a whole metre at [1000]."
+    ]
+  }
+}

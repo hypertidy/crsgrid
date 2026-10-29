@@ -310,7 +310,9 @@ def declared_alignment(g):
     from align import align
     out = []
     for a in g.spec.get("alignment", []):
-        target = Path(g.path).parent / f"{a['target']}.json"
+        here = Path(g.path).resolve().parent
+        target = next((d / f"{a['target']}.json" for d in (here, here.parent, here.parent.parent)
+                       if (d / f"{a['target']}.json").exists()), here / f"{a['target']}.json")
         if not target.exists():
             out.append(finding("alignment-unchecked", "info", f"alignment -> {a['target']}",
                                "no spec of that name next to this one, so the declared offset can't be checked."))

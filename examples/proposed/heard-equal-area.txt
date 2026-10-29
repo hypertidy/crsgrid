@@ -1,0 +1,15 @@
+$ python3 tools/propose.py --bbox=72.56,73.9,-53.2,-52.95 --res 100 --property equal_area --name heard-equal-area --out examples/proposed/heard-equal-area.json
+AOI [72.56, 73.9, -53.2, -52.95]: spherical centroid 73.2300, -53.0761; spans 1.34 x 0.25 degrees (~90 x 28 km, wide); property equal_area.
+family: small (under 1000 km) region: laea on the AOI's spherical centroid.
+  exact parameters: lat_0=-53.0761, lon_0=73.23 -> max scale error 0.001%
+  rounding step   parameters                                        max scale error
+        10 deg   lat_0=-50, lon_0=70                                0.068%
+         5 deg   lat_0=-55, lon_0=75                                0.020%
+         1 deg   lat_0=-53, lon_0=73                                0.002%  <- chosen
+       0.5 deg   lat_0=-53, lon_0=73                                0.002%
+      0.25 deg   lat_0=-53, lon_0=73.25                             0.001%
+       0.1 deg   lat_0=-53.1, lon_0=73.2                            0.001%
+      0.05 deg   lat_0=-53.1, lon_0=73.25                           0.001%
+      0.01 deg   lat_0=-53.08, lon_0=73.23                          0.001%
+  no well-known equal_area CRS does as well; closest: EPSG:6932 5.46%; EPSG:6933 44.38%
+  wrote examples/proposed/heard-equal-area.json

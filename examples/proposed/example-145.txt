@@ -1,0 +1,15 @@
+$ python3 tools/propose.py --bbox=143.7827,146.7827,-38.2,-36.2 --res 100 --property equal_area --name example-145 --out examples/proposed/example-145.json
+AOI [143.7827, 146.7827, -38.2, -36.2]: spherical centroid 145.2827, -37.2053; spans 3 x 2 degrees (~266 x 221 km, square); property equal_area.
+family: small (under 1000 km) region: laea on the AOI's spherical centroid.
+  exact parameters: lat_0=-37.2053, lon_0=145.283 -> max scale error 0.011%
+  rounding step   parameters                                        max scale error
+        10 deg   lat_0=-40, lon_0=150                               0.140%
+         5 deg   lat_0=-35, lon_0=145                               0.053%
+         1 deg   lat_0=-37, lon_0=145                               0.016%  <- chosen
+       0.5 deg   lat_0=-37, lon_0=145.5                             0.015%
+      0.25 deg   lat_0=-37.25, lon_0=145.25                         0.011%
+       0.1 deg   lat_0=-37.2, lon_0=145.3                           0.011%
+      0.05 deg   lat_0=-37.2, lon_0=145.3                           0.011%
+      0.01 deg   lat_0=-37.21, lon_0=145.28                         0.011%
+  no well-known equal_area CRS does as well; closest: EPSG:3577 0.76%; EPSG:6933 10.15%; EPSG:6932 12.11%
+  wrote examples/proposed/example-145.json

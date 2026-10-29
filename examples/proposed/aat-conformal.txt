@@ -1,0 +1,15 @@
+$ python3 tools/propose.py --bbox=44,160,-90,-60 --res 1000 --name aat-conformal --out examples/proposed/aat-conformal.json
+AOI [44.0, 160.0, -90.0, -60.0]: spherical centroid 102.0000, -78.8943; spans 116 x 30 degrees (~2487 x 3317 km, square, polar south); property conformal.
+family: polar (south): stere on the pole. lon_0 only rotates a polar map (distortion is unchanged), so it is 0 as in EPSG:3031/3413-style grids; use 100 instead to put the AOI upright.
+  exact parameters: lat_0=-90, lon_0=0, lat_ts=-71 -> max scale error 4.255%
+  rounding step   parameters                                        max scale error
+        10 deg   lat_0=-90, lon_0=0, lat_ts=-71                     4.255%  <- chosen
+         5 deg   lat_0=-90, lon_0=0, lat_ts=-71                     4.255%
+         1 deg   lat_0=-90, lon_0=0, lat_ts=-71                     4.255%
+       0.5 deg   lat_0=-90, lon_0=0, lat_ts=-71                     4.255%
+      0.25 deg   lat_0=-90, lon_0=0, lat_ts=-71                     4.255%
+       0.1 deg   lat_0=-90, lon_0=0, lat_ts=-71                     4.255%
+      0.05 deg   lat_0=-90, lon_0=0, lat_ts=-71                     4.255%
+      0.01 deg   lat_0=-90, lon_0=0, lat_ts=-71                     4.255%
+  known CRS EPSG:3976 (WGS 84 / NSIDC Sea Ice Polar Stereographic South) does as well over this AOI: 3.943% -> use the code
+  wrote examples/proposed/aat-conformal.json

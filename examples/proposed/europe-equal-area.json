@@ -1,0 +1,55 @@
+{
+  "crsgrid": "0.1",
+  "name": "europe-equal-area",
+  "title": "Proposed grid for [-25.0, 45.0, 34.0, 72.0]",
+  "family": {
+    "crs": {
+      "authority": "EPSG:3035"
+    },
+    "assign": {
+      "method": "single"
+    }
+  },
+  "lattice": {
+    "units": "m",
+    "quantum": 1,
+    "origin": [
+      0,
+      0
+    ],
+    "index": {
+      "row_direction": "up",
+      "edge_rule": "half_open",
+      "negative": true
+    },
+    "tiling": {
+      "tile_px": 512
+    },
+    "resolutions": {
+      "listed": [
+        100
+      ]
+    }
+  },
+  "domain": {
+    "extent": [
+      819200,
+      7833600,
+      972800,
+      5990400
+    ]
+  },
+  "ids": {
+    "template": "R{res}_{col:04!sign=E,W}_{row:04!sign=N,S}"
+  },
+  "provenance": {
+    "derived_from": "tools/propose.py",
+    "notes": [
+      "AOI [-25.0, 45.0, 34.0, 72.0]: spherical centroid 10.0000, 55.9188; spans 70 x 38 degrees (~4367 x 4202 km, square); property equal_area.",
+      "family: square region: laea on the AOI's spherical centroid.",
+      "rounded to 5 degree steps (lat_0 55.9188 -> 55, lon_0 10.0000 -> 10): max scale error 4.012% vs 4.120% exact; the coarsest step within 50% of exact, capped at 0.1 and floored at 0.01 percentage points. A rounded centre does better than the centroid: the centroid is not the minimax centre.",
+      "EPSG:3035 (ETRS89-extended / LAEA Europe) does as well over the AOI (3.705%), so the spec uses it.",
+      "domain: AOI's projected bounds padded 5% and snapped out to whole 512 px tiles at 100 m; tile_px 512 keeps every tile edge a whole metre at [100]."
+    ]
+  }
+}

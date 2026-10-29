@@ -1,0 +1,57 @@
+{
+  "crsgrid": "0.1",
+  "name": "tasmania",
+  "title": "Proposed grid for [143.5, 148.5, -43.7, -39.5]",
+  "family": {
+    "crs": {
+      "authority": "EPSG:32755",
+      "proj": "+proj=utm +zone=55 +south +datum=WGS84 +units=m +no_defs"
+    },
+    "assign": {
+      "method": "single"
+    }
+  },
+  "lattice": {
+    "units": "m",
+    "quantum": 1,
+    "origin": [
+      0,
+      0
+    ],
+    "index": {
+      "row_direction": "up",
+      "edge_rule": "half_open",
+      "negative": true
+    },
+    "tiling": {
+      "tile_px": 512
+    },
+    "resolutions": {
+      "listed": [
+        60,
+        20,
+        10
+      ]
+    }
+  },
+  "domain": {
+    "extent": [
+      153600,
+      675840,
+      5130240,
+      5652480
+    ]
+  },
+  "ids": {
+    "template": "R{res}_{col:04!sign=E,W}_{row:04!sign=N,S}"
+  },
+  "provenance": {
+    "derived_from": "tools/propose.py",
+    "notes": [
+      "AOI [143.5, 148.5, -43.7, -39.5]: spherical centroid 146.0000, -41.6152; spans 5 x 4.2 degrees (~416 x 464 km, square); property conformal.",
+      "family: AOI lies within UTM zone 55 (central meridian 147, +-3.5 degrees).",
+      "UTM zone 55S: max scale error 0.072% over the AOI.",
+      "domain: AOI's projected bounds padded 5% and snapped out to whole 512 px tiles at 60 m; tile_px 512 keeps every tile edge a whole metre at [10, 20, 60]."
+    ]
+  }
+}

@@ -8,5 +8,6 @@ Portable grid specs for any CRS: a family of CRS instances sharing one lattice, 
 - `tools/fixtures-aatgrid.R`, `tools/fixtures-s2mgrs.R`: generate fixtures from the aatgrid package, and from real Sentinel-2 items plus GeographicLib; `fixtures/equi7grid.json` and `fixtures/nsidc-polar-stereo.json` are transcribed from the upstream Equi7Grid tests and the NSIDC guide; `tools/fixtures-vrt.py` reads REMA and COP30 tile placements from their VRTs; `tools/fixtures-wmts.py` reads GIBS tile matrices from WMTS capabilities
 - `tools/check_fixtures.py`: checks a spec reproduces its fixtures using only the spec (`python3 tools/check_fixtures.py fixtures/*.json`; needs jsonschema, pyproj, and shapely + pyarrow for polygon domains)
 - `tools/lint.py`: first lint pass (`python3 tools/lint.py examples/*.json`)
+- `tools/propose.py`: AOI -> proposed spec, with rounding table, known-CRS check and lint (`python3 tools/propose.py --bbox=143.5,148.5,-43.7,-39.5 --res 10,20,60`); worked examples in `examples/proposed/`
 - `tools/align.py`: are two specs aligned? (`python3 tools/align.py examples/aatgrid.json examples/s2mgrs.json`)
 - `notes/`: background surveys

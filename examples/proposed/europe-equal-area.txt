@@ -1,0 +1,15 @@
+$ python3 tools/propose.py --bbox=-25,45,34,72 --res 100 --property equal_area --name europe-equal-area --out examples/proposed/europe-equal-area.json
+AOI [-25.0, 45.0, 34.0, 72.0]: spherical centroid 10.0000, 55.9188; spans 70 x 38 degrees (~4367 x 4202 km, square); property equal_area.
+family: square region: laea on the AOI's spherical centroid.
+  exact parameters: lat_0=55.9188, lon_0=10 -> max scale error 4.120%
+  rounding step   parameters                                        max scale error
+        10 deg   lat_0=60, lon_0=10                                 4.679%
+         5 deg   lat_0=55, lon_0=10                                 4.012%  <- chosen
+         1 deg   lat_0=56, lon_0=10                                 4.130%
+       0.5 deg   lat_0=56, lon_0=10                                 4.130%
+      0.25 deg   lat_0=56, lon_0=10                                 4.130%
+       0.1 deg   lat_0=55.9, lon_0=10                               4.118%
+      0.05 deg   lat_0=55.9, lon_0=10                               4.118%
+      0.01 deg   lat_0=55.92, lon_0=10                              4.120%
+  known CRS EPSG:3035 (ETRS89-extended / LAEA Europe) does as well over this AOI: 3.705% -> use the code
+  wrote examples/proposed/europe-equal-area.json

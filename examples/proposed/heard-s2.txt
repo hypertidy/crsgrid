@@ -1,0 +1,10 @@
+$ python3 tools/propose.py --bbox=72.56,73.9,-53.2,-52.95 --res 10,20,60 --align examples/s2mgrs.json --name heard-s2 --out examples/proposed/heard-s2.json
+AOI [72.56, 73.9, -53.2, -52.95]: spherical centroid 73.2300, -53.0761; spans 1.34 x 0.25 degrees (~90 x 28 km, wide); property conformal.
+family: AOI lies within UTM zone 43 (central meridian 75, +-3.5 degrees).
+  UTM zone 43S (EPSG:32743): max scale error over the AOI 0.033%
+  no well-known conformal CRS does as well; closest: EPSG:3994 25.90%; EPSG:3857 66.94%
+  --align s2mgrs: origin moved to (0, 40), s2mgrs's 60 m pixel lattice (43S) reduced modulo 60 m; domain re-snapped to whole tiles from that origin.
+  wrote examples/proposed/heard-s2.json
+  lint info    alignment-verified: offset [0.0, 0.0] confirmed for 1 instance pair(s).
+  lint info    alignment-verified: offset [0.0, 0.0] confirmed for 1 instance pair(s).
+  lint info    alignment-verified: offset [0.0, 0.0] confirmed for 1 instance pair(s).

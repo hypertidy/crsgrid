@@ -1,0 +1,54 @@
+{
+  "crsgrid": "0.1",
+  "name": "example-145",
+  "title": "Proposed grid for [143.7827, 146.7827, -38.2, -36.2]",
+  "family": {
+    "crs": {
+      "proj": "+proj=laea +lat_0=-37 +lon_0=145 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs"
+    },
+    "assign": {
+      "method": "single"
+    }
+  },
+  "lattice": {
+    "units": "m",
+    "quantum": 1,
+    "origin": [
+      0,
+      0
+    ],
+    "index": {
+      "row_direction": "up",
+      "edge_rule": "half_open",
+      "negative": true
+    },
+    "tiling": {
+      "tile_px": 512
+    },
+    "resolutions": {
+      "listed": [
+        100
+      ]
+    }
+  },
+  "domain": {
+    "extent": [
+      -153600,
+      204800,
+      -153600,
+      102400
+    ]
+  },
+  "ids": {
+    "template": "R{res}_{col:04!sign=E,W}_{row:04!sign=N,S}"
+  },
+  "provenance": {
+    "derived_from": "tools/propose.py",
+    "notes": [
+      "AOI [143.7827, 146.7827, -38.2, -36.2]: spherical centroid 145.2827, -37.2053; spans 3 x 2 degrees (~266 x 221 km, square); property equal_area.",
+      "family: small (under 1000 km) region: laea on the AOI's spherical centroid.",
+      "rounded to 1 degree steps (lat_0 -37.2053 -> -37, lon_0 145.2827 -> 145): max scale error 0.016% vs 0.011% exact; the coarsest step within 50% of exact, capped at 0.1 and floored at 0.01 percentage points. A rounded centre does better than the centroid: the centroid is not the minimax centre.",
+      "domain: AOI's projected bounds padded 5% and snapped out to whole 512 px tiles at 100 m; tile_px 512 keeps every tile edge a whole metre at [100]."
+    ]
+  }
+}
