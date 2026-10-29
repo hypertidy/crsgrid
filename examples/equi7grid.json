@@ -17,7 +17,8 @@
         "y_0": 5990638.42298,
         "zone_url": "https://raw.githubusercontent.com/TUW-GEO/Equi7Grid/269fdb6/src/equi7grid/data/zones/af_zone.parquet",
         "min_x": 0,
-        "min_y": 0
+        "min_y": 0,
+        "v14_zone_url": "https://raw.githubusercontent.com/TUW-GEO/Equi7Grid/v0.2.6/src/equi7grid/grids/AF/PROJ/EQUI7_V14_AF_PROJ_ZONE.shp"
       },
       "AN": {
         "epsg": 27702,
@@ -27,7 +28,8 @@
         "y_0": 3402016.50625,
         "zone_url": "https://raw.githubusercontent.com/TUW-GEO/Equi7Grid/269fdb6/src/equi7grid/data/zones/an_zone.parquet",
         "min_x": 0,
-        "min_y": 0
+        "min_y": 0,
+        "v14_zone_url": "https://raw.githubusercontent.com/TUW-GEO/Equi7Grid/v0.2.6/src/equi7grid/grids/AN/PROJ/EQUI7_V14_AN_PROJ_ZONE.shp"
       },
       "AS": {
         "epsg": 27703,
@@ -37,7 +39,8 @@
         "y_0": 4812712.92347,
         "zone_url": "https://raw.githubusercontent.com/TUW-GEO/Equi7Grid/269fdb6/src/equi7grid/data/zones/as_zone.parquet",
         "min_x": 0,
-        "min_y": -1800000
+        "min_y": -1800000,
+        "v14_zone_url": "https://raw.githubusercontent.com/TUW-GEO/Equi7Grid/v0.2.6/src/equi7grid/grids/AS/PROJ/EQUI7_V14_AS_PROJ_ZONE.shp"
       },
       "EU": {
         "epsg": 27704,
@@ -47,7 +50,8 @@
         "y_0": 2121415.69617,
         "zone_url": "https://raw.githubusercontent.com/TUW-GEO/Equi7Grid/269fdb6/src/equi7grid/data/zones/eu_zone.parquet",
         "min_x": 0,
-        "min_y": -600000
+        "min_y": -600000,
+        "v14_zone_url": "https://raw.githubusercontent.com/TUW-GEO/Equi7Grid/v0.2.6/src/equi7grid/grids/EU/PROJ/EQUI7_V14_EU_PROJ_ZONE.shp"
       },
       "NA": {
         "epsg": 27705,
@@ -57,7 +61,8 @@
         "y_0": 4867518.35323,
         "zone_url": "https://raw.githubusercontent.com/TUW-GEO/Equi7Grid/269fdb6/src/equi7grid/data/zones/na_zone.parquet",
         "min_x": 0,
-        "min_y": 0
+        "min_y": 0,
+        "v14_zone_url": "https://raw.githubusercontent.com/TUW-GEO/Equi7Grid/v0.2.6/src/equi7grid/grids/NA/PROJ/EQUI7_V14_NA_PROJ_ZONE.shp"
       },
       "OC": {
         "epsg": 27706,
@@ -67,7 +72,8 @@
         "y_0": 7654884.53733,
         "zone_url": "https://raw.githubusercontent.com/TUW-GEO/Equi7Grid/269fdb6/src/equi7grid/data/zones/oc_zone.parquet",
         "min_x": 0,
-        "min_y": 0
+        "min_y": 0,
+        "v14_zone_url": "https://raw.githubusercontent.com/TUW-GEO/Equi7Grid/v0.2.6/src/equi7grid/grids/OC/PROJ/EQUI7_V14_OC_PROJ_ZONE.shp"
       },
       "SA": {
         "epsg": 27707,
@@ -77,13 +83,19 @@
         "y_0": 5592024.44605,
         "zone_url": "https://raw.githubusercontent.com/TUW-GEO/Equi7Grid/269fdb6/src/equi7grid/data/zones/sa_zone.parquet",
         "min_x": 0,
-        "min_y": 0
+        "min_y": 0,
+        "v14_zone_url": "https://raw.githubusercontent.com/TUW-GEO/Equi7Grid/v0.2.6/src/equi7grid/grids/SA/PROJ/EQUI7_V14_SA_PROJ_ZONE.shp"
       }
     },
     "assign": {
       "method": "polygons",
       "source": "{zone_url}",
       "crs": "OGC:CRS84"
+    },
+    "crs_derived_from": {
+      "polygons": "{v14_zone_url}",
+      "rule": "bbox_min_at_zero",
+      "note": "Equi7 V14 zones (upstream v0.2.6). The v1.1 zones were redrawn later with the CRSs kept."
     }
   },
   "lattice": {
@@ -128,8 +140,8 @@
     "version": "equi7grid 1.1.1 (269fdb6)",
     "derived_from": "src/equi7grid/_create_grids.py, core.py; CRS parameters as in the upstream README and mdsumner/equi7grid data-raw/params.csv",
     "notes": [
-      "The lattice is shared: tiles sit on multiples of the tile size from CRS (0, 0) in every continent (core.py rejects names where x or y is not a multiple of the tile size). The false eastings/northings (x_0 = 5621452.01998 etc.) put that origin outside each zone. They are derived from the zone polygons (each zone's projected bbox starts at 0), which is why they carry five decimals: the auto-generated-looking parameters the linter should flag and explain. The lattice itself never depends on them.",
-      "Upstream's per-continent min_xy (AS y = -1800000, EU y = -600000, others 0) is the lower-left of its tile matrix. It is not a lattice origin (all are multiples of 600 km) but it is part of the domain: tiles below it don't exist even where the densified zone polygon reaches past it, which happens because the false eastings/northings were chosen to put each zone's projected bounds at exactly 0. Negative y is written with S in IDs (EU_E042S006T6).",
+      "The lattice is shared: tiles sit on multiples of the tile size from CRS (0, 0) in every continent (core.py rejects names where x or y is not a multiple of the tile size). The five-decimal false eastings/northings (x_0 = 5621452.01998 etc.) are derived: each puts the original V14 zone's projected bounding box minimum at exactly (0, 0) (all 7 continents, to micrometres; family.crs_derived_from). The v1.1 zones were redrawn with the CRSs kept, so AS, EU and OC no longer start at 0.",
+      "Upstream's per-continent min_xy (AS y = -1800000, EU y = -600000, others 0) is the lower-left of its tile matrix. It exists because the redrawn v1.1 zones reach past the V14 origin (AS to y = -1338 km, EU to y = -68 km), rounded out to the 600 km T6 tile. It is part of the domain: tiles below it don't exist even where the densified zone polygon reaches past it. Negative y is written with S in IDs (EU_E042S006T6).",
       "Resolution is not part of the ID (v1 dropped the old 'EU500M' prefix). Any sampling dividing the tile size is allowed (upstream allowed_samplings); 500 m is what upstream's tests use.",
       "Domain and assignment use the unbuffered zone polygons; upstream also ships buffered ones (*_zone_bfrd.parquet).",
       "Length distortion: upstream computes k = c / sin(c) on the sphere (c = geodesic distance from the centre / a), a spherical approximation of the aeqd parallel scale.",

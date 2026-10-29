@@ -67,7 +67,7 @@ Spec is canonicalisable (sorted keys, normalised CRS) → stable hash → a grid
 
 ## What the test grids taught
 
-Four grids are expressed as specs, each with fixtures from an independent oracle, and `tools/check_fixtures.py` reproduces them from the spec alone (0 failures; every known difference is recorded in the fixture with its reason).
+Six grids are expressed as specs, each with fixtures from an independent oracle, and `tools/check_fixtures.py` reproduces them from the spec alone (0 failures; every known difference is recorded in the fixture with its reason).
 
 | grid | oracle | cases | what it forced into the schema |
 |---|---|---|---|
@@ -75,20 +75,42 @@ Four grids are expressed as specs, each with fixtures from an independent oracle
 | Equi7Grid | upstream test suite (269fdb6) | 16 | `instances` table (named family), `assign: polygons`, named `tile_sizes`, coordinate-coded IDs (`{xmin/100000:03}`, `!sign=N,S`), polygon domain + per-instance `min_corner` |
 | Sentinel-2 MGRS | 132 real L2A footprints (starc store) + GeographicLib | 468 | `footprint` separate from the lattice cell (pad + snap one corner), named ID `codec: mgrs`, `assign: utm_standard`, `!map=` templates, enumerated `domain.list` |
 | NSIDC polar stereo | NSIDC guide, Tables 5–7 | 27 | untiled grids (one raster per instance and resolution), per-instance `domain.extent` |
+| REMA v2 2 m (PGC) | placement of all 5788 tiles in the rema-ovr VRT | 244 | symmetric overlap (`footprint.pad` 100 m), hierarchical IDs via `ids.fields` / `ids.recover` expressions, VRT-listed domain |
+| Copernicus GLO-30 (OpenTopography) | placement of all 26475 tiles in the COP30 VRT | 211 | `unit_scale` (lattice in arcseconds), `registration: point`, `x_scale` bands by latitude |
 
 Findings worth keeping:
 
 - **Lattices live in CRS units, everywhere so far.** Equi7's continents share one lattice at CRS (0, 0); per-instance limits belong in the domain.
-- **"Funny" parameters are often derived from data.** Equi7's five-decimal false eastings put each zone's projected bbox at exactly 0. The auto-parameter lint should *explain* such values (derived from bounds) as well as flag them.
+- **"Funny" parameters are often derived from data, possibly from older data.** Equi7's five-decimal false eastings put each *original V14* zone's projected bbox at exactly (0, 0) (all 7 continents, to micrometres). The v1.1 zones were redrawn with the CRSs kept, so AS, EU and OC no longer start at 0, and upstream's per-continent `min_xy` exists to absorb that. The spec records the derivation (`family.crs_derived_from`) and the lint checks and explains it.
 - **Authority codes and PROJ strings for "the same" CRS can disagree.** EPSG:27701–27707 round Equi7's false origins (under 1 mm). The known-CRS lint reports the difference rather than equating them.
-- **Same numbers, different datum = different grid.** NSIDC's grid numbers under Hughes 1980 (EPSG:3411) and WGS 84 (3413) put corners ~0.001° (~100 m) apart. The published corners are the Hughes values.
+- **Same numbers, different datum = different grid.** NSIDC's grid numbers under Hughes 1980 (EPSG:3411) and WGS 84 (3413) put the corners up to 150 m apart on the ground. The published corners are the Hughes values.
 - **"Deprecated" needs a source.** NSIDC supersedes 3411/3412 for its products; EPSG (v11.022) does not deprecate them. Specs record the steward's guidance (`superseded_by`).
 - **Overlapping tiles are a footprint, not a lattice.** Sentinel-2 tiles are 100 km MGRS cells whose 109.8 km footprints have the upper-left snapped outward to the 60 m lattice (anchored at the equator, so 40 mod 60 in the south). Not "padded 4900 m on every side", as one comment in starc says.
 - **Published tile lists lag production.** 10 Antarctic tiles (band C) exist in the Sentinel-2 archive but not in the valid list used as the domain.
 - **ID conventions differ between stewards of the same scheme.** Sentinel-2 writes zones unpadded (`8CMC`), MGRS/GeographicLib pads (`08CMC`); the spec makes one canonical and parses the rest.
 - **Distortion needs a definition.** crsgrid uses the ellipsoidal maximum length scale (Tissot semi-major axis). Equi7's spherical k is 8.6e-4 lower at its Atlantic edge, where it reaches 14.4% (k ≈ 1.144 at 29°W 24°N): the horrific angular width.
+- **Overlap is real practice, so describe it exactly and lint it.** REMA 2 m tiles are 50 km cells delivered 100 m larger on every side; 7 of 5788 are one pixel larger still. Its 32 m product pads 96 m, because 32 m doesn't divide 100 m.
+- **"GDAL just works" is alignment, not a spec.** The COP30 VRT upsamples every tile to 1 arcsec with fractional DstRects (0.00004 px residue) and clips the 21 antimeridian tiles with fractional SrcRects. Underneath is a clean rule: 1° cells, pixel-is-point (n + 1 pixels), x pixel 1, 1.5, 2, 3, 5, 10 arcsec by |lat| band, exact in arcseconds.
 - **Oracle tolerances are part of the oracle.** Upstream Equi7 asserts with numpy's default rtol 1e-7, about 0.5 m at x ≈ 5e6; fixtures record tolerances, not just values.
 - **Rust has no maintained GeographicLib MGRS.** `geographiclib-rs` (georust) is geodesic-only; `geoconvert` (partial GeoConvert port) is dormant since 2024-01; `mgrs-convert` is new and unproven. The 100 km codec is small, so crsgrid implements it and keeps GeographicLib (R `geographiclib`) as the oracle.
+
+## Lint pass (first cut)
+
+`tools/lint.py` runs functions over a spec and reports findings (code, severity, where, message, fix). On the six test grids it currently reports:
+
+| lint | fires on | what it says |
+|---|---|---|
+| `auto-param` | Equi7 | 14 five-decimal false origins, each *explained*: puts the recorded V14 zone's bbox minimum at 0 (residual under 0.5 mm) |
+| `crs-forms-differ` | Equi7 | EPSG:27701–27707 vs the PROJ strings: 0.03–0.52 mm, naming the rounded parameters |
+| `same-numbers-different-crs` | NSIDC | Hughes vs WGS 84 instances with identical numbers: up to 149 m (north), 125 m (south) at grid corners |
+| `superseded` | NSIDC | 3411/3412 superseded by the steward, not deprecated by EPSG |
+| `overlapping-footprints` | REMA, Sentinel-2 | 200 m and 9.8 km overlaps |
+| `shared-edge-pixels`, `lonlat-pixel-shape` | COP30 | pixel-is-point edges; ground pixel aspect per band (0.44–1.03) |
+| `res-not-cell` | Sentinel-2 | 60 m divides the 109.8 km footprint but not the 100 km cell |
+| `max-scale` | Equi7 | maximum length scale per continent over its zone: 15.5% (EU) to 92.1% (OC, on its Pacific boundary) |
+| `unpinned-domain` | COP30 | the tile list is a live URL |
+
+Still to come: alignment between two specs (aatgrid vs Sentinel-2 at 60 m, NSIDC vs a GIBS polar matrix), ID width vs index range, the proposer's rounding suggestions, and a land-only variant of `max-scale`.
 
 ## Getting to a spec: interpretation + proposal
 

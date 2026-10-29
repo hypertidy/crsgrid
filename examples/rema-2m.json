@@ -1,0 +1,74 @@
+{
+  "crsgrid": "0.1",
+  "name": "rema-2m",
+  "title": "REMA v2 2 m mosaic tiles (PGC)",
+  "description": "Antarctic polar stereographic; 100 km supertiles split 2 x 2 into 50 km subtiles, each delivered as a 50.2 km footprint (100 m overlap on every side). IDs are {super_row}_{super_col}_{sub_row}_{sub_col}.",
+  "family": {
+    "crs": {
+      "authority": "EPSG:3031"
+    },
+    "assign": {
+      "method": "single"
+    }
+  },
+  "lattice": {
+    "units": "m",
+    "quantum": 1,
+    "origin": [
+      -3100000,
+      -3100000
+    ],
+    "index": {
+      "row_direction": "up",
+      "edge_rule": "half_open",
+      "negative": false
+    },
+    "tiling": {
+      "tile_size": 50000
+    },
+    "footprint": {
+      "pad": [
+        100,
+        100,
+        100,
+        100
+      ]
+    },
+    "resolutions": {
+      "listed": [
+        2
+      ]
+    }
+  },
+  "domain": {
+    "list": {
+      "source": "https://raw.githubusercontent.com/mdsumner/rema-ovr/f96576d/REMA-2m_dem_ovr.vrt",
+      "format": "gdal_vrt",
+      "pattern": "2m/\\d+_\\d+/(?P<id>\\d+_\\d+_\\d_\\d)_2m_v2\\.0_dem\\.tif",
+      "origin": "PGC REMA v2.0 2 m mosaic tiles (s3://pgc-opendata-dems/rema/mosaics/v2.0/2m/), as indexed by mdsumner/rema-ovr"
+    }
+  },
+  "ids": {
+    "template": "{super_row:02}_{super_col:02}_{sub_row}_{sub_col}",
+    "fields": {
+      "super_row": "row // 2",
+      "super_col": "col // 2",
+      "sub_row": "row % 2 + 1",
+      "sub_col": "col % 2 + 1"
+    },
+    "recover": {
+      "row": "2 * super_row + sub_row - 1",
+      "col": "2 * super_col + sub_col - 1"
+    }
+  },
+  "provenance": {
+    "source": "https://www.pgc.umn.edu/data/rema/",
+    "derived_from": "placement of every 2 m source in mdsumner/rema-ovr REMA-2m_dem_ovr.vrt (gdalbuildvrt over the PGC tiles), tools/fixtures-vrt.py",
+    "notes": [
+      "Overlapping tiles: each 50 km subtile is delivered 100 m larger on every side (25100 px at 2 m), so neighbours share 200 m. This is a real scheme the linter should flag ('footprints overlap: every point in the overlap has two tiles') while still describing it exactly.",
+      "7 of the 5788 tiles (61_15_1_1, 61_15_1_2, 61_15_2_1, 61_15_2_2, 62_15_1_1, 62_15_2_1, 63_13_2_1) are 25101 px, one pixel more than the rule, extending 2 m further east and south. Recorded as known differences in the fixtures.",
+      "The PGC 10 m and 32 m mosaics tile by 100 km supertile instead (IDs {super_row}_{super_col}): 10 m tiles are 10020 px (100 m pad), 32 m tiles 3131 px, a 96 m pad, because 32 m does not divide 100 m. Some edge tiles are half height. Not expressed here: one spec per tiling for now.",
+      "The supertile/subtile split is expressed as ID field expressions over a 50 km lattice; nesting the 100 km supertile as its own tiling would also work."
+    ]
+  }
+}

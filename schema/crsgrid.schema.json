@@ -94,6 +94,30 @@
               ]
             }
           }
+        },
+        "crs_derived_from": {
+          "type": "object",
+          "required": [
+            "polygons",
+            "rule"
+          ],
+          "additionalProperties": false,
+          "description": "Records how CRS parameters were derived from data, so a lint can check and explain them rather than flag them as arbitrary.",
+          "properties": {
+            "polygons": {
+              "$ref": "#/$defs/template",
+              "description": "Per-instance URL of the vector data the parameters were derived from (any GDAL-readable source)."
+            },
+            "rule": {
+              "enum": [
+                "bbox_min_at_zero"
+              ],
+              "description": "bbox_min_at_zero: false easting/northing put the polygons' projected bounding box minimum at (0, 0)."
+            },
+            "note": {
+              "type": "string"
+            }
+          }
         }
       }
     },
@@ -438,6 +462,56 @@
               }
             }
           }
+        },
+        "unit_scale": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "default": 1,
+          "description": "Lattice units per CRS unit, so lattice arithmetic is exact: 3600 puts a degree-based grid in arcseconds. origin, quantum, tile sizes, resolutions, pads and bands are in lattice units; transforms divide by unit_scale."
+        },
+        "registration": {
+          "enum": [
+            "area",
+            "point"
+          ],
+          "default": "area",
+          "description": "area: pixels tile the cell (n = size / res per edge). point: pixel centres sit on the cell edges (GDAL AREA_OR_POINT=Point), so a tile has n + 1 pixels per edge and its footprint is the cell padded by half a pixel on every side."
+        },
+        "x_scale": {
+          "type": "object",
+          "required": [
+            "by",
+            "bands"
+          ],
+          "additionalProperties": false,
+          "description": "x resolution varies with a tile's position: x_res = res * factor of the band containing the tile centre. Used for lon/lat grids that thin out poleward (Copernicus DEM).",
+          "properties": {
+            "by": {
+              "const": "abs_y"
+            },
+            "bands": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "array",
+                "prefixItems": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "number",
+                    "exclusiveMinimum": 0
+                  }
+                ],
+                "minItems": 3,
+                "maxItems": 3
+              },
+              "description": "[lo, hi, factor]: the band applies when lo <= |y| < hi for the tile centre y, in lattice units (CRS y * unit_scale)."
+            }
+          }
         }
       }
     },
@@ -526,6 +600,18 @@
             "origin": {
               "type": "string",
               "description": "Where the list comes from, if the source is a copy."
+            },
+            "format": {
+              "enum": [
+                "parquet",
+                "csv",
+                "gdal_vrt"
+              ],
+              "default": "parquet"
+            },
+            "pattern": {
+              "type": "string",
+              "description": "For gdal_vrt: a regex with a named group 'id' applied to each SourceFilename."
             }
           }
         }
@@ -558,6 +644,20 @@
             "mgrs"
           ],
           "description": "A named algorithm supplying ID fields a template can't express. mgrs: from a tile in a UTM instance (100 km cells, origin (0, 0)) gives {band} (latitude band C-X, of the point or, decoding, resolved with the 2000 km row-letter cycle), {e100k} and {n100k} (100 km column and row letters, sets by zone mod 3 and zone parity), with GeographicLib MGRS as the reference implementation. IDs are then not unique per tile: a cell crossing a band boundary has one ID per band."
+        },
+        "fields": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "Derived ID fields as integer expressions over col, row and params (+ - * // % and parentheses), e.g. {\"super_col\": \"col // 2\", \"sub_col\": \"col % 2 + 1\"}."
+        },
+        "recover": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "Inverse of fields for parsing: expressions giving col and row from parsed fields, e.g. {\"col\": \"2 * super_col + sub_col - 1\"}."
         }
       }
     },

@@ -1,0 +1,4602 @@
+{
+  "spec": "examples/cop30.json",
+  "generator": "tools/fixtures-vrt.py cop30",
+  "oracle": {
+    "package": "GDAL VRT placement of 26475 tiles (https://opentopography.s3.sdsc.edu/raster/COP30/COP30_hh.vrt)",
+    "proj": "n/a (no transforms)"
+  },
+  "cases": [
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N00_00_E006_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          5.999861111,
+          7.000138889,
+          -0.000138889,
+          1.000138889
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N00_00_E009_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          8.999861111,
+          10.000138889,
+          -0.000138889,
+          1.000138889
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N00_00_E010_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          9.999861111,
+          11.000138889,
+          -0.000138889,
+          1.000138889
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N00_00_E011_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          10.999861111,
+          12.000138889,
+          -0.000138889,
+          1.000138889
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N02_00_E042_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          41.999861111,
+          43.000138889,
+          1.999861111,
+          3.000138889
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N04_00_W062_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -62.000138889,
+          -60.999861111,
+          3.999861111,
+          5.000138889
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N06_00_W074_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -74.000138889,
+          -72.999861111,
+          5.999861111,
+          7.000138889
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N08_00_W071_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -71.000138889,
+          -69.999861111,
+          7.999861111,
+          9.000138889
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N10_00_W064_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -64.000138889,
+          -62.999861111,
+          9.999861111,
+          11.000138889
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N13_00_E005_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          4.999861111,
+          6.000138889,
+          12.999861111,
+          14.000138889
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N15_00_E032_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          31.999861111,
+          33.000138889,
+          14.999861111,
+          16.000138889
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N17_00_E030_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          29.999861111,
+          31.000138889,
+          16.999861111,
+          18.000138889
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N19_00_E000_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -0.000138889,
+          1.000138889,
+          18.999861111,
+          20.000138889
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N20_00_W004_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -4.000138889,
+          -2.999861111,
+          19.999861111,
+          21.000138889
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N22_00_E049_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          48.999861111,
+          50.000138889,
+          21.999861111,
+          23.000138889
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N23_00_W100_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -100.000138889,
+          -98.999861111,
+          22.999861111,
+          24.000138889
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N25_00_E073_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          72.999861111,
+          74.000138889,
+          24.999861111,
+          26.000138889
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N26_00_W108_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -108.000138889,
+          -106.999861111,
+          25.999861111,
+          27.000138889
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N28_00_E072_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          71.999861111,
+          73.000138889,
+          27.999861111,
+          29.000138889
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N29_00_W096_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -96.000138889,
+          -94.999861111,
+          28.999861111,
+          30.000138889
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N31_00_E054_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          53.999861111,
+          55.000138889,
+          30.999861111,
+          32.000138889
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N32_00_W018_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -18.000138889,
+          -16.999861111,
+          31.999861111,
+          33.000138889
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N34_00_E060_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          59.999861111,
+          61.000138889,
+          33.999861111,
+          35.000138889
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N35_00_W001_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -1.000138889,
+          0.000138889,
+          34.999861111,
+          36.000138889
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N37_00_E015_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          14.999861111,
+          16.000138889,
+          36.999861111,
+          38.000138889
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N38_00_E081_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          80.999861111,
+          82.000138889,
+          37.999861111,
+          39.000138889
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N39_00_W077_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -77.000138889,
+          -75.999861111,
+          38.999861111,
+          40.000138889
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N41_00_E019_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          18.999861111,
+          20.000138889,
+          40.999861111,
+          42.000138889
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N42_00_E080_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          79.999861111,
+          81.000138889,
+          41.999861111,
+          43.000138889
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N43_00_E134_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          133.999861111,
+          135.000138889,
+          42.999861111,
+          44.000138889
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N44_00_W088_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -88.000138889,
+          -86.999861111,
+          43.999861111,
+          45.000138889
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N46_00_E000_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -0.000138889,
+          1.000138889,
+          45.999861111,
+          47.000138889
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N47_00_E030_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          29.999861111,
+          31.000138889,
+          46.999861111,
+          48.000138889
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N48_00_E057_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          56.999861111,
+          58.000138889,
+          47.999861111,
+          49.000138889
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N49_00_E085_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          84.999861111,
+          86.000138889,
+          48.999861111,
+          50.000138889
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N50_00_E000_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -0.000208333,
+          1.000208333,
+          49.999861111,
+          51.000138889
+        ],
+        "dim": [
+          2401,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N50_00_E001_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          0.999791667,
+          2.000208333,
+          49.999861111,
+          51.000138889
+        ],
+        "dim": [
+          2401,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N50_00_E002_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          1.999791667,
+          3.000208333,
+          49.999861111,
+          51.000138889
+        ],
+        "dim": [
+          2401,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N50_00_E003_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          2.999791667,
+          4.000208333,
+          49.999861111,
+          51.000138889
+        ],
+        "dim": [
+          2401,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N50_00_E111_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          110.999791667,
+          112.000208333,
+          49.999861111,
+          51.000138889
+        ],
+        "dim": [
+          2401,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N51_00_E134_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          133.999791667,
+          135.000208333,
+          50.999861111,
+          52.000138889
+        ],
+        "dim": [
+          2401,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N51_00_E179_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          178.999791667,
+          180.000208333,
+          50.999861111,
+          52.000138889
+        ],
+        "dim": [
+          2401,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N51_00_W180_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -180.000208333,
+          -178.999791667,
+          50.999861111,
+          52.000138889
+        ],
+        "dim": [
+          2401,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N52_00_E157_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          156.999791667,
+          158.000208333,
+          51.999861111,
+          53.000138889
+        ],
+        "dim": [
+          2401,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N52_00_E179_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          178.999791667,
+          180.000208333,
+          51.999861111,
+          53.000138889
+        ],
+        "dim": [
+          2401,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N53_00_E157_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          156.999791667,
+          158.000208333,
+          52.999861111,
+          54.000138889
+        ],
+        "dim": [
+          2401,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N54_00_W006_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -6.000208333,
+          -4.999791667,
+          53.999861111,
+          55.000138889
+        ],
+        "dim": [
+          2401,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N55_00_W072_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -72.000208333,
+          -70.999791667,
+          54.999861111,
+          56.000138889
+        ],
+        "dim": [
+          2401,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N56_00_W101_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -101.000208333,
+          -99.999791667,
+          55.999861111,
+          57.000138889
+        ],
+        "dim": [
+          2401,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N57_00_W126_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -126.000208333,
+          -124.999791667,
+          56.999861111,
+          58.000138889
+        ],
+        "dim": [
+          2401,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N58_00_W161_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -161.000208333,
+          -159.999791667,
+          57.999861111,
+          59.000138889
+        ],
+        "dim": [
+          2401,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N59_00_W157_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -157.000208333,
+          -155.999791667,
+          58.999861111,
+          60.000138889
+        ],
+        "dim": [
+          2401,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N60_00_E004_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          3.999722222,
+          5.000277778,
+          59.999861111,
+          61.000138889
+        ],
+        "dim": [
+          1801,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N60_00_E005_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          4.999722222,
+          6.000277778,
+          59.999861111,
+          61.000138889
+        ],
+        "dim": [
+          1801,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N60_00_E006_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          5.999722222,
+          7.000277778,
+          59.999861111,
+          61.000138889
+        ],
+        "dim": [
+          1801,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N60_00_E007_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          6.999722222,
+          8.000277778,
+          59.999861111,
+          61.000138889
+        ],
+        "dim": [
+          1801,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N60_00_W135_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -135.000277778,
+          -133.999722222,
+          59.999861111,
+          61.000138889
+        ],
+        "dim": [
+          1801,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N61_00_W109_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -109.000277778,
+          -107.999722222,
+          60.999861111,
+          62.000138889
+        ],
+        "dim": [
+          1801,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N62_00_E179_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          178.999722222,
+          180.000277778,
+          61.999861111,
+          63.000138889
+        ],
+        "dim": [
+          1801,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N62_00_W063_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -63.000277778,
+          -61.999722222,
+          61.999861111,
+          63.000138889
+        ],
+        "dim": [
+          1801,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N63_00_E156_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          155.999722222,
+          157.000277778,
+          62.999861111,
+          64.000138889
+        ],
+        "dim": [
+          1801,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N63_00_E179_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          178.999722222,
+          180.000277778,
+          62.999861111,
+          64.000138889
+        ],
+        "dim": [
+          1801,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N64_00_E106_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          105.999722222,
+          107.000277778,
+          63.999861111,
+          65.000138889
+        ],
+        "dim": [
+          1801,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N64_00_E179_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          178.999722222,
+          180.000277778,
+          63.999861111,
+          65.000138889
+        ],
+        "dim": [
+          1801,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N65_00_E044_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          43.999722222,
+          45.000277778,
+          64.999861111,
+          66.000138889
+        ],
+        "dim": [
+          1801,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N65_00_E179_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          178.999722222,
+          180.000277778,
+          64.999861111,
+          66.000138889
+        ],
+        "dim": [
+          1801,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N65_00_W143_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -143.000277778,
+          -141.999722222,
+          64.999861111,
+          66.000138889
+        ],
+        "dim": [
+          1801,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N65_00_W180_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -180.000277778,
+          -178.999722222,
+          64.999861111,
+          66.000138889
+        ],
+        "dim": [
+          1801,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N66_00_E179_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          178.999722222,
+          180.000277778,
+          65.999861111,
+          67.000138889
+        ],
+        "dim": [
+          1801,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N66_00_W069_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -69.000277778,
+          -67.999722222,
+          65.999861111,
+          67.000138889
+        ],
+        "dim": [
+          1801,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N66_00_W180_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -180.000277778,
+          -178.999722222,
+          65.999861111,
+          67.000138889
+        ],
+        "dim": [
+          1801,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N67_00_E152_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          151.999722222,
+          153.000277778,
+          66.999861111,
+          68.000138889
+        ],
+        "dim": [
+          1801,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N67_00_E179_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          178.999722222,
+          180.000277778,
+          66.999861111,
+          68.000138889
+        ],
+        "dim": [
+          1801,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N67_00_W180_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -180.000277778,
+          -178.999722222,
+          66.999861111,
+          68.000138889
+        ],
+        "dim": [
+          1801,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N68_00_E100_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          99.999722222,
+          101.000277778,
+          67.999861111,
+          69.000138889
+        ],
+        "dim": [
+          1801,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N68_00_E179_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          178.999722222,
+          180.000277778,
+          67.999861111,
+          69.000138889
+        ],
+        "dim": [
+          1801,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N68_00_W180_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -180.000277778,
+          -178.999722222,
+          67.999861111,
+          69.000138889
+        ],
+        "dim": [
+          1801,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N69_00_E062_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          61.999722222,
+          63.000277778,
+          68.999861111,
+          70.000138889
+        ],
+        "dim": [
+          1801,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N69_00_E179_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          178.999722222,
+          180.000277778,
+          68.999861111,
+          70.000138889
+        ],
+        "dim": [
+          1801,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N70_00_E018_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          17.999583333,
+          19.000416667,
+          69.999861111,
+          71.000138889
+        ],
+        "dim": [
+          1201,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N70_00_E019_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          18.999583333,
+          20.000416667,
+          69.999861111,
+          71.000138889
+        ],
+        "dim": [
+          1201,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N70_00_E020_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          19.999583333,
+          21.000416667,
+          69.999861111,
+          71.000138889
+        ],
+        "dim": [
+          1201,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N70_00_E021_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          20.999583333,
+          22.000416667,
+          69.999861111,
+          71.000138889
+        ],
+        "dim": [
+          1201,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N70_00_E179_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          178.999583333,
+          180.000416667,
+          69.999861111,
+          71.000138889
+        ],
+        "dim": [
+          1201,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N70_00_W180_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -180.000416667,
+          -178.999583333,
+          69.999861111,
+          71.000138889
+        ],
+        "dim": [
+          1201,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N71_00_E022_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          21.999583333,
+          23.000416667,
+          70.999861111,
+          72.000138889
+        ],
+        "dim": [
+          1201,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N71_00_E179_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          178.999583333,
+          180.000416667,
+          70.999861111,
+          72.000138889
+        ],
+        "dim": [
+          1201,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N71_00_W180_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -180.000416667,
+          -178.999583333,
+          70.999861111,
+          72.000138889
+        ],
+        "dim": [
+          1201,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N72_00_E092_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          91.999583333,
+          93.000416667,
+          71.999861111,
+          73.000138889
+        ],
+        "dim": [
+          1201,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N73_00_W051_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -51.000416667,
+          -49.999583333,
+          72.999861111,
+          74.000138889
+        ],
+        "dim": [
+          1201,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N75_00_E108_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          107.999583333,
+          109.000416667,
+          74.999861111,
+          76.000138889
+        ],
+        "dim": [
+          1201,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N76_00_W087_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -87.000416667,
+          -85.999583333,
+          75.999861111,
+          77.000138889
+        ],
+        "dim": [
+          1201,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N78_00_W045_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -45.000416667,
+          -43.999583333,
+          77.999861111,
+          79.000138889
+        ],
+        "dim": [
+          1201,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N80_00_E012_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          11.999305556,
+          13.000694444,
+          79.999861111,
+          81.000138889
+        ],
+        "dim": [
+          721,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N80_00_E013_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          12.999305556,
+          14.000694444,
+          79.999861111,
+          81.000138889
+        ],
+        "dim": [
+          721,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N80_00_E014_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          13.999305556,
+          15.000694444,
+          79.999861111,
+          81.000138889
+        ],
+        "dim": [
+          721,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N80_00_E015_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          14.999305556,
+          16.000694444,
+          79.999861111,
+          81.000138889
+        ],
+        "dim": [
+          721,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N80_00_E062_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          61.999305556,
+          63.000694444,
+          79.999861111,
+          81.000138889
+        ],
+        "dim": [
+          721,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_N82_00_W029_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -29.000694444,
+          -27.999305556,
+          81.999861111,
+          83.000138889
+        ],
+        "dim": [
+          721,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S01_00_E006_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          5.999861111,
+          7.000138889,
+          -1.000138889,
+          0.000138889
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S01_00_E008_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          7.999861111,
+          9.000138889,
+          -1.000138889,
+          0.000138889
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S01_00_E009_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          8.999861111,
+          10.000138889,
+          -1.000138889,
+          0.000138889
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S01_00_E010_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          9.999861111,
+          11.000138889,
+          -1.000138889,
+          0.000138889
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S02_00_E098_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          97.999861111,
+          99.000138889,
+          -2.000138889,
+          -0.999861111
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S04_00_E036_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          35.999861111,
+          37.000138889,
+          -4.000138889,
+          -2.999861111
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S06_00_E035_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          34.999861111,
+          36.000138889,
+          -6.000138889,
+          -4.999861111
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S08_00_E038_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          37.999861111,
+          39.000138889,
+          -8.000138889,
+          -6.999861111
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S09_00_E179_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          178.999861111,
+          180.000138889,
+          -9.000138889,
+          -7.999861111
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S10_00_E047_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          46.999861111,
+          48.000138889,
+          -10.000138889,
+          -8.999861111
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S10_00_E179_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          178.999861111,
+          180.000138889,
+          -10.000138889,
+          -8.999861111
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S11_00_E179_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          178.999861111,
+          180.000138889,
+          -11.000138889,
+          -9.999861111
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S12_00_W045_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -45.000138889,
+          -43.999861111,
+          -12.000138889,
+          -10.999861111
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S15_00_E039_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          38.999861111,
+          40.000138889,
+          -15.000138889,
+          -13.999861111
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S16_00_W180_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -180.000138889,
+          -178.999861111,
+          -16.000138889,
+          -14.999861111
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S17_00_E141_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          140.999861111,
+          142.000138889,
+          -17.000138889,
+          -15.999861111
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S17_00_E179_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          178.999861111,
+          180.000138889,
+          -17.000138889,
+          -15.999861111
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S17_00_W180_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -180.000138889,
+          -178.999861111,
+          -17.000138889,
+          -15.999861111
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S18_00_E179_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          178.999861111,
+          180.000138889,
+          -18.000138889,
+          -16.999861111
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S18_00_W180_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -180.000138889,
+          -178.999861111,
+          -18.000138889,
+          -16.999861111
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S19_00_E168_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          167.999861111,
+          169.000138889,
+          -19.000138889,
+          -17.999861111
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S19_00_E179_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          178.999861111,
+          180.000138889,
+          -19.000138889,
+          -17.999861111
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S19_00_W180_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -180.000138889,
+          -178.999861111,
+          -19.000138889,
+          -17.999861111
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S20_00_E179_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          178.999861111,
+          180.000138889,
+          -20.000138889,
+          -18.999861111
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S20_00_W180_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -180.000138889,
+          -178.999861111,
+          -20.000138889,
+          -18.999861111
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S21_00_W047_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -47.000138889,
+          -45.999861111,
+          -21.000138889,
+          -19.999861111
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S23_00_W060_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -60.000138889,
+          -58.999861111,
+          -23.000138889,
+          -21.999861111
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S26_00_E120_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          119.999861111,
+          121.000138889,
+          -26.000138889,
+          -24.999861111
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S29_00_E114_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          113.999861111,
+          115.000138889,
+          -29.000138889,
+          -27.999861111
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S32_00_E128_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          127.999861111,
+          129.000138889,
+          -32.000138889,
+          -30.999861111
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S36_00_E143_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          142.999861111,
+          144.000138889,
+          -36.000138889,
+          -34.999861111
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S45_00_E167_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          166.999861111,
+          168.000138889,
+          -45.000138889,
+          -43.999861111
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S48_00_E179_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          178.999861111,
+          180.000138889,
+          -48.000138889,
+          -46.999861111
+        ],
+        "dim": [
+          3601,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S51_00_E068_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          67.999791667,
+          69.000208333,
+          -51.000138889,
+          -49.999861111
+        ],
+        "dim": [
+          2401,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S51_00_E165_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          164.999791667,
+          166.000208333,
+          -51.000138889,
+          -49.999861111
+        ],
+        "dim": [
+          2401,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S51_00_E166_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          165.999791667,
+          167.000208333,
+          -51.000138889,
+          -49.999861111
+        ],
+        "dim": [
+          2401,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S51_00_W062_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -62.000208333,
+          -60.999791667,
+          -51.000138889,
+          -49.999861111
+        ],
+        "dim": [
+          2401,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S61_00_W045_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -45.000277778,
+          -43.999722222,
+          -61.000138889,
+          -59.999861111
+        ],
+        "dim": [
+          1801,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S61_00_W046_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -46.000277778,
+          -44.999722222,
+          -61.000138889,
+          -59.999861111
+        ],
+        "dim": [
+          1801,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S61_00_W047_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -47.000277778,
+          -45.999722222,
+          -61.000138889,
+          -59.999861111
+        ],
+        "dim": [
+          1801,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S61_00_W048_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -48.000277778,
+          -46.999722222,
+          -61.000138889,
+          -59.999861111
+        ],
+        "dim": [
+          1801,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S66_00_E111_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          110.999722222,
+          112.000277778,
+          -66.000138889,
+          -64.999861111
+        ],
+        "dim": [
+          1801,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S68_00_W180_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -180.000277778,
+          -178.999722222,
+          -68.000138889,
+          -66.999861111
+        ],
+        "dim": [
+          1801,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S69_00_E071_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          70.999722222,
+          72.000277778,
+          -69.000138889,
+          -67.999861111
+        ],
+        "dim": [
+          1801,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S70_00_E153_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          152.999722222,
+          154.000277778,
+          -70.000138889,
+          -68.999861111
+        ],
+        "dim": [
+          1801,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S71_00_E000_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -0.000416667,
+          1.000416667,
+          -71.000138889,
+          -69.999861111
+        ],
+        "dim": [
+          1201,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S71_00_E001_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          0.999583333,
+          2.000416667,
+          -71.000138889,
+          -69.999861111
+        ],
+        "dim": [
+          1201,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S71_00_E002_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          1.999583333,
+          3.000416667,
+          -71.000138889,
+          -69.999861111
+        ],
+        "dim": [
+          1201,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S71_00_E003_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          2.999583333,
+          4.000416667,
+          -71.000138889,
+          -69.999861111
+        ],
+        "dim": [
+          1201,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S72_00_E025_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          24.999583333,
+          26.000416667,
+          -72.000138889,
+          -70.999861111
+        ],
+        "dim": [
+          1201,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S73_00_E061_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          60.999583333,
+          62.000416667,
+          -73.000138889,
+          -71.999861111
+        ],
+        "dim": [
+          1201,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S74_00_E075_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          74.999583333,
+          76.000416667,
+          -74.000138889,
+          -72.999861111
+        ],
+        "dim": [
+          1201,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S75_00_E059_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          58.999583333,
+          60.000416667,
+          -75.000138889,
+          -73.999861111
+        ],
+        "dim": [
+          1201,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S76_00_E035_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          34.999583333,
+          36.000416667,
+          -76.000138889,
+          -74.999861111
+        ],
+        "dim": [
+          1201,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S76_00_W146_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -146.000416667,
+          -144.999583333,
+          -76.000138889,
+          -74.999861111
+        ],
+        "dim": [
+          1201,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S77_00_W096_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -96.000416667,
+          -94.999583333,
+          -77.000138889,
+          -75.999861111
+        ],
+        "dim": [
+          1201,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S78_00_E179_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          178.999583333,
+          180.000416667,
+          -78.000138889,
+          -76.999861111
+        ],
+        "dim": [
+          1201,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S78_00_W010_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -10.000416667,
+          -8.999583333,
+          -78.000138889,
+          -76.999861111
+        ],
+        "dim": [
+          1201,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S78_00_W180_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -180.000416667,
+          -178.999583333,
+          -78.000138889,
+          -76.999861111
+        ],
+        "dim": [
+          1201,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S79_00_E095_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          94.999583333,
+          96.000416667,
+          -79.000138889,
+          -77.999861111
+        ],
+        "dim": [
+          1201,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S79_00_E179_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          178.999583333,
+          180.000416667,
+          -79.000138889,
+          -77.999861111
+        ],
+        "dim": [
+          1201,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S79_00_W166_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -166.000416667,
+          -164.999583333,
+          -79.000138889,
+          -77.999861111
+        ],
+        "dim": [
+          1201,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S79_00_W180_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -180.000416667,
+          -178.999583333,
+          -79.000138889,
+          -77.999861111
+        ],
+        "dim": [
+          1201,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S80_00_E179_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          178.999583333,
+          180.000416667,
+          -80.000138889,
+          -78.999861111
+        ],
+        "dim": [
+          1201,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S80_00_W056_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -56.000416667,
+          -54.999583333,
+          -80.000138889,
+          -78.999861111
+        ],
+        "dim": [
+          1201,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S80_00_W180_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -180.000416667,
+          -178.999583333,
+          -80.000138889,
+          -78.999861111
+        ],
+        "dim": [
+          1201,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S81_00_E000_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -0.000694444,
+          1.000694444,
+          -81.000138889,
+          -79.999861111
+        ],
+        "dim": [
+          721,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S81_00_E001_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          0.999305556,
+          2.000694444,
+          -81.000138889,
+          -79.999861111
+        ],
+        "dim": [
+          721,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S81_00_E002_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          1.999305556,
+          3.000694444,
+          -81.000138889,
+          -79.999861111
+        ],
+        "dim": [
+          721,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S81_00_E003_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          2.999305556,
+          4.000694444,
+          -81.000138889,
+          -79.999861111
+        ],
+        "dim": [
+          721,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S81_00_E125_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          124.999305556,
+          126.000694444,
+          -81.000138889,
+          -79.999861111
+        ],
+        "dim": [
+          721,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S81_00_E179_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          178.999305556,
+          180.000694444,
+          -81.000138889,
+          -79.999861111
+        ],
+        "dim": [
+          721,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S81_00_W180_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -180.000694444,
+          -178.999305556,
+          -81.000138889,
+          -79.999861111
+        ],
+        "dim": [
+          721,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S82_00_E015_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          14.999305556,
+          16.000694444,
+          -82.000138889,
+          -80.999861111
+        ],
+        "dim": [
+          721,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S82_00_E179_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          178.999305556,
+          180.000694444,
+          -82.000138889,
+          -80.999861111
+        ],
+        "dim": [
+          721,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S82_00_W086_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -86.000694444,
+          -84.999305556,
+          -82.000138889,
+          -80.999861111
+        ],
+        "dim": [
+          721,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S82_00_W180_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -180.000694444,
+          -178.999305556,
+          -82.000138889,
+          -80.999861111
+        ],
+        "dim": [
+          721,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S83_00_E155_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          154.999305556,
+          156.000694444,
+          -83.000138889,
+          -81.999861111
+        ],
+        "dim": [
+          721,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S83_00_E179_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          178.999305556,
+          180.000694444,
+          -83.000138889,
+          -81.999861111
+        ],
+        "dim": [
+          721,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S83_00_W180_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -180.000694444,
+          -178.999305556,
+          -83.000138889,
+          -81.999861111
+        ],
+        "dim": [
+          721,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S84_00_E045_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          44.999305556,
+          46.000694444,
+          -84.000138889,
+          -82.999861111
+        ],
+        "dim": [
+          721,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S84_00_E179_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          178.999305556,
+          180.000694444,
+          -84.000138889,
+          -82.999861111
+        ],
+        "dim": [
+          721,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S84_00_W116_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -116.000694444,
+          -114.999305556,
+          -84.000138889,
+          -82.999861111
+        ],
+        "dim": [
+          721,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S84_00_W180_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -180.000694444,
+          -178.999305556,
+          -84.000138889,
+          -82.999861111
+        ],
+        "dim": [
+          721,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S85_00_E179_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          178.999305556,
+          180.000694444,
+          -85.000138889,
+          -83.999861111
+        ],
+        "dim": [
+          721,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S85_00_W006_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -6.000694444,
+          -4.999305556,
+          -85.000138889,
+          -83.999861111
+        ],
+        "dim": [
+          721,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S85_00_W180_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -180.000694444,
+          -178.999305556,
+          -85.000138889,
+          -83.999861111
+        ],
+        "dim": [
+          721,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S86_00_E000_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -0.001388889,
+          1.001388889,
+          -86.000138889,
+          -84.999861111
+        ],
+        "dim": [
+          361,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S86_00_E001_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          0.998611111,
+          2.001388889,
+          -86.000138889,
+          -84.999861111
+        ],
+        "dim": [
+          361,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S86_00_E002_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          1.998611111,
+          3.001388889,
+          -86.000138889,
+          -84.999861111
+        ],
+        "dim": [
+          361,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S86_00_E003_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          2.998611111,
+          4.001388889,
+          -86.000138889,
+          -84.999861111
+        ],
+        "dim": [
+          361,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S86_00_E075_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          74.998611111,
+          76.001388889,
+          -86.000138889,
+          -84.999861111
+        ],
+        "dim": [
+          361,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S86_00_E179_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          178.998611111,
+          180.001388889,
+          -86.000138889,
+          -84.999861111
+        ],
+        "dim": [
+          361,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S86_00_W146_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -146.001388889,
+          -144.998611111,
+          -86.000138889,
+          -84.999861111
+        ],
+        "dim": [
+          361,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S86_00_W180_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -180.001388889,
+          -178.998611111,
+          -86.000138889,
+          -84.999861111
+        ],
+        "dim": [
+          361,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S87_00_E179_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          178.998611111,
+          180.001388889,
+          -87.000138889,
+          -85.999861111
+        ],
+        "dim": [
+          361,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S87_00_W036_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -36.001388889,
+          -34.998611111,
+          -87.000138889,
+          -85.999861111
+        ],
+        "dim": [
+          361,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S87_00_W180_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -180.001388889,
+          -178.998611111,
+          -87.000138889,
+          -85.999861111
+        ],
+        "dim": [
+          361,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S88_00_E105_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          104.998611111,
+          106.001388889,
+          -88.000138889,
+          -86.999861111
+        ],
+        "dim": [
+          361,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S88_00_E179_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          178.998611111,
+          180.001388889,
+          -88.000138889,
+          -86.999861111
+        ],
+        "dim": [
+          361,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S88_00_W176_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -176.001388889,
+          -174.998611111,
+          -88.000138889,
+          -86.999861111
+        ],
+        "dim": [
+          361,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S88_00_W180_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -180.001388889,
+          -178.998611111,
+          -88.000138889,
+          -86.999861111
+        ],
+        "dim": [
+          361,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S89_00_E179_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          178.998611111,
+          180.001388889,
+          -89.000138889,
+          -87.999861111
+        ],
+        "dim": [
+          361,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S89_00_W066_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -66.001388889,
+          -64.998611111,
+          -89.000138889,
+          -87.999861111
+        ],
+        "dim": [
+          361,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S89_00_W180_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -180.001388889,
+          -178.998611111,
+          -89.000138889,
+          -87.999861111
+        ],
+        "dim": [
+          361,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S90_00_E135_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          134.998611111,
+          136.001388889,
+          -90.000138889,
+          -88.999861111
+        ],
+        "dim": [
+          361,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S90_00_E179_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          178.998611111,
+          180.001388889,
+          -90.000138889,
+          -88.999861111
+        ],
+        "dim": [
+          361,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "Copernicus_DSM_10_S90_00_W180_00_DEM"
+      },
+      "expected": {
+        "extent": [
+          -180.001388889,
+          -178.998611111,
+          -90.000138889,
+          -88.999861111
+        ],
+        "dim": [
+          361,
+          3601
+        ]
+      },
+      "source": "VRT placement",
+      "tolerance": {
+        "extent": 1e-07
+      }
+    },
+    {
+      "op": "domain_size",
+      "input": {},
+      "expected": {
+        "count": 26475
+      },
+      "source": "VRT sources"
+    },
+    {
+      "op": "in_domain",
+      "input": {
+        "id": "Copernicus_DSM_10_N00_00_E006_00_DEM"
+      },
+      "expected": {
+        "value": true
+      },
+      "source": "VRT sources"
+    },
+    {
+      "op": "in_domain",
+      "input": {
+        "id": "Copernicus_DSM_10_N00_00_E009_00_DEM"
+      },
+      "expected": {
+        "value": true
+      },
+      "source": "VRT sources"
+    },
+    {
+      "op": "in_domain",
+      "input": {
+        "id": "Copernicus_DSM_10_N89_00_E000_00_DEM"
+      },
+      "expected": {
+        "value": false
+      },
+      "source": "VRT sources"
+    }
+  ]
+}

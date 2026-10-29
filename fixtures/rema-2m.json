@@ -1,0 +1,4704 @@
+{
+  "spec": "examples/rema-2m.json",
+  "generator": "tools/fixtures-vrt.py rema",
+  "oracle": {
+    "package": "GDAL VRT placement of 5788 tiles (https://raw.githubusercontent.com/mdsumner/rema-ovr/f96576d/REMA-2m_dem_ovr.vrt)",
+    "proj": "n/a (no transforms)"
+  },
+  "cases": [
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "06_37_2_1"
+      },
+      "expected": {
+        "extent": [
+          599900.0,
+          650100.0,
+          -2450100.0,
+          -2399900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "10_37_1_1"
+      },
+      "expected": {
+        "extent": [
+          599900.0,
+          650100.0,
+          -2100100.0,
+          -2049900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "10_43_2_1"
+      },
+      "expected": {
+        "extent": [
+          1199900.0,
+          1250100.0,
+          -2050100.0,
+          -1999900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "11_37_1_2"
+      },
+      "expected": {
+        "extent": [
+          649900.0,
+          700100.0,
+          -2000100.0,
+          -1949900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "11_43_2_1"
+      },
+      "expected": {
+        "extent": [
+          1199900.0,
+          1250100.0,
+          -1950100.0,
+          -1899900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "12_35_1_2"
+      },
+      "expected": {
+        "extent": [
+          449900.0,
+          500100.0,
+          -1900100.0,
+          -1849900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "12_41_2_1"
+      },
+      "expected": {
+        "extent": [
+          999900.0,
+          1050100.0,
+          -1850100.0,
+          -1799900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "12_47_2_2"
+      },
+      "expected": {
+        "extent": [
+          1649900.0,
+          1700100.0,
+          -1850100.0,
+          -1799900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "13_38_1_2"
+      },
+      "expected": {
+        "extent": [
+          749900.0,
+          800100.0,
+          -1800100.0,
+          -1749900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "13_44_2_1"
+      },
+      "expected": {
+        "extent": [
+          1299900.0,
+          1350100.0,
+          -1750100.0,
+          -1699900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "13_51_2_1"
+      },
+      "expected": {
+        "extent": [
+          1999900.0,
+          2050100.0,
+          -1750100.0,
+          -1699900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "14_41_1_1"
+      },
+      "expected": {
+        "extent": [
+          999900.0,
+          1050100.0,
+          -1700100.0,
+          -1649900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "14_47_1_2"
+      },
+      "expected": {
+        "extent": [
+          1649900.0,
+          1700100.0,
+          -1700100.0,
+          -1649900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "15_37_1_2"
+      },
+      "expected": {
+        "extent": [
+          649900.0,
+          700100.0,
+          -1600100.0,
+          -1549900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "15_43_2_1"
+      },
+      "expected": {
+        "extent": [
+          1199900.0,
+          1250100.0,
+          -1550100.0,
+          -1499900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "15_49_2_2"
+      },
+      "expected": {
+        "extent": [
+          1849900.0,
+          1900100.0,
+          -1550100.0,
+          -1499900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "16_38_1_2"
+      },
+      "expected": {
+        "extent": [
+          749900.0,
+          800100.0,
+          -1500100.0,
+          -1449900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "16_44_2_1"
+      },
+      "expected": {
+        "extent": [
+          1299900.0,
+          1350100.0,
+          -1450100.0,
+          -1399900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "16_50_2_2"
+      },
+      "expected": {
+        "extent": [
+          1949900.0,
+          2000100.0,
+          -1450100.0,
+          -1399900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "17_34_2_1"
+      },
+      "expected": {
+        "extent": [
+          299900.0,
+          350100.0,
+          -1350100.0,
+          -1299900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "17_40_2_2"
+      },
+      "expected": {
+        "extent": [
+          949900.0,
+          1000100.0,
+          -1350100.0,
+          -1299900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "17_47_1_1"
+      },
+      "expected": {
+        "extent": [
+          1599900.0,
+          1650100.0,
+          -1400100.0,
+          -1349900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "18_19_2_1"
+      },
+      "expected": {
+        "extent": [
+          -1200100.0,
+          -1149900.0,
+          -1250100.0,
+          -1199900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "18_25_2_2"
+      },
+      "expected": {
+        "extent": [
+          -550100.0,
+          -499900.0,
+          -1250100.0,
+          -1199900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "18_33_1_1"
+      },
+      "expected": {
+        "extent": [
+          199900.0,
+          250100.0,
+          -1300100.0,
+          -1249900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "18_39_1_2"
+      },
+      "expected": {
+        "extent": [
+          849900.0,
+          900100.0,
+          -1300100.0,
+          -1249900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "18_45_2_1"
+      },
+      "expected": {
+        "extent": [
+          1399900.0,
+          1450100.0,
+          -1250100.0,
+          -1199900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "18_51_2_2"
+      },
+      "expected": {
+        "extent": [
+          2049900.0,
+          2100100.0,
+          -1250100.0,
+          -1199900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "19_21_2_2"
+      },
+      "expected": {
+        "extent": [
+          -950100.0,
+          -899900.0,
+          -1150100.0,
+          -1099900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "19_28_1_1"
+      },
+      "expected": {
+        "extent": [
+          -300100.0,
+          -249900.0,
+          -1200100.0,
+          -1149900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "19_34_1_2"
+      },
+      "expected": {
+        "extent": [
+          349900.0,
+          400100.0,
+          -1200100.0,
+          -1149900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "19_40_2_1"
+      },
+      "expected": {
+        "extent": [
+          899900.0,
+          950100.0,
+          -1150100.0,
+          -1099900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "19_46_2_2"
+      },
+      "expected": {
+        "extent": [
+          1549900.0,
+          1600100.0,
+          -1150100.0,
+          -1099900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "19_53_1_1"
+      },
+      "expected": {
+        "extent": [
+          2199900.0,
+          2250100.0,
+          -1200100.0,
+          -1149900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "20_20_2_2"
+      },
+      "expected": {
+        "extent": [
+          -1050100.0,
+          -999900.0,
+          -1050100.0,
+          -999900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "20_27_1_1"
+      },
+      "expected": {
+        "extent": [
+          -400100.0,
+          -349900.0,
+          -1100100.0,
+          -1049900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "20_33_1_2"
+      },
+      "expected": {
+        "extent": [
+          249900.0,
+          300100.0,
+          -1100100.0,
+          -1049900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "20_39_2_1"
+      },
+      "expected": {
+        "extent": [
+          799900.0,
+          850100.0,
+          -1050100.0,
+          -999900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "20_45_2_2"
+      },
+      "expected": {
+        "extent": [
+          1449900.0,
+          1500100.0,
+          -1050100.0,
+          -999900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "20_52_1_1"
+      },
+      "expected": {
+        "extent": [
+          2099900.0,
+          2150100.0,
+          -1100100.0,
+          -1049900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "21_17_2_2"
+      },
+      "expected": {
+        "extent": [
+          -1350100.0,
+          -1299900.0,
+          -950100.0,
+          -899900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "21_24_1_1"
+      },
+      "expected": {
+        "extent": [
+          -700100.0,
+          -649900.0,
+          -1000100.0,
+          -949900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "21_30_1_2"
+      },
+      "expected": {
+        "extent": [
+          -50100.0,
+          100.0,
+          -1000100.0,
+          -949900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "21_36_2_1"
+      },
+      "expected": {
+        "extent": [
+          499900.0,
+          550100.0,
+          -950100.0,
+          -899900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "21_42_2_2"
+      },
+      "expected": {
+        "extent": [
+          1149900.0,
+          1200100.0,
+          -950100.0,
+          -899900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "21_49_1_1"
+      },
+      "expected": {
+        "extent": [
+          1799900.0,
+          1850100.0,
+          -1000100.0,
+          -949900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "21_55_1_2"
+      },
+      "expected": {
+        "extent": [
+          2449900.0,
+          2500100.0,
+          -1000100.0,
+          -949900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "22_20_2_2"
+      },
+      "expected": {
+        "extent": [
+          -1050100.0,
+          -999900.0,
+          -850100.0,
+          -799900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "22_27_1_1"
+      },
+      "expected": {
+        "extent": [
+          -400100.0,
+          -349900.0,
+          -900100.0,
+          -849900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "22_33_1_2"
+      },
+      "expected": {
+        "extent": [
+          249900.0,
+          300100.0,
+          -900100.0,
+          -849900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "22_39_2_1"
+      },
+      "expected": {
+        "extent": [
+          799900.0,
+          850100.0,
+          -850100.0,
+          -799900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "22_45_2_2"
+      },
+      "expected": {
+        "extent": [
+          1449900.0,
+          1500100.0,
+          -850100.0,
+          -799900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "22_52_1_1"
+      },
+      "expected": {
+        "extent": [
+          2099900.0,
+          2150100.0,
+          -900100.0,
+          -849900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "23_17_1_2"
+      },
+      "expected": {
+        "extent": [
+          -1350100.0,
+          -1299900.0,
+          -800100.0,
+          -749900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "23_23_2_1"
+      },
+      "expected": {
+        "extent": [
+          -800100.0,
+          -749900.0,
+          -750100.0,
+          -699900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "23_29_2_2"
+      },
+      "expected": {
+        "extent": [
+          -150100.0,
+          -99900.0,
+          -750100.0,
+          -699900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "23_36_1_1"
+      },
+      "expected": {
+        "extent": [
+          499900.0,
+          550100.0,
+          -800100.0,
+          -749900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "23_42_1_2"
+      },
+      "expected": {
+        "extent": [
+          1149900.0,
+          1200100.0,
+          -800100.0,
+          -749900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "23_48_2_1"
+      },
+      "expected": {
+        "extent": [
+          1699900.0,
+          1750100.0,
+          -750100.0,
+          -699900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "23_54_2_2"
+      },
+      "expected": {
+        "extent": [
+          2349900.0,
+          2400100.0,
+          -750100.0,
+          -699900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "24_19_1_2"
+      },
+      "expected": {
+        "extent": [
+          -1150100.0,
+          -1099900.0,
+          -700100.0,
+          -649900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "24_25_2_1"
+      },
+      "expected": {
+        "extent": [
+          -600100.0,
+          -549900.0,
+          -650100.0,
+          -599900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "24_31_2_2"
+      },
+      "expected": {
+        "extent": [
+          49900.0,
+          100100.0,
+          -650100.0,
+          -599900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "24_38_1_1"
+      },
+      "expected": {
+        "extent": [
+          699900.0,
+          750100.0,
+          -700100.0,
+          -649900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "24_44_1_2"
+      },
+      "expected": {
+        "extent": [
+          1349900.0,
+          1400100.0,
+          -700100.0,
+          -649900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "24_50_2_1"
+      },
+      "expected": {
+        "extent": [
+          1899900.0,
+          1950100.0,
+          -650100.0,
+          -599900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "24_56_2_2"
+      },
+      "expected": {
+        "extent": [
+          2549900.0,
+          2600100.0,
+          -650100.0,
+          -599900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "25_20_1_2"
+      },
+      "expected": {
+        "extent": [
+          -1050100.0,
+          -999900.0,
+          -600100.0,
+          -549900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "25_26_2_1"
+      },
+      "expected": {
+        "extent": [
+          -500100.0,
+          -449900.0,
+          -550100.0,
+          -499900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "25_32_2_2"
+      },
+      "expected": {
+        "extent": [
+          149900.0,
+          200100.0,
+          -550100.0,
+          -499900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "25_39_1_1"
+      },
+      "expected": {
+        "extent": [
+          799900.0,
+          850100.0,
+          -600100.0,
+          -549900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "25_45_1_2"
+      },
+      "expected": {
+        "extent": [
+          1449900.0,
+          1500100.0,
+          -600100.0,
+          -549900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "25_51_2_1"
+      },
+      "expected": {
+        "extent": [
+          1999900.0,
+          2050100.0,
+          -550100.0,
+          -499900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "26_11_2_2"
+      },
+      "expected": {
+        "extent": [
+          -1950100.0,
+          -1899900.0,
+          -450100.0,
+          -399900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "26_18_2_1"
+      },
+      "expected": {
+        "extent": [
+          -1300100.0,
+          -1249900.0,
+          -450100.0,
+          -399900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "26_24_2_2"
+      },
+      "expected": {
+        "extent": [
+          -650100.0,
+          -599900.0,
+          -450100.0,
+          -399900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "26_31_1_1"
+      },
+      "expected": {
+        "extent": [
+          -100.0,
+          50100.0,
+          -500100.0,
+          -449900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "26_37_1_2"
+      },
+      "expected": {
+        "extent": [
+          649900.0,
+          700100.0,
+          -500100.0,
+          -449900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "26_43_2_1"
+      },
+      "expected": {
+        "extent": [
+          1199900.0,
+          1250100.0,
+          -450100.0,
+          -399900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "26_49_2_2"
+      },
+      "expected": {
+        "extent": [
+          1849900.0,
+          1900100.0,
+          -450100.0,
+          -399900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "26_56_1_1"
+      },
+      "expected": {
+        "extent": [
+          2499900.0,
+          2550100.0,
+          -500100.0,
+          -449900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "27_15_1_2"
+      },
+      "expected": {
+        "extent": [
+          -1550100.0,
+          -1499900.0,
+          -400100.0,
+          -349900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "27_21_2_1"
+      },
+      "expected": {
+        "extent": [
+          -1000100.0,
+          -949900.0,
+          -350100.0,
+          -299900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "27_27_2_2"
+      },
+      "expected": {
+        "extent": [
+          -350100.0,
+          -299900.0,
+          -350100.0,
+          -299900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "27_34_1_1"
+      },
+      "expected": {
+        "extent": [
+          299900.0,
+          350100.0,
+          -400100.0,
+          -349900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "27_40_1_2"
+      },
+      "expected": {
+        "extent": [
+          949900.0,
+          1000100.0,
+          -400100.0,
+          -349900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "27_46_2_1"
+      },
+      "expected": {
+        "extent": [
+          1499900.0,
+          1550100.0,
+          -350100.0,
+          -299900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "27_52_2_2"
+      },
+      "expected": {
+        "extent": [
+          2149900.0,
+          2200100.0,
+          -350100.0,
+          -299900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "28_11_2_1"
+      },
+      "expected": {
+        "extent": [
+          -2000100.0,
+          -1949900.0,
+          -250100.0,
+          -199900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "28_17_2_2"
+      },
+      "expected": {
+        "extent": [
+          -1350100.0,
+          -1299900.0,
+          -250100.0,
+          -199900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "28_24_1_1"
+      },
+      "expected": {
+        "extent": [
+          -700100.0,
+          -649900.0,
+          -300100.0,
+          -249900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "28_30_1_2"
+      },
+      "expected": {
+        "extent": [
+          -50100.0,
+          100.0,
+          -300100.0,
+          -249900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "28_36_2_1"
+      },
+      "expected": {
+        "extent": [
+          499900.0,
+          550100.0,
+          -250100.0,
+          -199900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "28_42_2_2"
+      },
+      "expected": {
+        "extent": [
+          1149900.0,
+          1200100.0,
+          -250100.0,
+          -199900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "28_49_1_1"
+      },
+      "expected": {
+        "extent": [
+          1799900.0,
+          1850100.0,
+          -300100.0,
+          -249900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "28_55_1_2"
+      },
+      "expected": {
+        "extent": [
+          2449900.0,
+          2500100.0,
+          -300100.0,
+          -249900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "29_14_2_2"
+      },
+      "expected": {
+        "extent": [
+          -1650100.0,
+          -1599900.0,
+          -150100.0,
+          -99900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "29_21_1_1"
+      },
+      "expected": {
+        "extent": [
+          -1000100.0,
+          -949900.0,
+          -200100.0,
+          -149900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "29_27_1_2"
+      },
+      "expected": {
+        "extent": [
+          -350100.0,
+          -299900.0,
+          -200100.0,
+          -149900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "29_35_1_2"
+      },
+      "expected": {
+        "extent": [
+          449900.0,
+          500100.0,
+          -200100.0,
+          -149900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "29_41_2_1"
+      },
+      "expected": {
+        "extent": [
+          999900.0,
+          1050100.0,
+          -150100.0,
+          -99900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "29_47_2_2"
+      },
+      "expected": {
+        "extent": [
+          1649900.0,
+          1700100.0,
+          -150100.0,
+          -99900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "29_54_1_1"
+      },
+      "expected": {
+        "extent": [
+          2299900.0,
+          2350100.0,
+          -200100.0,
+          -149900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "30_14_1_2"
+      },
+      "expected": {
+        "extent": [
+          -1650100.0,
+          -1599900.0,
+          -100100.0,
+          -49900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "30_20_2_1"
+      },
+      "expected": {
+        "extent": [
+          -1100100.0,
+          -1049900.0,
+          -50100.0,
+          100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "30_26_2_2"
+      },
+      "expected": {
+        "extent": [
+          -450100.0,
+          -399900.0,
+          -50100.0,
+          100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "30_36_2_1"
+      },
+      "expected": {
+        "extent": [
+          499900.0,
+          550100.0,
+          -50100.0,
+          100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "30_42_2_2"
+      },
+      "expected": {
+        "extent": [
+          1149900.0,
+          1200100.0,
+          -50100.0,
+          100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "30_49_1_1"
+      },
+      "expected": {
+        "extent": [
+          1799900.0,
+          1850100.0,
+          -100100.0,
+          -49900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "30_55_1_2"
+      },
+      "expected": {
+        "extent": [
+          2449900.0,
+          2500100.0,
+          -100100.0,
+          -49900.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "31_16_1_2"
+      },
+      "expected": {
+        "extent": [
+          -1450100.0,
+          -1399900.0,
+          -100.0,
+          50100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "31_22_2_1"
+      },
+      "expected": {
+        "extent": [
+          -900100.0,
+          -849900.0,
+          49900.0,
+          100100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "31_28_2_2"
+      },
+      "expected": {
+        "extent": [
+          -250100.0,
+          -199900.0,
+          49900.0,
+          100100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "31_38_1_1"
+      },
+      "expected": {
+        "extent": [
+          699900.0,
+          750100.0,
+          -100.0,
+          50100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "31_44_1_2"
+      },
+      "expected": {
+        "extent": [
+          1349900.0,
+          1400100.0,
+          -100.0,
+          50100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "31_50_2_1"
+      },
+      "expected": {
+        "extent": [
+          1899900.0,
+          1950100.0,
+          49900.0,
+          100100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "31_56_2_2"
+      },
+      "expected": {
+        "extent": [
+          2549900.0,
+          2600100.0,
+          49900.0,
+          100100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "32_18_1_2"
+      },
+      "expected": {
+        "extent": [
+          -1250100.0,
+          -1199900.0,
+          99900.0,
+          150100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "32_24_2_1"
+      },
+      "expected": {
+        "extent": [
+          -700100.0,
+          -649900.0,
+          149900.0,
+          200100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "32_32_1_2"
+      },
+      "expected": {
+        "extent": [
+          149900.0,
+          200100.0,
+          99900.0,
+          150100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "32_38_2_1"
+      },
+      "expected": {
+        "extent": [
+          699900.0,
+          750100.0,
+          149900.0,
+          200100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "32_44_2_2"
+      },
+      "expected": {
+        "extent": [
+          1349900.0,
+          1400100.0,
+          149900.0,
+          200100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "32_51_1_1"
+      },
+      "expected": {
+        "extent": [
+          1999900.0,
+          2050100.0,
+          99900.0,
+          150100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "33_12_2_2"
+      },
+      "expected": {
+        "extent": [
+          -1850100.0,
+          -1799900.0,
+          249900.0,
+          300100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "33_19_1_1"
+      },
+      "expected": {
+        "extent": [
+          -1200100.0,
+          -1149900.0,
+          199900.0,
+          250100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "33_25_1_2"
+      },
+      "expected": {
+        "extent": [
+          -550100.0,
+          -499900.0,
+          199900.0,
+          250100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "33_31_2_1"
+      },
+      "expected": {
+        "extent": [
+          -100.0,
+          50100.0,
+          249900.0,
+          300100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "33_37_2_2"
+      },
+      "expected": {
+        "extent": [
+          649900.0,
+          700100.0,
+          249900.0,
+          300100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "33_44_1_1"
+      },
+      "expected": {
+        "extent": [
+          1299900.0,
+          1350100.0,
+          199900.0,
+          250100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "33_50_1_2"
+      },
+      "expected": {
+        "extent": [
+          1949900.0,
+          2000100.0,
+          199900.0,
+          250100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "33_56_2_1"
+      },
+      "expected": {
+        "extent": [
+          2499900.0,
+          2550100.0,
+          249900.0,
+          300100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "34_17_2_2"
+      },
+      "expected": {
+        "extent": [
+          -1350100.0,
+          -1299900.0,
+          349900.0,
+          400100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "34_24_1_1"
+      },
+      "expected": {
+        "extent": [
+          -700100.0,
+          -649900.0,
+          299900.0,
+          350100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "34_30_1_2"
+      },
+      "expected": {
+        "extent": [
+          -50100.0,
+          100.0,
+          299900.0,
+          350100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "34_36_2_1"
+      },
+      "expected": {
+        "extent": [
+          499900.0,
+          550100.0,
+          349900.0,
+          400100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "34_42_2_2"
+      },
+      "expected": {
+        "extent": [
+          1149900.0,
+          1200100.0,
+          349900.0,
+          400100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "34_49_1_1"
+      },
+      "expected": {
+        "extent": [
+          1799900.0,
+          1850100.0,
+          299900.0,
+          350100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "34_55_1_2"
+      },
+      "expected": {
+        "extent": [
+          2449900.0,
+          2500100.0,
+          299900.0,
+          350100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "35_16_2_1"
+      },
+      "expected": {
+        "extent": [
+          -1500100.0,
+          -1449900.0,
+          449900.0,
+          500100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "35_22_2_2"
+      },
+      "expected": {
+        "extent": [
+          -850100.0,
+          -799900.0,
+          449900.0,
+          500100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "35_29_1_1"
+      },
+      "expected": {
+        "extent": [
+          -200100.0,
+          -149900.0,
+          399900.0,
+          450100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "35_35_1_2"
+      },
+      "expected": {
+        "extent": [
+          449900.0,
+          500100.0,
+          399900.0,
+          450100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "35_41_2_1"
+      },
+      "expected": {
+        "extent": [
+          999900.0,
+          1050100.0,
+          449900.0,
+          500100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "35_47_2_2"
+      },
+      "expected": {
+        "extent": [
+          1649900.0,
+          1700100.0,
+          449900.0,
+          500100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "35_54_1_1"
+      },
+      "expected": {
+        "extent": [
+          2299900.0,
+          2350100.0,
+          399900.0,
+          450100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "36_14_2_1"
+      },
+      "expected": {
+        "extent": [
+          -1700100.0,
+          -1649900.0,
+          549900.0,
+          600100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "36_20_2_2"
+      },
+      "expected": {
+        "extent": [
+          -1050100.0,
+          -999900.0,
+          549900.0,
+          600100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "36_27_1_1"
+      },
+      "expected": {
+        "extent": [
+          -400100.0,
+          -349900.0,
+          499900.0,
+          550100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "36_33_1_2"
+      },
+      "expected": {
+        "extent": [
+          249900.0,
+          300100.0,
+          499900.0,
+          550100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "36_39_2_1"
+      },
+      "expected": {
+        "extent": [
+          799900.0,
+          850100.0,
+          549900.0,
+          600100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "36_45_2_2"
+      },
+      "expected": {
+        "extent": [
+          1449900.0,
+          1500100.0,
+          549900.0,
+          600100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "36_52_1_1"
+      },
+      "expected": {
+        "extent": [
+          2099900.0,
+          2150100.0,
+          499900.0,
+          550100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "37_14_1_2"
+      },
+      "expected": {
+        "extent": [
+          -1650100.0,
+          -1599900.0,
+          599900.0,
+          650100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "37_20_2_1"
+      },
+      "expected": {
+        "extent": [
+          -1100100.0,
+          -1049900.0,
+          649900.0,
+          700100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "37_26_2_2"
+      },
+      "expected": {
+        "extent": [
+          -450100.0,
+          -399900.0,
+          649900.0,
+          700100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "37_33_1_1"
+      },
+      "expected": {
+        "extent": [
+          199900.0,
+          250100.0,
+          599900.0,
+          650100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "37_39_1_2"
+      },
+      "expected": {
+        "extent": [
+          849900.0,
+          900100.0,
+          599900.0,
+          650100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "37_45_2_1"
+      },
+      "expected": {
+        "extent": [
+          1399900.0,
+          1450100.0,
+          649900.0,
+          700100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "37_51_2_2"
+      },
+      "expected": {
+        "extent": [
+          2049900.0,
+          2100100.0,
+          649900.0,
+          700100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "38_12_2_2"
+      },
+      "expected": {
+        "extent": [
+          -1850100.0,
+          -1799900.0,
+          749900.0,
+          800100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "38_19_1_1"
+      },
+      "expected": {
+        "extent": [
+          -1200100.0,
+          -1149900.0,
+          699900.0,
+          750100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "38_25_1_2"
+      },
+      "expected": {
+        "extent": [
+          -550100.0,
+          -499900.0,
+          699900.0,
+          750100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "38_31_2_1"
+      },
+      "expected": {
+        "extent": [
+          -100.0,
+          50100.0,
+          749900.0,
+          800100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "38_37_2_2"
+      },
+      "expected": {
+        "extent": [
+          649900.0,
+          700100.0,
+          749900.0,
+          800100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "38_44_1_1"
+      },
+      "expected": {
+        "extent": [
+          1299900.0,
+          1350100.0,
+          699900.0,
+          750100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "38_50_1_2"
+      },
+      "expected": {
+        "extent": [
+          1949900.0,
+          2000100.0,
+          699900.0,
+          750100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "39_11_1_2"
+      },
+      "expected": {
+        "extent": [
+          -1950100.0,
+          -1899900.0,
+          799900.0,
+          850100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "39_18_1_2"
+      },
+      "expected": {
+        "extent": [
+          -1250100.0,
+          -1199900.0,
+          799900.0,
+          850100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "39_24_2_1"
+      },
+      "expected": {
+        "extent": [
+          -700100.0,
+          -649900.0,
+          849900.0,
+          900100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "39_30_2_2"
+      },
+      "expected": {
+        "extent": [
+          -50100.0,
+          100.0,
+          849900.0,
+          900100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "39_37_1_1"
+      },
+      "expected": {
+        "extent": [
+          599900.0,
+          650100.0,
+          799900.0,
+          850100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "39_43_1_2"
+      },
+      "expected": {
+        "extent": [
+          1249900.0,
+          1300100.0,
+          799900.0,
+          850100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "39_49_2_1"
+      },
+      "expected": {
+        "extent": [
+          1799900.0,
+          1850100.0,
+          849900.0,
+          900100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "40_08_2_2"
+      },
+      "expected": {
+        "extent": [
+          -2250100.0,
+          -2199900.0,
+          949900.0,
+          1000100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "40_15_1_1"
+      },
+      "expected": {
+        "extent": [
+          -1600100.0,
+          -1549900.0,
+          899900.0,
+          950100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "40_27_2_1"
+      },
+      "expected": {
+        "extent": [
+          -400100.0,
+          -349900.0,
+          949900.0,
+          1000100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "40_33_2_2"
+      },
+      "expected": {
+        "extent": [
+          249900.0,
+          300100.0,
+          949900.0,
+          1000100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "40_40_1_1"
+      },
+      "expected": {
+        "extent": [
+          899900.0,
+          950100.0,
+          899900.0,
+          950100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "40_46_1_2"
+      },
+      "expected": {
+        "extent": [
+          1549900.0,
+          1600100.0,
+          899900.0,
+          950100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "40_52_2_1"
+      },
+      "expected": {
+        "extent": [
+          2099900.0,
+          2150100.0,
+          949900.0,
+          1000100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "41_11_1_1"
+      },
+      "expected": {
+        "extent": [
+          -2000100.0,
+          -1949900.0,
+          999900.0,
+          1050100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "41_26_2_1"
+      },
+      "expected": {
+        "extent": [
+          -500100.0,
+          -449900.0,
+          1049900.0,
+          1100100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "41_32_2_2"
+      },
+      "expected": {
+        "extent": [
+          149900.0,
+          200100.0,
+          1049900.0,
+          1100100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "41_39_1_1"
+      },
+      "expected": {
+        "extent": [
+          799900.0,
+          850100.0,
+          999900.0,
+          1050100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "41_45_1_2"
+      },
+      "expected": {
+        "extent": [
+          1449900.0,
+          1500100.0,
+          999900.0,
+          1050100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "41_51_2_1"
+      },
+      "expected": {
+        "extent": [
+          1999900.0,
+          2050100.0,
+          1049900.0,
+          1100100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "42_09_2_2"
+      },
+      "expected": {
+        "extent": [
+          -2150100.0,
+          -2099900.0,
+          1149900.0,
+          1200100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "42_27_2_2"
+      },
+      "expected": {
+        "extent": [
+          -350100.0,
+          -299900.0,
+          1149900.0,
+          1200100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "42_34_1_1"
+      },
+      "expected": {
+        "extent": [
+          299900.0,
+          350100.0,
+          1099900.0,
+          1150100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "42_40_1_2"
+      },
+      "expected": {
+        "extent": [
+          949900.0,
+          1000100.0,
+          1099900.0,
+          1150100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "42_46_2_1"
+      },
+      "expected": {
+        "extent": [
+          1499900.0,
+          1550100.0,
+          1149900.0,
+          1200100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "42_52_2_2"
+      },
+      "expected": {
+        "extent": [
+          2149900.0,
+          2200100.0,
+          1149900.0,
+          1200100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "43_25_1_1"
+      },
+      "expected": {
+        "extent": [
+          -600100.0,
+          -549900.0,
+          1199900.0,
+          1250100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "43_31_1_2"
+      },
+      "expected": {
+        "extent": [
+          49900.0,
+          100100.0,
+          1199900.0,
+          1250100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "43_37_2_1"
+      },
+      "expected": {
+        "extent": [
+          599900.0,
+          650100.0,
+          1249900.0,
+          1300100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "43_43_2_2"
+      },
+      "expected": {
+        "extent": [
+          1249900.0,
+          1300100.0,
+          1249900.0,
+          1300100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "43_50_1_1"
+      },
+      "expected": {
+        "extent": [
+          1899900.0,
+          1950100.0,
+          1199900.0,
+          1250100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "44_23_2_2"
+      },
+      "expected": {
+        "extent": [
+          -750100.0,
+          -699900.0,
+          1349900.0,
+          1400100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "44_30_1_1"
+      },
+      "expected": {
+        "extent": [
+          -100100.0,
+          -49900.0,
+          1299900.0,
+          1350100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "44_36_1_2"
+      },
+      "expected": {
+        "extent": [
+          549900.0,
+          600100.0,
+          1299900.0,
+          1350100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "44_42_2_1"
+      },
+      "expected": {
+        "extent": [
+          1099900.0,
+          1150100.0,
+          1349900.0,
+          1400100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "44_48_2_2"
+      },
+      "expected": {
+        "extent": [
+          1749900.0,
+          1800100.0,
+          1349900.0,
+          1400100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "45_06_1_2"
+      },
+      "expected": {
+        "extent": [
+          -2450100.0,
+          -2399900.0,
+          1399900.0,
+          1450100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "45_28_2_2"
+      },
+      "expected": {
+        "extent": [
+          -250100.0,
+          -199900.0,
+          1449900.0,
+          1500100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "45_35_1_1"
+      },
+      "expected": {
+        "extent": [
+          399900.0,
+          450100.0,
+          1399900.0,
+          1450100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "45_41_1_2"
+      },
+      "expected": {
+        "extent": [
+          1049900.0,
+          1100100.0,
+          1399900.0,
+          1450100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "45_47_2_1"
+      },
+      "expected": {
+        "extent": [
+          1599900.0,
+          1650100.0,
+          1449900.0,
+          1500100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "46_04_2_2"
+      },
+      "expected": {
+        "extent": [
+          -2650100.0,
+          -2599900.0,
+          1549900.0,
+          1600100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "46_27_1_2"
+      },
+      "expected": {
+        "extent": [
+          -350100.0,
+          -299900.0,
+          1499900.0,
+          1550100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "46_33_2_1"
+      },
+      "expected": {
+        "extent": [
+          199900.0,
+          250100.0,
+          1549900.0,
+          1600100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "46_39_2_2"
+      },
+      "expected": {
+        "extent": [
+          849900.0,
+          900100.0,
+          1549900.0,
+          1600100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "46_46_1_1"
+      },
+      "expected": {
+        "extent": [
+          1499900.0,
+          1550100.0,
+          1499900.0,
+          1550100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "46_52_1_2"
+      },
+      "expected": {
+        "extent": [
+          2149900.0,
+          2200100.0,
+          1499900.0,
+          1550100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "47_27_1_1"
+      },
+      "expected": {
+        "extent": [
+          -400100.0,
+          -349900.0,
+          1599900.0,
+          1650100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "47_33_1_2"
+      },
+      "expected": {
+        "extent": [
+          249900.0,
+          300100.0,
+          1599900.0,
+          1650100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "47_39_2_1"
+      },
+      "expected": {
+        "extent": [
+          799900.0,
+          850100.0,
+          1649900.0,
+          1700100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "47_45_2_2"
+      },
+      "expected": {
+        "extent": [
+          1449900.0,
+          1500100.0,
+          1649900.0,
+          1700100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "48_04_2_2"
+      },
+      "expected": {
+        "extent": [
+          -2650100.0,
+          -2599900.0,
+          1749900.0,
+          1800100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "48_30_1_2"
+      },
+      "expected": {
+        "extent": [
+          -50100.0,
+          100.0,
+          1699900.0,
+          1750100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "48_36_2_1"
+      },
+      "expected": {
+        "extent": [
+          499900.0,
+          550100.0,
+          1749900.0,
+          1800100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "48_42_2_2"
+      },
+      "expected": {
+        "extent": [
+          1149900.0,
+          1200100.0,
+          1749900.0,
+          1800100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "49_04_1_1"
+      },
+      "expected": {
+        "extent": [
+          -2700100.0,
+          -2649900.0,
+          1799900.0,
+          1850100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "49_30_1_2"
+      },
+      "expected": {
+        "extent": [
+          -50100.0,
+          100.0,
+          1799900.0,
+          1850100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "49_36_2_1"
+      },
+      "expected": {
+        "extent": [
+          499900.0,
+          550100.0,
+          1849900.0,
+          1900100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "49_42_2_2"
+      },
+      "expected": {
+        "extent": [
+          1149900.0,
+          1200100.0,
+          1849900.0,
+          1900100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "50_30_2_1"
+      },
+      "expected": {
+        "extent": [
+          -100100.0,
+          -49900.0,
+          1949900.0,
+          2000100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "50_36_2_2"
+      },
+      "expected": {
+        "extent": [
+          549900.0,
+          600100.0,
+          1949900.0,
+          2000100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "50_43_1_1"
+      },
+      "expected": {
+        "extent": [
+          1199900.0,
+          1250100.0,
+          1899900.0,
+          1950100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "51_31_2_1"
+      },
+      "expected": {
+        "extent": [
+          -100.0,
+          50100.0,
+          2049900.0,
+          2100100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "51_37_2_2"
+      },
+      "expected": {
+        "extent": [
+          649900.0,
+          700100.0,
+          2049900.0,
+          2100100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "52_32_2_1"
+      },
+      "expected": {
+        "extent": [
+          99900.0,
+          150100.0,
+          2149900.0,
+          2200100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "53_08_2_1"
+      },
+      "expected": {
+        "extent": [
+          -2300100.0,
+          -2249900.0,
+          2249900.0,
+          2300100.0
+        ],
+        "dim": [
+          25100,
+          25100
+        ]
+      },
+      "source": "VRT placement"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "61_15_1_1"
+      },
+      "expected": {
+        "extent": [
+          -1600100.0,
+          -1549898.0,
+          2999898.0,
+          3050100.0
+        ],
+        "dim": [
+          25101,
+          25101
+        ]
+      },
+      "source": "VRT placement",
+      "known_difference": {
+        "value": {
+          "extent": [
+            -1600100.0,
+            -1549900.0,
+            2999900.0,
+            3050100.0
+          ],
+          "dim": [
+            25100,
+            25100
+          ]
+        },
+        "reason": "this PGC tile is 25101 px, one pixel more than every other tile; the spec's rule gives 25100"
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "61_15_1_2"
+      },
+      "expected": {
+        "extent": [
+          -1550100.0,
+          -1499898.0,
+          2999898.0,
+          3050100.0
+        ],
+        "dim": [
+          25101,
+          25101
+        ]
+      },
+      "source": "VRT placement",
+      "known_difference": {
+        "value": {
+          "extent": [
+            -1550100.0,
+            -1499900.0,
+            2999900.0,
+            3050100.0
+          ],
+          "dim": [
+            25100,
+            25100
+          ]
+        },
+        "reason": "this PGC tile is 25101 px, one pixel more than every other tile; the spec's rule gives 25100"
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "61_15_2_1"
+      },
+      "expected": {
+        "extent": [
+          -1600100.0,
+          -1549898.0,
+          3049898.0,
+          3100100.0
+        ],
+        "dim": [
+          25101,
+          25101
+        ]
+      },
+      "source": "VRT placement",
+      "known_difference": {
+        "value": {
+          "extent": [
+            -1600100.0,
+            -1549900.0,
+            3049900.0,
+            3100100.0
+          ],
+          "dim": [
+            25100,
+            25100
+          ]
+        },
+        "reason": "this PGC tile is 25101 px, one pixel more than every other tile; the spec's rule gives 25100"
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "61_15_2_2"
+      },
+      "expected": {
+        "extent": [
+          -1550100.0,
+          -1499898.0,
+          3049898.0,
+          3100100.0
+        ],
+        "dim": [
+          25101,
+          25101
+        ]
+      },
+      "source": "VRT placement",
+      "known_difference": {
+        "value": {
+          "extent": [
+            -1550100.0,
+            -1499900.0,
+            3049900.0,
+            3100100.0
+          ],
+          "dim": [
+            25100,
+            25100
+          ]
+        },
+        "reason": "this PGC tile is 25101 px, one pixel more than every other tile; the spec's rule gives 25100"
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "62_15_1_1"
+      },
+      "expected": {
+        "extent": [
+          -1600100.0,
+          -1549898.0,
+          3099898.0,
+          3150100.0
+        ],
+        "dim": [
+          25101,
+          25101
+        ]
+      },
+      "source": "VRT placement",
+      "known_difference": {
+        "value": {
+          "extent": [
+            -1600100.0,
+            -1549900.0,
+            3099900.0,
+            3150100.0
+          ],
+          "dim": [
+            25100,
+            25100
+          ]
+        },
+        "reason": "this PGC tile is 25101 px, one pixel more than every other tile; the spec's rule gives 25100"
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "62_15_2_1"
+      },
+      "expected": {
+        "extent": [
+          -1600100.0,
+          -1549898.0,
+          3149898.0,
+          3200100.0
+        ],
+        "dim": [
+          25101,
+          25101
+        ]
+      },
+      "source": "VRT placement",
+      "known_difference": {
+        "value": {
+          "extent": [
+            -1600100.0,
+            -1549900.0,
+            3149900.0,
+            3200100.0
+          ],
+          "dim": [
+            25100,
+            25100
+          ]
+        },
+        "reason": "this PGC tile is 25101 px, one pixel more than every other tile; the spec's rule gives 25100"
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "63_13_2_1"
+      },
+      "expected": {
+        "extent": [
+          -1800100.0,
+          -1749898.0,
+          3249898.0,
+          3300100.0
+        ],
+        "dim": [
+          25101,
+          25101
+        ]
+      },
+      "source": "VRT placement",
+      "known_difference": {
+        "value": {
+          "extent": [
+            -1800100.0,
+            -1749900.0,
+            3249900.0,
+            3300100.0
+          ],
+          "dim": [
+            25100,
+            25100
+          ]
+        },
+        "reason": "this PGC tile is 25101 px, one pixel more than every other tile; the spec's rule gives 25100"
+      }
+    },
+    {
+      "op": "domain_size",
+      "input": {},
+      "expected": {
+        "count": 5788
+      },
+      "source": "VRT sources"
+    },
+    {
+      "op": "in_domain",
+      "input": {
+        "id": "06_37_2_1"
+      },
+      "expected": {
+        "value": true
+      },
+      "source": "VRT sources"
+    },
+    {
+      "op": "in_domain",
+      "input": {
+        "id": "06_37_2_2"
+      },
+      "expected": {
+        "value": true
+      },
+      "source": "VRT sources"
+    },
+    {
+      "op": "in_domain",
+      "input": {
+        "id": "99_99_1_1"
+      },
+      "expected": {
+        "value": false
+      },
+      "source": "VRT sources"
+    },
+    {
+      "op": "in_domain",
+      "input": {
+        "id": "06_37_3_1"
+      },
+      "expected": {
+        "value": false
+      },
+      "source": "VRT sources"
+    }
+  ]
+}

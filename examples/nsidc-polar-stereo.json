@@ -97,7 +97,7 @@
       "The ID template is crsgrid's own; NSIDC names grids by product (psn25 / pss25 files), not by a scheme.",
       "Distinctive for crsgrid: an untiled grid (the common 'one CRS, one extent, one resolution' case), per-instance extents, and deprecated EPSG codes the linter should point at their successors.",
       "superseded_by records NSIDC's guidance that new products use EPSG:3413/3976. EPSG itself has not deprecated 3411/3412 (EPSG v11.022, PROJ 9.5.1 and 9.8.1), so a lint should say 'superseded by NSIDC', not 'deprecated'.",
-      "The same grid numbers in the two datums are different grids: the published corner coordinates are the Hughes 1980 values, and under WGS 84 the corners move by about 0.001 degree (roughly 100 m). An alignment lint must not report a 3411 grid and a 3413 grid as aligned."
+      "The same grid numbers in the two datums are different grids: the published corner coordinates are the Hughes 1980 values, and under WGS 84 the same numbers sit up to 150 m away on the ground (125 m in the south). An alignment lint must not report a 3411 grid and a 3413 grid as aligned."
     ]
   }
 }

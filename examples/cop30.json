@@ -1,0 +1,95 @@
+{
+  "crsgrid": "0.1",
+  "name": "cop30",
+  "title": "Copernicus DEM GLO-30 tiles (DSM_10, point registered, as on OpenTopography)",
+  "description": "1 degree lon/lat tiles, pixel-is-point (3601 rows), with fewer columns poleward: 1 arc second in x below 50 degrees, then 1.5, 2, 3, 5, 10.",
+  "family": {
+    "crs": {
+      "authority": "OGC:CRS84"
+    },
+    "assign": {
+      "method": "single"
+    }
+  },
+  "lattice": {
+    "units": "arcsec",
+    "unit_scale": 3600,
+    "quantum": 0.25,
+    "origin": [
+      -648000,
+      -324000
+    ],
+    "index": {
+      "row_direction": "up",
+      "edge_rule": "half_open",
+      "negative": false
+    },
+    "registration": "point",
+    "tiling": {
+      "tile_size": 3600
+    },
+    "x_scale": {
+      "by": "abs_y",
+      "bands": [
+        [
+          0,
+          180000,
+          1
+        ],
+        [
+          180000,
+          216000,
+          1.5
+        ],
+        [
+          216000,
+          252000,
+          2
+        ],
+        [
+          252000,
+          288000,
+          3
+        ],
+        [
+          288000,
+          306000,
+          5
+        ],
+        [
+          306000,
+          324000,
+          10
+        ]
+      ]
+    },
+    "resolutions": {
+      "listed": [
+        1
+      ]
+    }
+  },
+  "domain": {
+    "list": {
+      "source": "https://opentopography.s3.sdsc.edu/raster/COP30/COP30_hh.vrt",
+      "format": "gdal_vrt",
+      "pattern": "(?P<id>Copernicus_DSM_10_[NS]\\d\\d_00_[EW]\\d{3}_00_DEM)\\.tif",
+      "origin": "Copernicus DEM GLO-30 tiles as served by OpenTopography (sds::cop30()); not pinnable, retrieved 2026-10-29"
+    }
+  },
+  "ids": {
+    "template": "Copernicus_DSM_10_{ymin/3600:02!sign=N,S}_00_{xmin/3600:03!sign=E,W}_00_DEM"
+  },
+  "provenance": {
+    "source": "https://opentopography.s3.sdsc.edu/raster/COP30/COP30_hh.vrt",
+    "derived_from": "placement of all 26475 sources in the VRT, tools/fixtures-vrt.py",
+    "notes": [
+      "Lattice in arcseconds (unit_scale 3600) so every edge and half pixel is exact; 0.25 arcsec is the smallest step (half of a 1.5 arcsec pixel).",
+      "Width bands use |latitude of the tile centre|: a tile covering 50-51S is in the 50-60 band, 49-50S is not.",
+      "Pixel-is-point: tile N73 W030 has its first pixel centre at exactly 30W 74N and 1201 x 3601 pixels; its footprint is the 1 degree cell padded by half a pixel (1.5 arcsec in x, 0.5 in y). Neighbouring tiles share their edge row and column.",
+      "The VRT works without a clean spec: gdalbuildvrt upsamples every tile to a uniform 1 arcsec grid with fractional DstRects (residue 0.00004 px), and clips the 21 tiles at 180W to its own west edge (-180 - 0.5 arcsec) with a fractional SrcRect offset.",
+      "Coverage is land only: 26475 tiles from 90S to the 83N row; none north of 84N.",
+      "This is the OpenTopography 'DSM_10' point-registered product. Other distributions of Copernicus DEM (e.g. the Copernicus_DSM_COG_10_... COGs) may use a different pixel layout; not checked here, so they would need their own fixtures."
+    ]
+  }
+}

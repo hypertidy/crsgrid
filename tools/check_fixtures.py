@@ -88,6 +88,28 @@ def template_parser(template, numeric, letters=()):
     return parse
 
 
+# -- ID field expressions -----------------------------------------------------
+
+def expr(src, env):
+    import ast
+    ops = {ast.Add: lambda a, b: a + b, ast.Sub: lambda a, b: a - b, ast.Mult: lambda a, b: a * b,
+           ast.FloorDiv: lambda a, b: a // b, ast.Mod: lambda a, b: a % b}
+
+    def ev(n):
+        if isinstance(n, ast.Expression):
+            return ev(n.body)
+        if isinstance(n, ast.BinOp) and type(n.op) in ops:
+            return ops[type(n.op)](ev(n.left), ev(n.right))
+        if isinstance(n, ast.UnaryOp) and isinstance(n.op, ast.USub):
+            return -ev(n.operand)
+        if isinstance(n, ast.Constant) and isinstance(n.value, int):
+            return n.value
+        if isinstance(n, ast.Name):
+            return env[n.id]
+        raise ValueError(f"unsupported expression {src!r}")
+    return ev(ast.parse(src, mode="eval"))
+
+
 # -- polygons ------------------------------------------------------------------
 
 @lru_cache(None)
@@ -154,13 +176,21 @@ def mgrs_cell(zone, band, e, n, inverse):
 
 
 @lru_cache(None)
-def id_list(url, column):
-    import pyarrow.parquet as pq
+def id_list(url, column=None, format="parquet", pattern=None):
     CACHE.mkdir(parents=True, exist_ok=True)
     path = CACHE / re.sub(r"[^\w.]+", "_", url)
     if not path.exists():
         urllib.request.urlretrieve(url, path)
+    if format == "gdal_vrt":
+        rx = re.compile(pattern)
+        names = re.findall(r"<SourceFilename[^>]*>([^<]*)<", path.read_text())
+        return frozenset(m.group("id") for m in map(rx.search, names) if m)
+    import pyarrow.parquet as pq
     return frozenset(pq.read_table(path).column(column).to_pylist())
+
+
+def domain_ids(dl):
+    return id_list(dl["source"], dl.get("column"), dl.get("format", "parquet"), dl.get("pattern"))
 
 
 # -- the grid ------------------------------------------------------------------
@@ -172,6 +202,9 @@ class Grid:
         self.spec = spec
         fam, lat = spec["family"], spec["lattice"]
         self.q = lat["quantum"]
+        self.us = lat.get("unit_scale", 1)
+        self.point = lat.get("registration", "area") == "point"
+        self.xbands = lat.get("x_scale", {}).get("bands")
         self.x0, self.y0 = lat["origin"]
         self.up = lat["index"]["row_direction"] == "up"
         self.negative = lat["index"].get("negative", True)
@@ -180,17 +213,21 @@ class Grid:
         self.names = self.res.get("names", {})
         self.table = fam.get("instances")
         self.params = fam.get("params", {})
-        if not self.table:
+        self.single = not self.table and not self.params
+        if not self.table and not self.single:
             self.key_parse = template_parser(fam["instance_key"],
                                              {k for k, p in self.params.items() if p["type"] != "string"})
         ids = spec["ids"]
-        numeric = self.NUMERIC | {k for k, p in self.params.items() if p["type"] != "string"}
+        numeric = (self.NUMERIC | {k for k, p in self.params.items() if p["type"] != "string"}
+                   | set(ids.get("fields", {})))
         self.codec = ids.get("codec")
         letters = {"band", "e100k", "n100k"} if self.codec == "mgrs" else ()
         self.id_parsers = [template_parser(t, numeric, letters) for t in [ids["template"]] + ids.get("parse_aliases", [])]
 
     # instances: a context dict of template fields
-    def instance(self, key):
+    def instance(self, key=""):
+        if self.single:
+            return {"instance": key}
         if self.table:
             return {"instance": key, **self.table[key]}
         vals = self.key_parse(key)
@@ -203,6 +240,8 @@ class Grid:
         return {"instance": key, **params}
 
     def instances(self):
+        if self.single:
+            return [self.instance()]
         if self.table:
             return [self.instance(k) for k in self.spec["family"]["assign"].get("order", self.table)]
         raise NotImplementedError("enumerating formula instances")
@@ -292,9 +331,11 @@ class Grid:
                 _, lat = self.to_xy(t["ctx"]).transform(xmin + t["ts"] / 2, ymin + t["ts"] / 2, direction="INVERSE")
             extra = {"band": band_of(lat), "e100k": e, "n100k": n}
         name = {v: k for k, v in self.names.items()}.get(t["res"], "")
-        return fmt(self.spec["ids"]["template"],
-                   {**t["ctx"], "res": t["res"], "name": name, "tiling": t["tiling"],
-                    "col": t["col"], "row": t["row"], "xmin": xmin, "ymin": ymin, **extra})
+        env = {**t["ctx"], "res": t["res"], "name": name, "tiling": t["tiling"],
+               "col": t["col"], "row": t["row"], "xmin": xmin, "ymin": ymin, **extra}
+        for k, e in self.spec["ids"].get("fields", {}).items():
+            env[k] = expr(e, env)
+        return fmt(self.spec["ids"]["template"], env)
 
     def parse_id(self, s, domain=True):
         for parse in self.id_parsers:
@@ -311,7 +352,7 @@ class Grid:
                                                lambda x, y: tr.transform(x, y, direction="INVERSE"))
                 v["instance"] = ctx["instance"]
             else:
-                ctx = self.instance(v["instance"])
+                ctx = self.instance(v.get("instance", ""))
             if "tiling" not in self.spec["lattice"]:   # untiled: the ID names an instance raster
                 self.check_res(v["res"])
                 ext = self.domain_extent(ctx)
@@ -319,6 +360,8 @@ class Grid:
                     raise SpecError("not_aligned")
                 return {"ctx": ctx, "res": v["res"], "untiled": True, "extent": ext}
             ts = self.tile_size(v.get("res"), v.get("tiling"))
+            for k, e in self.spec["ids"].get("recover", {}).items():
+                v[k] = expr(e, v)
             if "col" in v:
                 col, row = v["col"], v["row"]
             else:
@@ -330,6 +373,8 @@ class Grid:
             if self.codec == "mgrs":
                 t["band"] = v["band"]
                 t["id"] = fmt(self.spec["ids"]["template"], v)
+            else:
+                t["id"] = self.make_id(t)
             if domain:
                 self.check_domain(t)
             return t
@@ -346,7 +391,7 @@ class Grid:
     def check_domain(self, t):
         dom = self.spec.get("domain", {})
         if "list" in dom and t.get("id") is not None:
-            if t["id"] not in id_list(dom["list"]["source"], dom["list"].get("column")):
+            if t["id"] not in domain_ids(dom["list"]):
                 raise SpecError("outside_domain")
         if "min_corner" in dom:
             mx, my = (float(fmt(v, t["ctx"])) if isinstance(v, str) else v for v in dom["min_corner"])
@@ -362,9 +407,21 @@ class Grid:
     def domain_extent(self, ctx):
         return [float(fmt(v, ctx)) if isinstance(v, str) else v for v in self.spec["domain"]["extent"]]
 
-    def footprint(self, t):
+    def pixel(self, t, res):
+        """(x, y) pixel size in lattice units for tile t at base resolution res."""
+        fx = 1
+        if self.xbands:
+            _, _, ymin, ymax = self.extent(t["col"], t["row"], t["ts"])
+            yc = abs((ymin + ymax) / 2)
+            fx = next(f for lo, hi, f in self.xbands if lo <= yc < hi)
+        return res * fx, res
+
+    def footprint(self, t, res=None):
         xmin, xmax, ymin, ymax = self.extent(t["col"], t["row"], t["ts"])
         fp = self.spec["lattice"].get("footprint")
+        if self.point:
+            px, py = self.pixel(t, res)
+            return [xmin - px / 2, xmax + px / 2, ymin - py / 2, ymax + py / 2]
         if not fp:
             return [xmin, xmax, ymin, ymax]
         l, r, b, tp = fp.get("pad", [0, 0, 0, 0])
@@ -444,14 +501,17 @@ def run(case, g):
             if t.get("untiled"):
                 e = [num(v) for v in t["extent"]]
                 return {"extent": e, "dim": [round((e[1] - e[0]) / t["res"]), round((e[3] - e[2]) / t["res"])]}
-            res = t["res"] or i["res"]
-            ext = g.footprint(t)
-            if g.spec["lattice"].get("footprint"):
+            res = t["res"] or i.get("res") or g.res["listed"][0]
+            ext = g.footprint(t, res)
+            if g.point:
+                px, py = g.pixel(t, res)
+                dim = [round(t["ts"] / px) + 1, round(t["ts"] / py) + 1]
+            elif g.spec["lattice"].get("footprint"):
                 g.check_res(res, ext[1] - ext[0])   # pixels must fit the footprint, not the cell
-                px = round((ext[1] - ext[0]) / res)
+                dim = [round((ext[1] - ext[0]) / res), round((ext[3] - ext[2]) / res)]
             else:
-                px = g.tile_px(t["ts"], res)
-            out = {"extent": ext, "dim": [px, round((ext[3] - ext[2]) / res)]}
+                dim = [g.tile_px(t["ts"], res)] * 2
+            out = {"extent": [num(float(v) / g.us) if g.us != 1 else v for v in ext], "dim": dim}
             if "crs_authority" in case["expected"]:
                 out["crs_authority"] = fmt(g.spec["family"]["crs"]["authority"], t["ctx"])
             return out
@@ -499,8 +559,7 @@ def run(case, g):
             return {"x": (xmin + xmax) / 2, "y": (ymin + ymax) / 2,
                     "crs_authority": fmt(g.spec["family"]["crs"]["authority"], t["ctx"])}
         if op in ("domain_size", "in_domain"):
-            dl = g.spec["domain"]["list"]
-            ids = id_list(dl["source"], dl.get("column"))
+            ids = domain_ids(g.spec["domain"]["list"])
             return {"count": len(ids)} if op == "domain_size" else {"value": i["id"] in ids}
         if op == "scale_factor":
             ctx = g.assign(i["lon"], i["lat"])
@@ -517,7 +576,10 @@ def matches(got, want, tol):
     for k, w in want.items():
         v = got[k]
         if k in tol:
-            if abs(v - w) > tol[k]:
+            if isinstance(w, list):
+                if len(v) != len(w) or any(abs(a - b) > tol[k] for a, b in zip(v, w)):
+                    return False
+            elif abs(v - w) > tol[k]:
                 return False
         elif k == "ids" and isinstance(w, list):
             if sorted(v) != sorted(w):
