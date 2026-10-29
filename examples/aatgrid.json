@@ -1,0 +1,105 @@
+{
+  "crsgrid": "0.1",
+  "name": "aatgrid",
+  "title": "Australian Antarctic Territory grid (aatgrid v0.3)",
+  "description": "UTM south family with one lattice shared by every zone: origin 140000/20000, 720 px tiles at any resolution, aligned to Sentinel-2 10/20 m pixels.",
+  "family": {
+    "crs": {
+      "proj": "+proj=utm +zone={zone} +south +datum=WGS84 +units=m +no_defs",
+      "authority": "EPSG:327{zone:02}"
+    },
+    "params": {
+      "zone": {
+        "type": "integer",
+        "range": [
+          1,
+          60
+        ],
+        "description": "UTM zone number (southern hemisphere)"
+      }
+    },
+    "instance_key": "{zone:02}S",
+    "assign": {
+      "method": "lon_bands",
+      "param": "zone",
+      "lon_start": -180,
+      "width": 6,
+      "first": 1
+    }
+  },
+  "lattice": {
+    "units": "m",
+    "quantum": 1,
+    "origin": [
+      140000,
+      20000
+    ],
+    "index": {
+      "row_direction": "up",
+      "edge_rule": "half_open",
+      "negative": false
+    },
+    "tiling": {
+      "tile_px": 720
+    },
+    "resolutions": {
+      "listed": [
+        60,
+        20,
+        10
+      ],
+      "open": true,
+      "names": {
+        "L1": 60,
+        "L2": 10
+      }
+    }
+  },
+  "domain": {
+    "envelope": {
+      "max_scale_factor": 1.2
+    }
+  },
+  "ids": {
+    "template": "{instance}_R{res:04}_{col:04}_{row:04}",
+    "parse_aliases": [
+      "{instance}_{name}_{col:04}_{row:04}"
+    ],
+    "separator": "_"
+  },
+  "alignment": [
+    {
+      "target": "sentinel-2-mgrs",
+      "resolutions": [
+        10,
+        20
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "note": "S2 10 m and 20 m pixel lattices coincide with aatgrid's (verified against 132 MGRS codes, aatgrid R/mgrs.R)."
+    },
+    {
+      "target": "sentinel-2-mgrs",
+      "resolutions": [
+        60
+      ],
+      "offset": [
+        -20,
+        20
+      ],
+      "where": "southern zones",
+      "note": "aatgrid origin is 20 mod 60 on both axes; S2 60 m ulx is 0 mod 60 and uly is 40 mod 60 in southern zones (1e7 % 60 = 40)."
+    }
+  ],
+  "provenance": {
+    "source": "https://github.com/mdsumner/aatgrid",
+    "version": "0.3.0 (0285afb)",
+    "notes": [
+      "Levels are not fixed: tile size is 720 * res for any res, and nesting between two resolutions is their ratio when it is an integer (aatgrid nesting_factor()).",
+      "negative = false follows the explorer ('negative indices do not exist'); the R functions themselves accept negative indices.",
+      "No lon/lat extent or zone list: the README's 42S-58S is stale, and crsgrid seeds domains from the user's motivation (AOI, purpose) rather than hardcoding limits. The 1.2 scale-factor envelope is the explorer's default view setting, kept as a default rather than a limit."
+    ]
+  }
+}

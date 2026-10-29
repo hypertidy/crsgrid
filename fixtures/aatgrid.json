@@ -1,0 +1,647 @@
+{
+  "spec": "examples/aatgrid.json",
+  "generator": "tools/fixtures-aatgrid.R",
+  "oracle": {
+    "package": "aatgrid 0.3.0 (0285afb)",
+    "proj": "9.8.1",
+    "terra": "1.9.54"
+  },
+  "cases": [
+    {
+      "op": "tile_at",
+      "input": {
+        "instance": "43S",
+        "x": 658400,
+        "y": 4340000,
+        "res": 60
+      },
+      "expected": {
+        "col": 12,
+        "row": 100,
+        "id": "43S_R0060_0012_0100"
+      },
+      "note": "both edges exactly"
+    },
+    {
+      "op": "tile_at",
+      "input": {
+        "instance": "43S",
+        "x": 658399,
+        "y": 4339999,
+        "res": 60
+      },
+      "expected": {
+        "col": 11,
+        "row": 99,
+        "id": "43S_R0060_0011_0099"
+      },
+      "note": "one quantum below both edges"
+    },
+    {
+      "op": "tile_at",
+      "input": {
+        "instance": "43S",
+        "x": 658401,
+        "y": 4340001,
+        "res": 60
+      },
+      "expected": {
+        "col": 12,
+        "row": 100,
+        "id": "43S_R0060_0012_0100"
+      },
+      "note": "one quantum above both edges"
+    },
+    {
+      "op": "tile_at",
+      "input": {
+        "instance": "43S",
+        "x": 680000,
+        "y": 4361600,
+        "res": 60
+      },
+      "expected": {
+        "col": 12,
+        "row": 100,
+        "id": "43S_R0060_0012_0100"
+      },
+      "note": "tile centre"
+    },
+    {
+      "op": "tile_at",
+      "input": {
+        "instance": "43S",
+        "x": 140000,
+        "y": 20000,
+        "res": 60
+      },
+      "expected": {
+        "col": 0,
+        "row": 0,
+        "id": "43S_R0060_0000_0000"
+      },
+      "note": "grid origin"
+    },
+    {
+      "op": "tile_at",
+      "input": {
+        "instance": "43S",
+        "x": 312800,
+        "y": 1460000,
+        "res": 20
+      },
+      "expected": {
+        "col": 12,
+        "row": 100,
+        "id": "43S_R0020_0012_0100"
+      },
+      "note": "both edges exactly"
+    },
+    {
+      "op": "tile_at",
+      "input": {
+        "instance": "43S",
+        "x": 312799,
+        "y": 1459999,
+        "res": 20
+      },
+      "expected": {
+        "col": 11,
+        "row": 99,
+        "id": "43S_R0020_0011_0099"
+      },
+      "note": "one quantum below both edges"
+    },
+    {
+      "op": "tile_at",
+      "input": {
+        "instance": "43S",
+        "x": 312801,
+        "y": 1460001,
+        "res": 20
+      },
+      "expected": {
+        "col": 12,
+        "row": 100,
+        "id": "43S_R0020_0012_0100"
+      },
+      "note": "one quantum above both edges"
+    },
+    {
+      "op": "tile_at",
+      "input": {
+        "instance": "43S",
+        "x": 320000,
+        "y": 1467200,
+        "res": 20
+      },
+      "expected": {
+        "col": 12,
+        "row": 100,
+        "id": "43S_R0020_0012_0100"
+      },
+      "note": "tile centre"
+    },
+    {
+      "op": "tile_at",
+      "input": {
+        "instance": "43S",
+        "x": 140000,
+        "y": 20000,
+        "res": 20
+      },
+      "expected": {
+        "col": 0,
+        "row": 0,
+        "id": "43S_R0020_0000_0000"
+      },
+      "note": "grid origin"
+    },
+    {
+      "op": "tile_at",
+      "input": {
+        "instance": "43S",
+        "x": 226400,
+        "y": 740000,
+        "res": 10
+      },
+      "expected": {
+        "col": 12,
+        "row": 100,
+        "id": "43S_R0010_0012_0100"
+      },
+      "note": "both edges exactly"
+    },
+    {
+      "op": "tile_at",
+      "input": {
+        "instance": "43S",
+        "x": 226399,
+        "y": 739999,
+        "res": 10
+      },
+      "expected": {
+        "col": 11,
+        "row": 99,
+        "id": "43S_R0010_0011_0099"
+      },
+      "note": "one quantum below both edges"
+    },
+    {
+      "op": "tile_at",
+      "input": {
+        "instance": "43S",
+        "x": 226401,
+        "y": 740001,
+        "res": 10
+      },
+      "expected": {
+        "col": 12,
+        "row": 100,
+        "id": "43S_R0010_0012_0100"
+      },
+      "note": "one quantum above both edges"
+    },
+    {
+      "op": "tile_at",
+      "input": {
+        "instance": "43S",
+        "x": 230000,
+        "y": 743600,
+        "res": 10
+      },
+      "expected": {
+        "col": 12,
+        "row": 100,
+        "id": "43S_R0010_0012_0100"
+      },
+      "note": "tile centre"
+    },
+    {
+      "op": "tile_at",
+      "input": {
+        "instance": "43S",
+        "x": 140000,
+        "y": 20000,
+        "res": 10
+      },
+      "expected": {
+        "col": 0,
+        "row": 0,
+        "id": "43S_R0010_0000_0000"
+      },
+      "note": "grid origin"
+    },
+    {
+      "op": "tile_at",
+      "input": {
+        "instance": "43S",
+        "x": 399200,
+        "y": 2180000,
+        "res": 30
+      },
+      "expected": {
+        "col": 12,
+        "row": 100,
+        "id": "43S_R0030_0012_0100"
+      },
+      "note": "both edges exactly; res 30 is not listed (open resolutions)"
+    },
+    {
+      "op": "tile_at",
+      "input": {
+        "instance": "43S",
+        "x": 399199,
+        "y": 2179999,
+        "res": 30
+      },
+      "expected": {
+        "col": 11,
+        "row": 99,
+        "id": "43S_R0030_0011_0099"
+      },
+      "note": "one quantum below both edges; res 30 is not listed (open resolutions)"
+    },
+    {
+      "op": "tile_at",
+      "input": {
+        "instance": "43S",
+        "x": 399201,
+        "y": 2180001,
+        "res": 30
+      },
+      "expected": {
+        "col": 12,
+        "row": 100,
+        "id": "43S_R0030_0012_0100"
+      },
+      "note": "one quantum above both edges; res 30 is not listed (open resolutions)"
+    },
+    {
+      "op": "tile_at",
+      "input": {
+        "instance": "43S",
+        "x": 410000,
+        "y": 2190800,
+        "res": 30
+      },
+      "expected": {
+        "col": 12,
+        "row": 100,
+        "id": "43S_R0030_0012_0100"
+      },
+      "note": "tile centre; res 30 is not listed (open resolutions)"
+    },
+    {
+      "op": "tile_at",
+      "input": {
+        "instance": "43S",
+        "x": 140000,
+        "y": 20000,
+        "res": 30
+      },
+      "expected": {
+        "col": 0,
+        "row": 0,
+        "id": "43S_R0030_0000_0000"
+      },
+      "note": "grid origin; res 30 is not listed (open resolutions)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "43S_R0060_0006_0114"
+      },
+      "expected": {
+        "extent": [399200, 442400, 4944800, 4988000],
+        "dim": [720, 720],
+        "crs_authority": "EPSG:32743"
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "55S_R0010_0040_0700"
+      },
+      "expected": {
+        "extent": [428000, 435200, 5060000, 5067200],
+        "dim": [720, 720],
+        "crs_authority": "EPSG:32755"
+      }
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "43S_R0020_0003_0001"
+      },
+      "expected": {
+        "extent": [183200, 197600, 34400, 48800],
+        "dim": [720, 720],
+        "crs_authority": "EPSG:32743"
+      }
+    },
+    {
+      "op": "tile_at_lonlat",
+      "input": {
+        "lon": 73.5,
+        "lat": -53.1,
+        "res": 60
+      },
+      "expected": {
+        "instance": "43S",
+        "x": 399570.376,
+        "y": 4115553.817,
+        "col": 6,
+        "row": 94,
+        "id": "43S_R0060_0006_0094"
+      },
+      "note": "Heard Island"
+    },
+    {
+      "op": "tile_at_lonlat",
+      "input": {
+        "lon": 73.5,
+        "lat": -53.1,
+        "res": 10
+      },
+      "expected": {
+        "instance": "43S",
+        "x": 399570.376,
+        "y": 4115553.817,
+        "col": 36,
+        "row": 568,
+        "id": "43S_R0010_0036_0568"
+      },
+      "note": "Heard Island"
+    },
+    {
+      "op": "tile_at_lonlat",
+      "input": {
+        "lon": 158.87,
+        "lat": -54.62,
+        "res": 60
+      },
+      "expected": {
+        "instance": "57S",
+        "x": 491605.686,
+        "y": 3947485.504,
+        "col": 8,
+        "row": 90,
+        "id": "57S_R0060_0008_0090"
+      },
+      "note": "Macquarie Island"
+    },
+    {
+      "op": "tile_at_lonlat",
+      "input": {
+        "lon": 158.87,
+        "lat": -54.62,
+        "res": 10
+      },
+      "expected": {
+        "instance": "57S",
+        "x": 491605.686,
+        "y": 3947485.504,
+        "col": 48,
+        "row": 545,
+        "id": "57S_R0010_0048_0545"
+      },
+      "note": "Macquarie Island"
+    },
+    {
+      "op": "tile_at_lonlat",
+      "input": {
+        "lon": 77.97,
+        "lat": -68.58,
+        "res": 60
+      },
+      "expected": {
+        "instance": "43S",
+        "x": 621006.189,
+        "y": 2389548.127,
+        "col": 11,
+        "row": 54,
+        "id": "43S_R0060_0011_0054"
+      },
+      "note": "Davis"
+    },
+    {
+      "op": "tile_at_lonlat",
+      "input": {
+        "lon": 77.97,
+        "lat": -68.58,
+        "res": 10
+      },
+      "expected": {
+        "instance": "43S",
+        "x": 621006.189,
+        "y": 2389548.127,
+        "col": 66,
+        "row": 329,
+        "id": "43S_R0010_0066_0329"
+      },
+      "note": "Davis"
+    },
+    {
+      "op": "tile_at_lonlat",
+      "input": {
+        "lon": 62.87,
+        "lat": -67.6,
+        "res": 60
+      },
+      "expected": {
+        "instance": "41S",
+        "x": 494471.697,
+        "y": 2501725.247,
+        "col": 8,
+        "row": 57,
+        "id": "41S_R0060_0008_0057"
+      },
+      "note": "Mawson"
+    },
+    {
+      "op": "tile_at_lonlat",
+      "input": {
+        "lon": 62.87,
+        "lat": -67.6,
+        "res": 10
+      },
+      "expected": {
+        "instance": "41S",
+        "x": 494471.697,
+        "y": 2501725.247,
+        "col": 49,
+        "row": 344,
+        "id": "41S_R0010_0049_0344"
+      },
+      "note": "Mawson"
+    },
+    {
+      "op": "tile_at_lonlat",
+      "input": {
+        "lon": 110.53,
+        "lat": -66.28,
+        "res": 60
+      },
+      "expected": {
+        "instance": "49S",
+        "x": 478902.611,
+        "y": 2648800.568,
+        "col": 7,
+        "row": 60,
+        "id": "49S_R0060_0007_0060"
+      },
+      "note": "Casey"
+    },
+    {
+      "op": "tile_at_lonlat",
+      "input": {
+        "lon": 110.53,
+        "lat": -66.28,
+        "res": 10
+      },
+      "expected": {
+        "instance": "49S",
+        "x": 478902.611,
+        "y": 2648800.568,
+        "col": 47,
+        "row": 365,
+        "id": "49S_R0010_0047_0365"
+      },
+      "note": "Casey"
+    },
+    {
+      "op": "children",
+      "input": {
+        "id": "43S_R0060_0006_0114",
+        "res": 10
+      },
+      "expected": {
+        "count": 36,
+        "ids": ["43S_R0010_0036_0684", "43S_R0010_0037_0684", "43S_R0010_0038_0684", "43S_R0010_0039_0684", "43S_R0010_0040_0684", "43S_R0010_0041_0684", "43S_R0010_0036_0685", "43S_R0010_0037_0685", "43S_R0010_0038_0685", "43S_R0010_0039_0685", "43S_R0010_0040_0685", "43S_R0010_0041_0685", "43S_R0010_0036_0686", "43S_R0010_0037_0686", "43S_R0010_0038_0686", "43S_R0010_0039_0686", "43S_R0010_0040_0686", "43S_R0010_0041_0686", "43S_R0010_0036_0687", "43S_R0010_0037_0687", "43S_R0010_0038_0687", "43S_R0010_0039_0687", "43S_R0010_0040_0687", "43S_R0010_0041_0687", "43S_R0010_0036_0688", "43S_R0010_0037_0688", "43S_R0010_0038_0688", "43S_R0010_0039_0688", "43S_R0010_0040_0688", "43S_R0010_0041_0688", "43S_R0010_0036_0689", "43S_R0010_0037_0689", "43S_R0010_0038_0689", "43S_R0010_0039_0689", "43S_R0010_0040_0689", "43S_R0010_0041_0689"]
+      },
+      "note": "nesting factor 6; ids ordered by row then col"
+    },
+    {
+      "op": "parent",
+      "input": {
+        "id": "43S_R0010_0041_0689",
+        "res": 60
+      },
+      "expected": {
+        "id": "43S_R0060_0006_0114"
+      }
+    },
+    {
+      "op": "children",
+      "input": {
+        "id": "43S_R0060_0006_0114",
+        "res": 20
+      },
+      "expected": {
+        "count": 9,
+        "ids": ["43S_R0020_0018_0342", "43S_R0020_0019_0342", "43S_R0020_0020_0342", "43S_R0020_0018_0343", "43S_R0020_0019_0343", "43S_R0020_0020_0343", "43S_R0020_0018_0344", "43S_R0020_0019_0344", "43S_R0020_0020_0344"]
+      },
+      "note": "nesting factor 3; ids ordered by row then col"
+    },
+    {
+      "op": "parent",
+      "input": {
+        "id": "43S_R0020_0020_0344",
+        "res": 60
+      },
+      "expected": {
+        "id": "43S_R0060_0006_0114"
+      }
+    },
+    {
+      "op": "children",
+      "input": {
+        "id": "43S_R0020_0006_0114",
+        "res": 10
+      },
+      "expected": {
+        "count": 4,
+        "ids": ["43S_R0010_0012_0228", "43S_R0010_0013_0228", "43S_R0010_0012_0229", "43S_R0010_0013_0229"]
+      },
+      "note": "nesting factor 2; ids ordered by row then col"
+    },
+    {
+      "op": "parent",
+      "input": {
+        "id": "43S_R0010_0013_0229",
+        "res": 20
+      },
+      "expected": {
+        "id": "43S_R0020_0006_0114"
+      }
+    },
+    {
+      "op": "children",
+      "input": {
+        "id": "43S_R0060_0006_0114",
+        "res": 25
+      },
+      "expected": {
+        "error": "nesting"
+      },
+      "note": "60 / 25 is not an integer"
+    },
+    {
+      "op": "parse",
+      "input": {
+        "id": "43S_R0060_0006_0114"
+      },
+      "expected": {
+        "instance": "43S",
+        "zone": 43,
+        "res": 60,
+        "col": 6,
+        "row": 114,
+        "canonical": "43S_R0060_0006_0114"
+      }
+    },
+    {
+      "op": "parse",
+      "input": {
+        "id": "43S_L1_0006_0114"
+      },
+      "expected": {
+        "instance": "43S",
+        "zone": 43,
+        "res": 60,
+        "col": 6,
+        "row": 114,
+        "canonical": "43S_R0060_0006_0114"
+      }
+    },
+    {
+      "op": "parse",
+      "input": {
+        "id": "43S_L2_0040_0700"
+      },
+      "expected": {
+        "instance": "43S",
+        "zone": 43,
+        "res": 10,
+        "col": 40,
+        "row": 700,
+        "canonical": "43S_R0010_0040_0700"
+      }
+    },
+    {
+      "op": "parse",
+      "input": {
+        "id": "07S_R0010_0001_0002"
+      },
+      "expected": {
+        "instance": "07S",
+        "zone": 7,
+        "res": 10,
+        "col": 1,
+        "row": 2,
+        "canonical": "07S_R0010_0001_0002"
+      }
+    }
+  ]
+}

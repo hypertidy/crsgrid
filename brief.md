@@ -30,11 +30,13 @@ UTM is a family with 120 instances. A single LAEA for one site is a family with 
 
 **Lattice.** origin (x0, y0) in CRS units, a resolution ladder, tile size in pixels, and level nesting ratios. Constraint: every tile edge is a whole number of pixels at every resolution in the ladder, and every level's tile edge is an integer multiple of the next. (aatgrid: 720 px, res {10,20,60} → L1 = 43.2 km, L2 = 7.2 km, 6×6 nesting. 720 is chosen because it's highly composite — that choice should be *explained* by the tool, not just made.)
 
-**Domain.** The region where the grid is valid/usable: an aligned extent in CRS units, plus an optional *validity envelope* (e.g. max scale-factor `k`, like the explorer's `kmax` 1.05–1.4 option, or max angular distortion). Domain is always snapped to the coarsest tile.
+**Domain.** The region where the grid is valid/usable: an aligned extent in CRS units, plus an optional *validity envelope* (e.g. max scale-factor `k`, like the explorer's `kmax` 1.05–1.4 option, or max angular distortion). Domain is always snapped to the coarsest tile. **No hardcoded limits:** the lattice is unbounded, and a domain is *seeded heuristically from the user's motivation* (an AOI, a purpose, a dataset) by the proposer, then edited. A spec may carry a domain as a record of that choice, never as a built-in cap. (aatgrid's hardcoded zone list went stale, which is the cautionary tale.)
 
 **ID scheme.** Template string over `{instance}{level}{col}{row}`, with zero-pad width derived from domain size, row direction (north-up vs south-up count) explicit, and the option of a compact/hierarchical encoding (quadkey-like, but base-N for N×N nesting).
 
 ## The spec (strawman)
+
+> **Superseded by `schema/crsgrid.schema.json` (v0.1 draft), with `examples/aatgrid.json` as the first worked case.** The main change: aatgrid v0.3 has no fixed levels. The invariant is `tile_px` (720), so tile size is `720 × res` for *any* resolution, and nesting is the ratio of two resolutions when it is an integer. The schema therefore has `tiling: {tile_px}` or `{tile_size}`, a listed (optionally open) set of resolutions, and optional resolution names (`L1 = 60`) instead of a `levels` list. The ID encodes the resolution (`43S_R0060_0006_0094`). Below is the original sketch, for the record.
 
 ```yaml
 crsgrid: 0.1
