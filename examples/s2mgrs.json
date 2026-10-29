@@ -1,0 +1,125 @@
+{
+  "crsgrid": "0.1",
+  "name": "s2mgrs",
+  "title": "Sentinel-2 tiling grid (MGRS 100 km squares, 109.8 km footprints)",
+  "description": "UTM north and south zones; tiles are MGRS 100 km squares, each produced as a 109.8 km footprint snapped to the 60 m pixel lattice, so neighbours overlap by 9.8 km. IDs are MGRS codes.",
+  "family": {
+    "crs": {
+      "authority": "EPSG:32{hemisphere!map=N:6,S:7}{zone:02}",
+      "proj": "+proj=utm +zone={zone} {hemisphere!map=N:,S:+south} +datum=WGS84 +units=m +no_defs"
+    },
+    "params": {
+      "zone": {
+        "type": "integer",
+        "range": [
+          1,
+          60
+        ]
+      },
+      "hemisphere": {
+        "type": "string",
+        "values": [
+          "N",
+          "S"
+        ]
+      }
+    },
+    "instance_key": "{zone:02}{hemisphere}",
+    "assign": {
+      "method": "utm_standard",
+      "zone": "zone",
+      "hemisphere": "hemisphere"
+    }
+  },
+  "lattice": {
+    "units": "m",
+    "quantum": 1,
+    "origin": [
+      0,
+      0
+    ],
+    "index": {
+      "row_direction": "up",
+      "edge_rule": "half_open",
+      "negative": false
+    },
+    "tiling": {
+      "tile_size": 100000
+    },
+    "footprint": {
+      "pad": [
+        0,
+        9800,
+        9800,
+        0
+      ],
+      "snap": {
+        "step": 60,
+        "origin": [
+          0,
+          "{hemisphere!map=N:0,S:10000000}"
+        ],
+        "corner": "top_left"
+      }
+    },
+    "resolutions": {
+      "listed": [
+        10,
+        20,
+        60
+      ]
+    }
+  },
+  "domain": {
+    "list": {
+      "source": "https://raw.githubusercontent.com/hypertidy/starc/3f04021/inst/extdata/valid_mgrs_sentinel2.parquet",
+      "column": "mgrs0",
+      "origin": "ESA Sentinel-2 tiling grid (KML), as tabulated in starc"
+    }
+  },
+  "ids": {
+    "template": "{zone}{band}{e100k}{n100k}",
+    "codec": "mgrs",
+    "parse_aliases": [
+      "{zone:02}{band}{e100k}{n100k}",
+      "T{zone}{band}{e100k}{n100k}",
+      "T{zone:02}{band}{e100k}{n100k}"
+    ]
+  },
+  "alignment": [
+    {
+      "target": "aatgrid",
+      "resolutions": [
+        10,
+        20
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "where": "southern zones"
+    },
+    {
+      "target": "aatgrid",
+      "resolutions": [
+        60
+      ],
+      "offset": [
+        20,
+        -20
+      ],
+      "where": "southern zones",
+      "note": "the reverse of aatgrid's [-20, 20]"
+    }
+  ],
+  "provenance": {
+    "source": "ESA Sentinel-2 tiling grid; footprint rule verified against real L2A items",
+    "derived_from": "aatgrid R/mgrs.R (rule verified exact on 132 codes) and the starc store, re-checked here by tools/fixtures-s2mgrs.R",
+    "notes": [
+      "Canonical IDs leave single-digit zones unpadded (8CMC), as in the ESA list and the archive's tile field; standard MGRS (GeographicLib) pads (08CMC). Both, and the T-prefixed product form (T8CMC), parse.",
+      "The footprint is not the 100 km square padded 4900 m on every side (as starc's R/aatgrid-mgrs.R comment says): the upper-left corner is the square's west/north edge snapped outward to the 60 m lattice, and the tile extends 109800 m east and south. All three band resolutions share that extent.",
+      "The 60 m snap lattice is anchored at the equator, so in southern zones northings are 40 mod 60 (1e7 % 60 = 40); this is why aatgrid's 60 m pixels are offset by 20 m.",
+      "Latitude bands C-X span 80S-84N; the polar caps (UPS) are not part of the Sentinel-2 grid."
+    ]
+  }
+}

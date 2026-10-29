@@ -1,0 +1,473 @@
+{
+  "spec": "examples/nsidc-polar-stereo.json",
+  "generator": "transcribed by hand from the NSIDC polar stereographic guide",
+  "oracle": {
+    "package": "NSIDC guide to polar stereographic projection (Tables 5-7), fetched 2026-10-29",
+    "proj": "n/a (published values)"
+  },
+  "cases": [
+    {
+      "op": "corner_lonlat",
+      "input": {
+        "instance": "north",
+        "corner": "upper_left"
+      },
+      "expected": {
+        "lon": 168.35,
+        "lat": 30.98
+      },
+      "tolerance": {
+        "lon": 0.0051,
+        "lat": 0.0051
+      },
+      "source": "NSIDC guide, Table 6",
+      "note": "published to 0.01 degree, longitude in [0, 360)"
+    },
+    {
+      "op": "corner_lonlat",
+      "input": {
+        "instance": "north-wgs84",
+        "corner": "upper_left"
+      },
+      "expected": {
+        "lon": 168.35,
+        "lat": 30.98
+      },
+      "tolerance": {
+        "lon": 0.0051,
+        "lat": 0.0051
+      },
+      "source": "NSIDC guide, Table 6",
+      "note": "published to 0.01 degree, longitude in [0, 360); published for the grid, checked against the WGS 84 CRS too"
+    },
+    {
+      "op": "corner_lonlat",
+      "input": {
+        "instance": "north",
+        "corner": "upper_right"
+      },
+      "expected": {
+        "lon": 102.34,
+        "lat": 31.37
+      },
+      "tolerance": {
+        "lon": 0.0051,
+        "lat": 0.0051
+      },
+      "source": "NSIDC guide, Table 6",
+      "note": "published to 0.01 degree, longitude in [0, 360)"
+    },
+    {
+      "op": "corner_lonlat",
+      "input": {
+        "instance": "north-wgs84",
+        "corner": "upper_right"
+      },
+      "expected": {
+        "lon": 102.34,
+        "lat": 31.37
+      },
+      "tolerance": {
+        "lon": 0.0051,
+        "lat": 0.0051
+      },
+      "source": "NSIDC guide, Table 6",
+      "note": "published to 0.01 degree, longitude in [0, 360); published for the grid, checked against the WGS 84 CRS too",
+      "known_difference": {
+        "value": {
+          "lon": 102.3391,
+          "lat": 31.3642
+        },
+        "reason": "the published corners are Hughes 1980 values; with the same grid numbers in WGS 84 (EPSG:3413) this corner rounds differently (about 0.001 degree, ~100 m)"
+      }
+    },
+    {
+      "op": "corner_lonlat",
+      "input": {
+        "instance": "north",
+        "corner": "lower_right"
+      },
+      "expected": {
+        "lon": 350.03,
+        "lat": 34.35
+      },
+      "tolerance": {
+        "lon": 0.0051,
+        "lat": 0.0051
+      },
+      "source": "NSIDC guide, Table 6",
+      "note": "published to 0.01 degree, longitude in [0, 360)"
+    },
+    {
+      "op": "corner_lonlat",
+      "input": {
+        "instance": "north-wgs84",
+        "corner": "lower_right"
+      },
+      "expected": {
+        "lon": 350.03,
+        "lat": 34.35
+      },
+      "tolerance": {
+        "lon": 0.0051,
+        "lat": 0.0051
+      },
+      "source": "NSIDC guide, Table 6",
+      "note": "published to 0.01 degree, longitude in [0, 360); published for the grid, checked against the WGS 84 CRS too",
+      "known_difference": {
+        "value": {
+          "lon": 350.0279,
+          "lat": 34.3444
+        },
+        "reason": "the published corners are Hughes 1980 values; with the same grid numbers in WGS 84 (EPSG:3413) this corner rounds differently (about 0.001 degree, ~100 m)"
+      }
+    },
+    {
+      "op": "corner_lonlat",
+      "input": {
+        "instance": "north",
+        "corner": "lower_left"
+      },
+      "expected": {
+        "lon": 279.26,
+        "lat": 33.92
+      },
+      "tolerance": {
+        "lon": 0.0051,
+        "lat": 0.0051
+      },
+      "source": "NSIDC guide, Table 6",
+      "note": "published to 0.01 degree, longitude in [0, 360)"
+    },
+    {
+      "op": "corner_lonlat",
+      "input": {
+        "instance": "north-wgs84",
+        "corner": "lower_left"
+      },
+      "expected": {
+        "lon": 279.26,
+        "lat": 33.92
+      },
+      "tolerance": {
+        "lon": 0.0051,
+        "lat": 0.0051
+      },
+      "source": "NSIDC guide, Table 6",
+      "note": "published to 0.01 degree, longitude in [0, 360); published for the grid, checked against the WGS 84 CRS too"
+    },
+    {
+      "op": "corner_lonlat",
+      "input": {
+        "instance": "south",
+        "corner": "upper_left"
+      },
+      "expected": {
+        "lon": 317.76,
+        "lat": -39.23
+      },
+      "tolerance": {
+        "lon": 0.0051,
+        "lat": 0.0051
+      },
+      "source": "NSIDC guide, Table 7",
+      "note": "published to 0.01 degree, longitude in [0, 360)"
+    },
+    {
+      "op": "corner_lonlat",
+      "input": {
+        "instance": "south-wgs84",
+        "corner": "upper_left"
+      },
+      "expected": {
+        "lon": 317.76,
+        "lat": -39.23
+      },
+      "tolerance": {
+        "lon": 0.0051,
+        "lat": 0.0051
+      },
+      "source": "NSIDC guide, Table 7",
+      "note": "published to 0.01 degree, longitude in [0, 360); published for the grid, checked against the WGS 84 CRS too"
+    },
+    {
+      "op": "corner_lonlat",
+      "input": {
+        "instance": "south",
+        "corner": "upper_right"
+      },
+      "expected": {
+        "lon": 42.24,
+        "lat": -39.23
+      },
+      "tolerance": {
+        "lon": 0.0051,
+        "lat": 0.0051
+      },
+      "source": "NSIDC guide, Table 7",
+      "note": "published to 0.01 degree, longitude in [0, 360)"
+    },
+    {
+      "op": "corner_lonlat",
+      "input": {
+        "instance": "south-wgs84",
+        "corner": "upper_right"
+      },
+      "expected": {
+        "lon": 42.24,
+        "lat": -39.23
+      },
+      "tolerance": {
+        "lon": 0.0051,
+        "lat": 0.0051
+      },
+      "source": "NSIDC guide, Table 7",
+      "note": "published to 0.01 degree, longitude in [0, 360); published for the grid, checked against the WGS 84 CRS too"
+    },
+    {
+      "op": "corner_lonlat",
+      "input": {
+        "instance": "south",
+        "corner": "lower_right"
+      },
+      "expected": {
+        "lon": 135.0,
+        "lat": -41.45
+      },
+      "tolerance": {
+        "lon": 0.0051,
+        "lat": 0.0051
+      },
+      "source": "NSIDC guide, Table 7",
+      "note": "published to 0.01 degree, longitude in [0, 360)"
+    },
+    {
+      "op": "corner_lonlat",
+      "input": {
+        "instance": "south-wgs84",
+        "corner": "lower_right"
+      },
+      "expected": {
+        "lon": 135.0,
+        "lat": -41.45
+      },
+      "tolerance": {
+        "lon": 0.0051,
+        "lat": 0.0051
+      },
+      "source": "NSIDC guide, Table 7",
+      "note": "published to 0.01 degree, longitude in [0, 360); published for the grid, checked against the WGS 84 CRS too"
+    },
+    {
+      "op": "corner_lonlat",
+      "input": {
+        "instance": "south",
+        "corner": "lower_left"
+      },
+      "expected": {
+        "lon": 225.0,
+        "lat": -41.45
+      },
+      "tolerance": {
+        "lon": 0.0051,
+        "lat": 0.0051
+      },
+      "source": "NSIDC guide, Table 7",
+      "note": "published to 0.01 degree, longitude in [0, 360)"
+    },
+    {
+      "op": "corner_lonlat",
+      "input": {
+        "instance": "south-wgs84",
+        "corner": "lower_left"
+      },
+      "expected": {
+        "lon": 225.0,
+        "lat": -41.45
+      },
+      "tolerance": {
+        "lon": 0.0051,
+        "lat": 0.0051
+      },
+      "source": "NSIDC guide, Table 7",
+      "note": "published to 0.01 degree, longitude in [0, 360); published for the grid, checked against the WGS 84 CRS too"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "north_25000m"
+      },
+      "expected": {
+        "extent": [
+          -3850000,
+          3750000,
+          -5350000,
+          5850000
+        ],
+        "dim": [
+          304,
+          448
+        ]
+      },
+      "source": "NSIDC guide, Tables 5-7"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "north_12500m"
+      },
+      "expected": {
+        "extent": [
+          -3850000,
+          3750000,
+          -5350000,
+          5850000
+        ],
+        "dim": [
+          608,
+          896
+        ]
+      },
+      "source": "NSIDC guide, Tables 5-7"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "north_6250m"
+      },
+      "expected": {
+        "extent": [
+          -3850000,
+          3750000,
+          -5350000,
+          5850000
+        ],
+        "dim": [
+          1216,
+          1792
+        ]
+      },
+      "source": "NSIDC guide, Tables 5-7"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "south_25000m"
+      },
+      "expected": {
+        "extent": [
+          -3950000,
+          3950000,
+          -3950000,
+          4350000
+        ],
+        "dim": [
+          316,
+          332
+        ]
+      },
+      "source": "NSIDC guide, Tables 5-7"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "south_12500m"
+      },
+      "expected": {
+        "extent": [
+          -3950000,
+          3950000,
+          -3950000,
+          4350000
+        ],
+        "dim": [
+          632,
+          664
+        ]
+      },
+      "source": "NSIDC guide, Tables 5-7"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "south_6250m"
+      },
+      "expected": {
+        "extent": [
+          -3950000,
+          3950000,
+          -3950000,
+          4350000
+        ],
+        "dim": [
+          1264,
+          1328
+        ]
+      },
+      "source": "NSIDC guide, Tables 5-7"
+    },
+    {
+      "op": "parse",
+      "input": {
+        "id": "north_30000m"
+      },
+      "expected": {
+        "error": "not_aligned"
+      },
+      "source": "crsgrid: 30 km doesn't divide the 7600 km width",
+      "note": "not from NSIDC; checks the open-resolution rule against the extent"
+    },
+    {
+      "op": "crs_deprecated",
+      "input": {
+        "instance": "north"
+      },
+      "expected": {
+        "value": true
+      },
+      "source": "NSIDC guide, projection parameters ('3411 and 3412 are deprecated')",
+      "known_difference": {
+        "value": {
+          "value": false
+        },
+        "reason": "NSIDC calls 3411/3412 deprecated for its products; the EPSG dataset (v11.022, in PROJ 9.5.1 and 9.8.1) does not mark them deprecated. The spec records NSIDC's guidance as superseded_by."
+      }
+    },
+    {
+      "op": "crs_deprecated",
+      "input": {
+        "instance": "south"
+      },
+      "expected": {
+        "value": true
+      },
+      "source": "NSIDC guide, projection parameters ('3411 and 3412 are deprecated')",
+      "known_difference": {
+        "value": {
+          "value": false
+        },
+        "reason": "NSIDC calls 3411/3412 deprecated for its products; the EPSG dataset (v11.022, in PROJ 9.5.1 and 9.8.1) does not mark them deprecated. The spec records NSIDC's guidance as superseded_by."
+      }
+    },
+    {
+      "op": "crs_deprecated",
+      "input": {
+        "instance": "north-wgs84"
+      },
+      "expected": {
+        "value": false
+      },
+      "source": "NSIDC guide, projection parameters ('3411 and 3412 are deprecated')"
+    },
+    {
+      "op": "crs_deprecated",
+      "input": {
+        "instance": "south-wgs84"
+      },
+      "expected": {
+        "value": false
+      },
+      "source": "NSIDC guide, projection parameters ('3411 and 3412 are deprecated')"
+    }
+  ]
+}

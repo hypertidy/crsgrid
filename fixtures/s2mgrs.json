@@ -1,0 +1,6200 @@
+{
+  "spec": "examples/s2mgrs.json",
+  "generator": "tools/fixtures-s2mgrs.R",
+  "oracle": {
+    "package": "Sentinel-2 L2A archive items (132 codes, starc store) + geographiclib 0.4.2",
+    "proj": "9.8.1"
+  },
+  "cases": [
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "10CDD",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 1790200, 1900000],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32710"
+      },
+      "note": "archive: p_d6c5c43bf7c09147 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "10CDD",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 1790200, 1900000],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32710"
+      },
+      "note": "archive: p_d6c5c43bf7c09147 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "10CDD",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 1790200, 1900000],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32710"
+      },
+      "note": "archive: p_d6c5c43bf7c09147 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "10CED",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 1790200, 1900000],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32710"
+      },
+      "note": "archive: p_f81169267ef6bfa9 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "10CED",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 1790200, 1900000],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32710"
+      },
+      "note": "archive: p_f81169267ef6bfa9 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "10CED",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 1790200, 1900000],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32710"
+      },
+      "note": "archive: p_f81169267ef6bfa9 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "12CWC",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 1690240, 1800040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32712"
+      },
+      "note": "archive: p_bfbb783fbd71a3c6 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "12CWC",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 1690240, 1800040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32712"
+      },
+      "note": "archive: p_bfbb783fbd71a3c6 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "12CWC",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 1690240, 1800040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32712"
+      },
+      "note": "archive: p_bfbb783fbd71a3c6 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "12JXQ",
+        "res": 10
+      },
+      "expected": {
+        "extent": [600000, 709800, 6890200, 7000000],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32712"
+      },
+      "note": "archive: p_fd169f2b8d6aa530 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "12JXQ",
+        "res": 20
+      },
+      "expected": {
+        "extent": [600000, 709800, 6890200, 7000000],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32712"
+      },
+      "note": "archive: p_fd169f2b8d6aa530 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "12JXQ",
+        "res": 60
+      },
+      "expected": {
+        "extent": [600000, 709800, 6890200, 7000000],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32712"
+      },
+      "note": "archive: p_fd169f2b8d6aa530 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "12JXR",
+        "res": 10
+      },
+      "expected": {
+        "extent": [600000, 709800, 6990220, 7100020],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32712"
+      },
+      "note": "archive: p_8a22047c1efa68d4 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "12JXR",
+        "res": 20
+      },
+      "expected": {
+        "extent": [600000, 709800, 6990220, 7100020],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32712"
+      },
+      "note": "archive: p_8a22047c1efa68d4 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "12JXR",
+        "res": 60
+      },
+      "expected": {
+        "extent": [600000, 709800, 6990220, 7100020],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32712"
+      },
+      "note": "archive: p_8a22047c1efa68d4 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "13CET",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 1690240, 1800040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32713"
+      },
+      "note": "archive: p_7788336b37980d59 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "13CET",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 1690240, 1800040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32713"
+      },
+      "note": "archive: p_7788336b37980d59 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "13CET",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 1690240, 1800040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32713"
+      },
+      "note": "archive: p_7788336b37980d59 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "14DNF",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 1990240, 2100040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32714"
+      },
+      "note": "archive: p_d0dc16ed524d1deb (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "14DNF",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 1990240, 2100040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32714"
+      },
+      "note": "archive: p_d0dc16ed524d1deb (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "14DNF",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 1990240, 2100040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32714"
+      },
+      "note": "archive: p_d0dc16ed524d1deb (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "15CWV",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 1890220, 2000020],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32715"
+      },
+      "note": "archive: p_1e905ea594a108f6 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "15CWV",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 1890220, 2000020],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32715"
+      },
+      "note": "archive: p_1e905ea594a108f6 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "15CWV",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 1890220, 2000020],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32715"
+      },
+      "note": "archive: p_1e905ea594a108f6 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "15CXV",
+        "res": 10
+      },
+      "expected": {
+        "extent": [600000, 709800, 1890220, 2000020],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32715"
+      },
+      "note": "archive: p_5c225713cee13f65 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "15CXV",
+        "res": 20
+      },
+      "expected": {
+        "extent": [600000, 709800, 1890220, 2000020],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32715"
+      },
+      "note": "archive: p_5c225713cee13f65 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "15CXV",
+        "res": 60
+      },
+      "expected": {
+        "extent": [600000, 709800, 1890220, 2000020],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32715"
+      },
+      "note": "archive: p_5c225713cee13f65 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "16CDE",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 1890220, 2000020],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32716"
+      },
+      "note": "archive: p_f359aef4785cf212 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "16CDE",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 1890220, 2000020],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32716"
+      },
+      "note": "archive: p_f359aef4785cf212 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "16CDE",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 1890220, 2000020],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32716"
+      },
+      "note": "archive: p_f359aef4785cf212 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "16CED",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 1790200, 1900000],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32716"
+      },
+      "note": "archive: p_bc909afb8aad64da (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "16CED",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 1790200, 1900000],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32716"
+      },
+      "note": "archive: p_bc909afb8aad64da (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "16CED",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 1790200, 1900000],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32716"
+      },
+      "note": "archive: p_bc909afb8aad64da (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "17CNV",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 1890220, 2000020],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32717"
+      },
+      "note": "archive: p_3b2758b524018564 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "17CNV",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 1890220, 2000020],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32717"
+      },
+      "note": "archive: p_3b2758b524018564 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "17CNV",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 1890220, 2000020],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32717"
+      },
+      "note": "archive: p_3b2758b524018564 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "18DVF",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 1990240, 2100040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32718"
+      },
+      "note": "archive: p_6b9810214d4d8016 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "18DVF",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 1990240, 2100040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32718"
+      },
+      "note": "archive: p_6b9810214d4d8016 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "18DVF",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 1990240, 2100040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32718"
+      },
+      "note": "archive: p_6b9810214d4d8016 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "18DWF",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 1990240, 2100040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32718"
+      },
+      "note": "archive: p_71ab8de5884eca9b (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "18DWF",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 1990240, 2100040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32718"
+      },
+      "note": "archive: p_71ab8de5884eca9b (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "18DWF",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 1990240, 2100040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32718"
+      },
+      "note": "archive: p_71ab8de5884eca9b (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "18DWH",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 2190220, 2300020],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32718"
+      },
+      "note": "archive: p_7314f571b278bfc0 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "18DWH",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 2190220, 2300020],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32718"
+      },
+      "note": "archive: p_7314f571b278bfc0 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "18DWH",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 2190220, 2300020],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32718"
+      },
+      "note": "archive: p_7314f571b278bfc0 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "18DWJ",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 2290240, 2400040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32718"
+      },
+      "note": "archive: p_079b9376c54f8383 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "18DWJ",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 2290240, 2400040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32718"
+      },
+      "note": "archive: p_079b9376c54f8383 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "18DWJ",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 2290240, 2400040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32718"
+      },
+      "note": "archive: p_079b9376c54f8383 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "18DXH",
+        "res": 10
+      },
+      "expected": {
+        "extent": [600000, 709800, 2190220, 2300020],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32718"
+      },
+      "note": "archive: p_39026ff7274fc90e (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "18DXH",
+        "res": 20
+      },
+      "expected": {
+        "extent": [600000, 709800, 2190220, 2300020],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32718"
+      },
+      "note": "archive: p_39026ff7274fc90e (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "18DXH",
+        "res": 60
+      },
+      "expected": {
+        "extent": [600000, 709800, 2190220, 2300020],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32718"
+      },
+      "note": "archive: p_39026ff7274fc90e (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "18DXJ",
+        "res": 10
+      },
+      "expected": {
+        "extent": [600000, 709800, 2290240, 2400040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32718"
+      },
+      "note": "archive: p_4850f804381493a1 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "18DXJ",
+        "res": 20
+      },
+      "expected": {
+        "extent": [600000, 709800, 2290240, 2400040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32718"
+      },
+      "note": "archive: p_4850f804381493a1 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "18DXJ",
+        "res": 60
+      },
+      "expected": {
+        "extent": [600000, 709800, 2290240, 2400040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32718"
+      },
+      "note": "archive: p_4850f804381493a1 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "19DDE",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 2390200, 2500000],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32719"
+      },
+      "note": "archive: p_5f07975b75e4c7f8 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "19DDE",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 2390200, 2500000],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32719"
+      },
+      "note": "archive: p_5f07975b75e4c7f8 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "19DDE",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 2390200, 2500000],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32719"
+      },
+      "note": "archive: p_5f07975b75e4c7f8 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "19DEE",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 2390200, 2500000],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32719"
+      },
+      "note": "archive: p_0c4ac4e56f6ec76a (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "19DEE",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 2390200, 2500000],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32719"
+      },
+      "note": "archive: p_0c4ac4e56f6ec76a (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "19DEE",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 2390200, 2500000],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32719"
+      },
+      "note": "archive: p_0c4ac4e56f6ec76a (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "20CNC",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 1690240, 1800040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32720"
+      },
+      "note": "archive: p_6f05affd36d7cafa (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "20CNC",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 1690240, 1800040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32720"
+      },
+      "note": "archive: p_6f05affd36d7cafa (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "20CNC",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 1690240, 1800040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32720"
+      },
+      "note": "archive: p_6f05affd36d7cafa (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "20DNF",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 1990240, 2100040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32720"
+      },
+      "note": "archive: p_1e754876bb28cc4e (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "20DNF",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 1990240, 2100040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32720"
+      },
+      "note": "archive: p_1e754876bb28cc4e (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "20DNF",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 1990240, 2100040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32720"
+      },
+      "note": "archive: p_1e754876bb28cc4e (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "20DNG",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 2090200, 2200000],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32720"
+      },
+      "note": "archive: p_9c6ed7fea5536858 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "20DNG",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 2090200, 2200000],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32720"
+      },
+      "note": "archive: p_9c6ed7fea5536858 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "20DNG",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 2090200, 2200000],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32720"
+      },
+      "note": "archive: p_9c6ed7fea5536858 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "20DNM",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 2590240, 2700040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32720"
+      },
+      "note": "archive: p_96cf1dae74077c8c (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "20DNM",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 2590240, 2700040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32720"
+      },
+      "note": "archive: p_96cf1dae74077c8c (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "20DNM",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 2590240, 2700040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32720"
+      },
+      "note": "archive: p_96cf1dae74077c8c (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "20DPF",
+        "res": 10
+      },
+      "expected": {
+        "extent": [600000, 709800, 1990240, 2100040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32720"
+      },
+      "note": "archive: p_2dd6092c37fc29f8 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "20DPF",
+        "res": 20
+      },
+      "expected": {
+        "extent": [600000, 709800, 1990240, 2100040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32720"
+      },
+      "note": "archive: p_2dd6092c37fc29f8 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "20DPF",
+        "res": 60
+      },
+      "expected": {
+        "extent": [600000, 709800, 1990240, 2100040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32720"
+      },
+      "note": "archive: p_2dd6092c37fc29f8 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "20DPM",
+        "res": 10
+      },
+      "expected": {
+        "extent": [600000, 709800, 2590240, 2700040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32720"
+      },
+      "note": "archive: p_fa3123f020f2b0ca (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "20DPM",
+        "res": 20
+      },
+      "expected": {
+        "extent": [600000, 709800, 2590240, 2700040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32720"
+      },
+      "note": "archive: p_fa3123f020f2b0ca (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "20DPM",
+        "res": 60
+      },
+      "expected": {
+        "extent": [600000, 709800, 2590240, 2700040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32720"
+      },
+      "note": "archive: p_fa3123f020f2b0ca (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "21DVJ",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 2790220, 2900020],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32721"
+      },
+      "note": "archive: p_47db332d0342571b (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "21DVJ",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 2790220, 2900020],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32721"
+      },
+      "note": "archive: p_47db332d0342571b (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "21DVJ",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 2790220, 2900020],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32721"
+      },
+      "note": "archive: p_47db332d0342571b (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "22CEU",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 1290220, 1400020],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32722"
+      },
+      "note": "archive: p_8cc3230e2e0c647c (red band)",
+      "known_difference": {
+        "value": {
+          "error": "outside_domain"
+        },
+        "reason": "produced by ESA (in the archive) but missing from the published valid list the spec uses as its domain"
+      }
+    },
+    {
+      "op": "tile_footprint",
+      "input": {
+        "id": "22CEU",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 1290220, 1400020],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32722"
+      },
+      "note": "archive: p_8cc3230e2e0c647c (red band) - footprint only, without the domain check"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "22CEU",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 1290220, 1400020],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32722"
+      },
+      "note": "archive: p_8cc3230e2e0c647c (rededge1 band)",
+      "known_difference": {
+        "value": {
+          "error": "outside_domain"
+        },
+        "reason": "produced by ESA (in the archive) but missing from the published valid list the spec uses as its domain"
+      }
+    },
+    {
+      "op": "tile_footprint",
+      "input": {
+        "id": "22CEU",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 1290220, 1400020],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32722"
+      },
+      "note": "archive: p_8cc3230e2e0c647c (rededge1 band) - footprint only, without the domain check"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "22CEU",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 1290220, 1400020],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32722"
+      },
+      "note": "archive: p_8cc3230e2e0c647c (coastal band)",
+      "known_difference": {
+        "value": {
+          "error": "outside_domain"
+        },
+        "reason": "produced by ESA (in the archive) but missing from the published valid list the spec uses as its domain"
+      }
+    },
+    {
+      "op": "tile_footprint",
+      "input": {
+        "id": "22CEU",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 1290220, 1400020],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32722"
+      },
+      "note": "archive: p_8cc3230e2e0c647c (coastal band) - footprint only, without the domain check"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "23CMP",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 1290220, 1400020],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32723"
+      },
+      "note": "archive: p_89e91d827f45ca38 (red band)",
+      "known_difference": {
+        "value": {
+          "error": "outside_domain"
+        },
+        "reason": "produced by ESA (in the archive) but missing from the published valid list the spec uses as its domain"
+      }
+    },
+    {
+      "op": "tile_footprint",
+      "input": {
+        "id": "23CMP",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 1290220, 1400020],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32723"
+      },
+      "note": "archive: p_89e91d827f45ca38 (red band) - footprint only, without the domain check"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "23CMP",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 1290220, 1400020],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32723"
+      },
+      "note": "archive: p_89e91d827f45ca38 (rededge1 band)",
+      "known_difference": {
+        "value": {
+          "error": "outside_domain"
+        },
+        "reason": "produced by ESA (in the archive) but missing from the published valid list the spec uses as its domain"
+      }
+    },
+    {
+      "op": "tile_footprint",
+      "input": {
+        "id": "23CMP",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 1290220, 1400020],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32723"
+      },
+      "note": "archive: p_89e91d827f45ca38 (rededge1 band) - footprint only, without the domain check"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "23CMP",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 1290220, 1400020],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32723"
+      },
+      "note": "archive: p_89e91d827f45ca38 (coastal band)",
+      "known_difference": {
+        "value": {
+          "error": "outside_domain"
+        },
+        "reason": "produced by ESA (in the archive) but missing from the published valid list the spec uses as its domain"
+      }
+    },
+    {
+      "op": "tile_footprint",
+      "input": {
+        "id": "23CMP",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 1290220, 1400020],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32723"
+      },
+      "note": "archive: p_89e91d827f45ca38 (coastal band) - footprint only, without the domain check"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "25CDQ",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 1390240, 1500040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32725"
+      },
+      "note": "archive: p_12ed79199e4fbc5c (red band)",
+      "known_difference": {
+        "value": {
+          "error": "outside_domain"
+        },
+        "reason": "produced by ESA (in the archive) but missing from the published valid list the spec uses as its domain"
+      }
+    },
+    {
+      "op": "tile_footprint",
+      "input": {
+        "id": "25CDQ",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 1390240, 1500040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32725"
+      },
+      "note": "archive: p_12ed79199e4fbc5c (red band) - footprint only, without the domain check"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "25CDQ",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 1390240, 1500040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32725"
+      },
+      "note": "archive: p_12ed79199e4fbc5c (rededge1 band)",
+      "known_difference": {
+        "value": {
+          "error": "outside_domain"
+        },
+        "reason": "produced by ESA (in the archive) but missing from the published valid list the spec uses as its domain"
+      }
+    },
+    {
+      "op": "tile_footprint",
+      "input": {
+        "id": "25CDQ",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 1390240, 1500040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32725"
+      },
+      "note": "archive: p_12ed79199e4fbc5c (rededge1 band) - footprint only, without the domain check"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "25CDQ",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 1390240, 1500040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32725"
+      },
+      "note": "archive: p_12ed79199e4fbc5c (coastal band)",
+      "known_difference": {
+        "value": {
+          "error": "outside_domain"
+        },
+        "reason": "produced by ESA (in the archive) but missing from the published valid list the spec uses as its domain"
+      }
+    },
+    {
+      "op": "tile_footprint",
+      "input": {
+        "id": "25CDQ",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 1390240, 1500040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32725"
+      },
+      "note": "archive: p_12ed79199e4fbc5c (coastal band) - footprint only, without the domain check"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "26CMA",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 1490200, 1600000],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32726"
+      },
+      "note": "archive: p_20bd9a793cf063a2 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "26CMA",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 1490200, 1600000],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32726"
+      },
+      "note": "archive: p_20bd9a793cf063a2 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "26CMA",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 1490200, 1600000],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32726"
+      },
+      "note": "archive: p_20bd9a793cf063a2 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "26CMB",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 1590220, 1700020],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32726"
+      },
+      "note": "archive: p_7a4fd6eaf5eb3533 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "26CMB",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 1590220, 1700020],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32726"
+      },
+      "note": "archive: p_7a4fd6eaf5eb3533 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "26CMB",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 1590220, 1700020],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32726"
+      },
+      "note": "archive: p_7a4fd6eaf5eb3533 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "26CNA",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 1490200, 1600000],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32726"
+      },
+      "note": "archive: p_66dfefe9791d4614 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "26CNA",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 1490200, 1600000],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32726"
+      },
+      "note": "archive: p_66dfefe9791d4614 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "26CNA",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 1490200, 1600000],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32726"
+      },
+      "note": "archive: p_66dfefe9791d4614 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "26CNC",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 1690240, 1800040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32726"
+      },
+      "note": "archive: p_c7336e0e9cd6f348 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "26CNC",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 1690240, 1800040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32726"
+      },
+      "note": "archive: p_c7336e0e9cd6f348 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "26CNC",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 1690240, 1800040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32726"
+      },
+      "note": "archive: p_c7336e0e9cd6f348 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "27CVT",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 1690240, 1800040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32727"
+      },
+      "note": "archive: p_ae69b6c275e7fef5 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "27CVT",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 1690240, 1800040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32727"
+      },
+      "note": "archive: p_ae69b6c275e7fef5 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "27CVT",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 1690240, 1800040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32727"
+      },
+      "note": "archive: p_ae69b6c275e7fef5 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "27CVU",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 1790200, 1900000],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32727"
+      },
+      "note": "archive: p_c29709bb5ff8b82a (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "27CVU",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 1790200, 1900000],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32727"
+      },
+      "note": "archive: p_c29709bb5ff8b82a (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "27CVU",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 1790200, 1900000],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32727"
+      },
+      "note": "archive: p_c29709bb5ff8b82a (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "27CWV",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 1890220, 2000020],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32727"
+      },
+      "note": "archive: p_492b25000c63dde5 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "27CWV",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 1890220, 2000020],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32727"
+      },
+      "note": "archive: p_492b25000c63dde5 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "27CWV",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 1890220, 2000020],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32727"
+      },
+      "note": "archive: p_492b25000c63dde5 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "27CXV",
+        "res": 10
+      },
+      "expected": {
+        "extent": [600000, 709800, 1890220, 2000020],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32727"
+      },
+      "note": "archive: p_b71339d3e54dba61 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "27CXV",
+        "res": 20
+      },
+      "expected": {
+        "extent": [600000, 709800, 1890220, 2000020],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32727"
+      },
+      "note": "archive: p_b71339d3e54dba61 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "27CXV",
+        "res": 60
+      },
+      "expected": {
+        "extent": [600000, 709800, 1890220, 2000020],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32727"
+      },
+      "note": "archive: p_b71339d3e54dba61 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "27DXA",
+        "res": 10
+      },
+      "expected": {
+        "extent": [600000, 709800, 1990240, 2100040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32727"
+      },
+      "note": "archive: p_b9c686adb68aedc5 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "27DXA",
+        "res": 20
+      },
+      "expected": {
+        "extent": [600000, 709800, 1990240, 2100040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32727"
+      },
+      "note": "archive: p_b9c686adb68aedc5 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "27DXA",
+        "res": 60
+      },
+      "expected": {
+        "extent": [600000, 709800, 1990240, 2100040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32727"
+      },
+      "note": "archive: p_b9c686adb68aedc5 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "27WXP",
+        "res": 10
+      },
+      "expected": {
+        "extent": [600000, 709800, 7290240, 7400040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32627"
+      },
+      "note": "archive: p_b50c729a63e75f6e (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "27WXP",
+        "res": 20
+      },
+      "expected": {
+        "extent": [600000, 709800, 7290240, 7400040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32627"
+      },
+      "note": "archive: p_b50c729a63e75f6e (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "27WXP",
+        "res": 60
+      },
+      "expected": {
+        "extent": [600000, 709800, 7290240, 7400040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32627"
+      },
+      "note": "archive: p_b50c729a63e75f6e (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "28CDE",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 1890220, 2000020],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32728"
+      },
+      "note": "archive: p_49fb3787afc5fe27 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "28CDE",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 1890220, 2000020],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32728"
+      },
+      "note": "archive: p_49fb3787afc5fe27 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "28CDE",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 1890220, 2000020],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32728"
+      },
+      "note": "archive: p_49fb3787afc5fe27 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "28DDF",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 1990240, 2100040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32728"
+      },
+      "note": "archive: p_ec25dfa76cfcb1d8 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "28DDF",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 1990240, 2100040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32728"
+      },
+      "note": "archive: p_ec25dfa76cfcb1d8 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "28DDF",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 1990240, 2100040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32728"
+      },
+      "note": "archive: p_ec25dfa76cfcb1d8 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "29DNB",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 2090200, 2200000],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32729"
+      },
+      "note": "archive: p_d0ce8ffe7ce9b8e3 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "29DNB",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 2090200, 2200000],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32729"
+      },
+      "note": "archive: p_d0ce8ffe7ce9b8e3 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "29DNB",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 2090200, 2200000],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32729"
+      },
+      "note": "archive: p_d0ce8ffe7ce9b8e3 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "30DWH",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 2190220, 2300020],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32730"
+      },
+      "note": "archive: p_d3da3bde45e43663 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "30DWH",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 2190220, 2300020],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32730"
+      },
+      "note": "archive: p_d3da3bde45e43663 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "30DWH",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 2190220, 2300020],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32730"
+      },
+      "note": "archive: p_d3da3bde45e43663 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "31DFC",
+        "res": 10
+      },
+      "expected": {
+        "extent": [600000, 709800, 2190220, 2300020],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32731"
+      },
+      "note": "archive: p_c5ee6fe32bf75a28 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "31DFC",
+        "res": 20
+      },
+      "expected": {
+        "extent": [600000, 709800, 2190220, 2300020],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32731"
+      },
+      "note": "archive: p_c5ee6fe32bf75a28 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "31DFC",
+        "res": 60
+      },
+      "expected": {
+        "extent": [600000, 709800, 2190220, 2300020],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32731"
+      },
+      "note": "archive: p_c5ee6fe32bf75a28 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "32DMH",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 2190220, 2300020],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32732"
+      },
+      "note": "archive: p_a7d129669bc9870f (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "32DMH",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 2190220, 2300020],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32732"
+      },
+      "note": "archive: p_a7d129669bc9870f (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "32DMH",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 2190220, 2300020],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32732"
+      },
+      "note": "archive: p_a7d129669bc9870f (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "33DVC",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 2190220, 2300020],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32733"
+      },
+      "note": "archive: p_e64f1922b6c8715f (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "33DVC",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 2190220, 2300020],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32733"
+      },
+      "note": "archive: p_e64f1922b6c8715f (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "33DVC",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 2190220, 2300020],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32733"
+      },
+      "note": "archive: p_e64f1922b6c8715f (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "33DVD",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 2290240, 2400040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32733"
+      },
+      "note": "archive: p_b9f23c87bc04bd61 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "33DVD",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 2290240, 2400040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32733"
+      },
+      "note": "archive: p_b9f23c87bc04bd61 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "33DVD",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 2290240, 2400040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32733"
+      },
+      "note": "archive: p_b9f23c87bc04bd61 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "35DMC",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 2190220, 2300020],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32735"
+      },
+      "note": "archive: p_9d36dc9520c47ad0 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "35DMC",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 2190220, 2300020],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32735"
+      },
+      "note": "archive: p_9d36dc9520c47ad0 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "35DMC",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 2190220, 2300020],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32735"
+      },
+      "note": "archive: p_9d36dc9520c47ad0 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "35DNC",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 2190220, 2300020],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32735"
+      },
+      "note": "archive: p_9bd04e70e97118ec (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "35DNC",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 2190220, 2300020],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32735"
+      },
+      "note": "archive: p_9bd04e70e97118ec (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "35DNC",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 2190220, 2300020],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32735"
+      },
+      "note": "archive: p_9bd04e70e97118ec (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "36DWJ",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 2290240, 2400040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32736"
+      },
+      "note": "archive: p_d40b4aa3189d1670 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "36DWJ",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 2290240, 2400040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32736"
+      },
+      "note": "archive: p_d40b4aa3189d1670 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "36DWJ",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 2290240, 2400040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32736"
+      },
+      "note": "archive: p_d40b4aa3189d1670 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "37DFE",
+        "res": 10
+      },
+      "expected": {
+        "extent": [600000, 709800, 2390200, 2500000],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32737"
+      },
+      "note": "archive: p_f36a26f9c99ff6a0 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "37DFE",
+        "res": 20
+      },
+      "expected": {
+        "extent": [600000, 709800, 2390200, 2500000],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32737"
+      },
+      "note": "archive: p_f36a26f9c99ff6a0 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "37DFE",
+        "res": 60
+      },
+      "expected": {
+        "extent": [600000, 709800, 2390200, 2500000],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32737"
+      },
+      "note": "archive: p_f36a26f9c99ff6a0 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "38DMK",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 2390200, 2500000],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32738"
+      },
+      "note": "archive: p_9c291cb580b79eea (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "38DMK",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 2390200, 2500000],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32738"
+      },
+      "note": "archive: p_9c291cb580b79eea (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "38DMK",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 2390200, 2500000],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32738"
+      },
+      "note": "archive: p_9c291cb580b79eea (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "38DNL",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 2490220, 2600020],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32738"
+      },
+      "note": "archive: p_e13f58d87680f97b (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "38DNL",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 2490220, 2600020],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32738"
+      },
+      "note": "archive: p_e13f58d87680f97b (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "38DNL",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 2490220, 2600020],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32738"
+      },
+      "note": "archive: p_e13f58d87680f97b (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "39DVF",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 2490220, 2600020],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32739"
+      },
+      "note": "archive: p_7b1d89a1bee31352 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "39DVF",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 2490220, 2600020],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32739"
+      },
+      "note": "archive: p_7b1d89a1bee31352 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "39DVF",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 2490220, 2600020],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32739"
+      },
+      "note": "archive: p_7b1d89a1bee31352 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "39DVG",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 2590240, 2700040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32739"
+      },
+      "note": "archive: p_e6eb89f0e257d537 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "39DVG",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 2590240, 2700040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32739"
+      },
+      "note": "archive: p_e6eb89f0e257d537 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "39DVG",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 2590240, 2700040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32739"
+      },
+      "note": "archive: p_e6eb89f0e257d537 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "39GWJ",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 4790200, 4900000],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32739"
+      },
+      "note": "archive: p_0b95aabf1dfa6e8d (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "39GWJ",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 4790200, 4900000],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32739"
+      },
+      "note": "archive: p_0b95aabf1dfa6e8d (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "39GWJ",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 4790200, 4900000],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32739"
+      },
+      "note": "archive: p_0b95aabf1dfa6e8d (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "40DDM",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 2590240, 2700040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32740"
+      },
+      "note": "archive: p_d86c1ee3ef9a8830 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "40DDM",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 2590240, 2700040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32740"
+      },
+      "note": "archive: p_d86c1ee3ef9a8830 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "40DDM",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 2590240, 2700040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32740"
+      },
+      "note": "archive: p_d86c1ee3ef9a8830 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "40DEL",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 2490220, 2600020],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32740"
+      },
+      "note": "archive: p_ef3444c025f49032 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "40DEL",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 2490220, 2600020],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32740"
+      },
+      "note": "archive: p_ef3444c025f49032 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "40DEL",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 2490220, 2600020],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32740"
+      },
+      "note": "archive: p_ef3444c025f49032 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "40DEM",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 2590240, 2700040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32740"
+      },
+      "note": "archive: p_f08b6652de8fc238 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "40DEM",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 2590240, 2700040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32740"
+      },
+      "note": "archive: p_f08b6652de8fc238 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "40DEM",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 2590240, 2700040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32740"
+      },
+      "note": "archive: p_f08b6652de8fc238 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "40DFL",
+        "res": 10
+      },
+      "expected": {
+        "extent": [600000, 709800, 2490220, 2600020],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32740"
+      },
+      "note": "archive: p_0345399eb31b03fc (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "40DFL",
+        "res": 20
+      },
+      "expected": {
+        "extent": [600000, 709800, 2490220, 2600020],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32740"
+      },
+      "note": "archive: p_0345399eb31b03fc (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "40DFL",
+        "res": 60
+      },
+      "expected": {
+        "extent": [600000, 709800, 2490220, 2600020],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32740"
+      },
+      "note": "archive: p_0345399eb31b03fc (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "41DME",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 2390200, 2500000],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32741"
+      },
+      "note": "archive: p_2ddaf6bc80d8f820 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "41DME",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 2390200, 2500000],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32741"
+      },
+      "note": "archive: p_2ddaf6bc80d8f820 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "41DME",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 2390200, 2500000],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32741"
+      },
+      "note": "archive: p_2ddaf6bc80d8f820 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "41DMF",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 2490220, 2600020],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32741"
+      },
+      "note": "archive: p_6b31cf574ed10c77 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "41DMF",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 2490220, 2600020],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32741"
+      },
+      "note": "archive: p_6b31cf574ed10c77 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "41DMF",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 2490220, 2600020],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32741"
+      },
+      "note": "archive: p_6b31cf574ed10c77 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "41DNF",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 2490220, 2600020],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32741"
+      },
+      "note": "archive: p_3f27874e6120ca00 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "41DNF",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 2490220, 2600020],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32741"
+      },
+      "note": "archive: p_3f27874e6120ca00 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "41DNF",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 2490220, 2600020],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32741"
+      },
+      "note": "archive: p_3f27874e6120ca00 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "41DPE",
+        "res": 10
+      },
+      "expected": {
+        "extent": [600000, 709800, 2390200, 2500000],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32741"
+      },
+      "note": "archive: p_cd0391fd923aca5c (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "41DPE",
+        "res": 20
+      },
+      "expected": {
+        "extent": [600000, 709800, 2390200, 2500000],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32741"
+      },
+      "note": "archive: p_cd0391fd923aca5c (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "41DPE",
+        "res": 60
+      },
+      "expected": {
+        "extent": [600000, 709800, 2390200, 2500000],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32741"
+      },
+      "note": "archive: p_cd0391fd923aca5c (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "42DVK",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 2390200, 2500000],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32742"
+      },
+      "note": "archive: p_9af65440dc5b02d2 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "42DVK",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 2390200, 2500000],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32742"
+      },
+      "note": "archive: p_9af65440dc5b02d2 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "42DVK",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 2390200, 2500000],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32742"
+      },
+      "note": "archive: p_9af65440dc5b02d2 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "42DWK",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 2390200, 2500000],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32742"
+      },
+      "note": "archive: p_7177c3e0f4d065fe (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "42DWK",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 2390200, 2500000],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32742"
+      },
+      "note": "archive: p_7177c3e0f4d065fe (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "42DWK",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 2390200, 2500000],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32742"
+      },
+      "note": "archive: p_7177c3e0f4d065fe (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "42FWL",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 4490200, 4600000],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32742"
+      },
+      "note": "archive: p_8699f1e686b5b5b6 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "42FWL",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 4490200, 4600000],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32742"
+      },
+      "note": "archive: p_8699f1e686b5b5b6 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "42FWL",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 4490200, 4600000],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32742"
+      },
+      "note": "archive: p_8699f1e686b5b5b6 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "42FYF",
+        "res": 10
+      },
+      "expected": {
+        "extent": [699960, 809760, 3990220, 4100020],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32742"
+      },
+      "note": "archive: p_d2972deecd8191f4 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "42FYF",
+        "res": 20
+      },
+      "expected": {
+        "extent": [699960, 809760, 3990220, 4100020],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32742"
+      },
+      "note": "archive: p_d2972deecd8191f4 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "42FYF",
+        "res": 60
+      },
+      "expected": {
+        "extent": [699960, 809760, 3990220, 4100020],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32742"
+      },
+      "note": "archive: p_d2972deecd8191f4 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "42FYG",
+        "res": 10
+      },
+      "expected": {
+        "extent": [699960, 809760, 4090240, 4200040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32742"
+      },
+      "note": "archive: p_af5a2f7ccd889223 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "42FYG",
+        "res": 20
+      },
+      "expected": {
+        "extent": [699960, 809760, 4090240, 4200040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32742"
+      },
+      "note": "archive: p_af5a2f7ccd889223 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "42FYG",
+        "res": 60
+      },
+      "expected": {
+        "extent": [699960, 809760, 4090240, 4200040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32742"
+      },
+      "note": "archive: p_af5a2f7ccd889223 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "43DED",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 2290240, 2400040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32743"
+      },
+      "note": "archive: p_12ee271e5adb0cca (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "43DED",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 2290240, 2400040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32743"
+      },
+      "note": "archive: p_12ee271e5adb0cca (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "43DED",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 2290240, 2400040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32743"
+      },
+      "note": "archive: p_12ee271e5adb0cca (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "43DFD",
+        "res": 10
+      },
+      "expected": {
+        "extent": [600000, 709800, 2290240, 2400040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32743"
+      },
+      "note": "archive: p_f4ebaf353fc1ae58 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "43DFD",
+        "res": 20
+      },
+      "expected": {
+        "extent": [600000, 709800, 2290240, 2400040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32743"
+      },
+      "note": "archive: p_f4ebaf353fc1ae58 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "43DFD",
+        "res": 60
+      },
+      "expected": {
+        "extent": [600000, 709800, 2290240, 2400040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32743"
+      },
+      "note": "archive: p_f4ebaf353fc1ae58 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "43DFE",
+        "res": 10
+      },
+      "expected": {
+        "extent": [600000, 709800, 2390200, 2500000],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32743"
+      },
+      "note": "archive: p_d359006fcc609495 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "43DFE",
+        "res": 20
+      },
+      "expected": {
+        "extent": [600000, 709800, 2390200, 2500000],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32743"
+      },
+      "note": "archive: p_d359006fcc609495 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "43DFE",
+        "res": 60
+      },
+      "expected": {
+        "extent": [600000, 709800, 2390200, 2500000],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32743"
+      },
+      "note": "archive: p_d359006fcc609495 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "43FCB",
+        "res": 10
+      },
+      "expected": {
+        "extent": [300000, 409800, 4090240, 4200040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32743"
+      },
+      "note": "archive: p_4331619ddeadfdad (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "43FCB",
+        "res": 20
+      },
+      "expected": {
+        "extent": [300000, 409800, 4090240, 4200040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32743"
+      },
+      "note": "archive: p_4331619ddeadfdad (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "43FCB",
+        "res": 60
+      },
+      "expected": {
+        "extent": [300000, 409800, 4090240, 4200040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32743"
+      },
+      "note": "archive: p_4331619ddeadfdad (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "43FDB",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 4090240, 4200040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32743"
+      },
+      "note": "archive: p_535e45e210d97516 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "43FDB",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 4090240, 4200040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32743"
+      },
+      "note": "archive: p_535e45e210d97516 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "43FDB",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 4090240, 4200040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32743"
+      },
+      "note": "archive: p_535e45e210d97516 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "44DNL",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 2490220, 2600020],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32744"
+      },
+      "note": "archive: p_c836dd4a598cf8c2 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "44DNL",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 2490220, 2600020],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32744"
+      },
+      "note": "archive: p_c836dd4a598cf8c2 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "44DNL",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 2490220, 2600020],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32744"
+      },
+      "note": "archive: p_c836dd4a598cf8c2 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "44DNM",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 2590240, 2700040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32744"
+      },
+      "note": "archive: p_64fa7df293cc3b88 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "44DNM",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 2590240, 2700040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32744"
+      },
+      "note": "archive: p_64fa7df293cc3b88 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "44DNM",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 2590240, 2700040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32744"
+      },
+      "note": "archive: p_64fa7df293cc3b88 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "44DPM",
+        "res": 10
+      },
+      "expected": {
+        "extent": [600000, 709800, 2590240, 2700040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32744"
+      },
+      "note": "archive: p_39be65407491457b (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "44DPM",
+        "res": 20
+      },
+      "expected": {
+        "extent": [600000, 709800, 2590240, 2700040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32744"
+      },
+      "note": "archive: p_39be65407491457b (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "44DPM",
+        "res": 60
+      },
+      "expected": {
+        "extent": [600000, 709800, 2590240, 2700040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32744"
+      },
+      "note": "archive: p_39be65407491457b (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "45DVG",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 2590240, 2700040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32745"
+      },
+      "note": "archive: p_47e9657fd6baa294 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "45DVG",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 2590240, 2700040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32745"
+      },
+      "note": "archive: p_47e9657fd6baa294 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "45DVG",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 2590240, 2700040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32745"
+      },
+      "note": "archive: p_47e9657fd6baa294 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "45DXG",
+        "res": 10
+      },
+      "expected": {
+        "extent": [600000, 709800, 2590240, 2700040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32745"
+      },
+      "note": "archive: p_158d3aff58648c8b (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "45DXG",
+        "res": 20
+      },
+      "expected": {
+        "extent": [600000, 709800, 2590240, 2700040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32745"
+      },
+      "note": "archive: p_158d3aff58648c8b (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "45DXG",
+        "res": 60
+      },
+      "expected": {
+        "extent": [600000, 709800, 2590240, 2700040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32745"
+      },
+      "note": "archive: p_158d3aff58648c8b (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "46DDM",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 2590240, 2700040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32746"
+      },
+      "note": "archive: p_8c17eb7d3eccdc5c (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "46DDM",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 2590240, 2700040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32746"
+      },
+      "note": "archive: p_8c17eb7d3eccdc5c (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "46DDM",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 2590240, 2700040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32746"
+      },
+      "note": "archive: p_8c17eb7d3eccdc5c (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "46DEM",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 2590240, 2700040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32746"
+      },
+      "note": "archive: p_e568e4b8a6fe026f (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "46DEM",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 2590240, 2700040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32746"
+      },
+      "note": "archive: p_e568e4b8a6fe026f (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "46DEM",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 2590240, 2700040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32746"
+      },
+      "note": "archive: p_e568e4b8a6fe026f (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "46DFN",
+        "res": 10
+      },
+      "expected": {
+        "extent": [600000, 709800, 2690200, 2800000],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32746"
+      },
+      "note": "archive: p_123a3d59b40253dd (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "46DFN",
+        "res": 20
+      },
+      "expected": {
+        "extent": [600000, 709800, 2690200, 2800000],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32746"
+      },
+      "note": "archive: p_123a3d59b40253dd (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "46DFN",
+        "res": 60
+      },
+      "expected": {
+        "extent": [600000, 709800, 2690200, 2800000],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32746"
+      },
+      "note": "archive: p_123a3d59b40253dd (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "46DFP",
+        "res": 10
+      },
+      "expected": {
+        "extent": [600000, 709800, 2790220, 2900020],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32746"
+      },
+      "note": "archive: p_2d7afa7abd5ad018 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "46DFP",
+        "res": 20
+      },
+      "expected": {
+        "extent": [600000, 709800, 2790220, 2900020],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32746"
+      },
+      "note": "archive: p_2d7afa7abd5ad018 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "46DFP",
+        "res": 60
+      },
+      "expected": {
+        "extent": [600000, 709800, 2790220, 2900020],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32746"
+      },
+      "note": "archive: p_2d7afa7abd5ad018 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "47DPH",
+        "res": 10
+      },
+      "expected": {
+        "extent": [600000, 709800, 2690200, 2800000],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32747"
+      },
+      "note": "archive: p_510f75869bec7af4 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "47DPH",
+        "res": 20
+      },
+      "expected": {
+        "extent": [600000, 709800, 2690200, 2800000],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32747"
+      },
+      "note": "archive: p_510f75869bec7af4 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "47DPH",
+        "res": 60
+      },
+      "expected": {
+        "extent": [600000, 709800, 2690200, 2800000],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32747"
+      },
+      "note": "archive: p_510f75869bec7af4 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "48DVN",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 2690200, 2800000],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32748"
+      },
+      "note": "archive: p_92cedf33c888a7ab (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "48DVN",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 2690200, 2800000],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32748"
+      },
+      "note": "archive: p_92cedf33c888a7ab (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "48DVN",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 2690200, 2800000],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32748"
+      },
+      "note": "archive: p_92cedf33c888a7ab (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "49DDG",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 2590240, 2700040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32749"
+      },
+      "note": "archive: p_d09a73a16a32873b (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "49DDG",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 2590240, 2700040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32749"
+      },
+      "note": "archive: p_d09a73a16a32873b (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "49DDG",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 2590240, 2700040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32749"
+      },
+      "note": "archive: p_d09a73a16a32873b (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "49DDH",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 2690200, 2800000],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32749"
+      },
+      "note": "archive: p_1abf13fee58c8a0c (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "49DDH",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 2690200, 2800000],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32749"
+      },
+      "note": "archive: p_1abf13fee58c8a0c (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "49DDH",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 2690200, 2800000],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32749"
+      },
+      "note": "archive: p_1abf13fee58c8a0c (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "49DEG",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 2590240, 2700040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32749"
+      },
+      "note": "archive: p_e1ad20bed6b538a5 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "49DEG",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 2590240, 2700040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32749"
+      },
+      "note": "archive: p_e1ad20bed6b538a5 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "49DEG",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 2590240, 2700040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32749"
+      },
+      "note": "archive: p_e1ad20bed6b538a5 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "49DEH",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 2690200, 2800000],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32749"
+      },
+      "note": "archive: p_8d3b6da3ac7f16cc (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "49DEH",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 2690200, 2800000],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32749"
+      },
+      "note": "archive: p_8d3b6da3ac7f16cc (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "49DEH",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 2690200, 2800000],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32749"
+      },
+      "note": "archive: p_8d3b6da3ac7f16cc (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "49DFG",
+        "res": 10
+      },
+      "expected": {
+        "extent": [600000, 709800, 2590240, 2700040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32749"
+      },
+      "note": "archive: p_5b8b811208a5e936 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "49DFG",
+        "res": 20
+      },
+      "expected": {
+        "extent": [600000, 709800, 2590240, 2700040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32749"
+      },
+      "note": "archive: p_5b8b811208a5e936 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "49DFG",
+        "res": 60
+      },
+      "expected": {
+        "extent": [600000, 709800, 2590240, 2700040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32749"
+      },
+      "note": "archive: p_5b8b811208a5e936 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "49DFH",
+        "res": 10
+      },
+      "expected": {
+        "extent": [600000, 709800, 2690200, 2800000],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32749"
+      },
+      "note": "archive: p_664fb943f50df624 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "49DFH",
+        "res": 20
+      },
+      "expected": {
+        "extent": [600000, 709800, 2690200, 2800000],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32749"
+      },
+      "note": "archive: p_664fb943f50df624 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "49DFH",
+        "res": 60
+      },
+      "expected": {
+        "extent": [600000, 709800, 2690200, 2800000],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32749"
+      },
+      "note": "archive: p_664fb943f50df624 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "4CEV",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 1390240, 1500040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32704"
+      },
+      "note": "archive: p_3f34a2adee16f34d (red band)",
+      "known_difference": {
+        "value": {
+          "error": "outside_domain"
+        },
+        "reason": "produced by ESA (in the archive) but missing from the published valid list the spec uses as its domain"
+      }
+    },
+    {
+      "op": "tile_footprint",
+      "input": {
+        "id": "4CEV",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 1390240, 1500040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32704"
+      },
+      "note": "archive: p_3f34a2adee16f34d (red band) - footprint only, without the domain check"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "4CEV",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 1390240, 1500040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32704"
+      },
+      "note": "archive: p_3f34a2adee16f34d (rededge1 band)",
+      "known_difference": {
+        "value": {
+          "error": "outside_domain"
+        },
+        "reason": "produced by ESA (in the archive) but missing from the published valid list the spec uses as its domain"
+      }
+    },
+    {
+      "op": "tile_footprint",
+      "input": {
+        "id": "4CEV",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 1390240, 1500040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32704"
+      },
+      "note": "archive: p_3f34a2adee16f34d (rededge1 band) - footprint only, without the domain check"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "4CEV",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 1390240, 1500040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32704"
+      },
+      "note": "archive: p_3f34a2adee16f34d (coastal band)",
+      "known_difference": {
+        "value": {
+          "error": "outside_domain"
+        },
+        "reason": "produced by ESA (in the archive) but missing from the published valid list the spec uses as its domain"
+      }
+    },
+    {
+      "op": "tile_footprint",
+      "input": {
+        "id": "4CEV",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 1390240, 1500040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32704"
+      },
+      "note": "archive: p_3f34a2adee16f34d (coastal band) - footprint only, without the domain check"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "4QGH",
+        "res": 10
+      },
+      "expected": {
+        "extent": [699960, 809760, 2190240, 2300040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32604"
+      },
+      "note": "archive: p_cdadc6dd3d4abe27 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "4QGH",
+        "res": 20
+      },
+      "expected": {
+        "extent": [699960, 809760, 2190240, 2300040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32604"
+      },
+      "note": "archive: p_cdadc6dd3d4abe27 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "4QGH",
+        "res": 60
+      },
+      "expected": {
+        "extent": [699960, 809760, 2190240, 2300040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32604"
+      },
+      "note": "archive: p_cdadc6dd3d4abe27 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "50DPM",
+        "res": 10
+      },
+      "expected": {
+        "extent": [600000, 709800, 2590240, 2700040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32750"
+      },
+      "note": "archive: p_d1718cd153d20f5d (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "50DPM",
+        "res": 20
+      },
+      "expected": {
+        "extent": [600000, 709800, 2590240, 2700040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32750"
+      },
+      "note": "archive: p_d1718cd153d20f5d (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "50DPM",
+        "res": 60
+      },
+      "expected": {
+        "extent": [600000, 709800, 2590240, 2700040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32750"
+      },
+      "note": "archive: p_d1718cd153d20f5d (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "51CVS",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 1590220, 1700020],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32751"
+      },
+      "note": "archive: p_ef7652a05e4acb10 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "51CVS",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 1590220, 1700020],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32751"
+      },
+      "note": "archive: p_ef7652a05e4acb10 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "51CVS",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 1590220, 1700020],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32751"
+      },
+      "note": "archive: p_ef7652a05e4acb10 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "51CWS",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 1590220, 1700020],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32751"
+      },
+      "note": "archive: p_028b96b84e2d7def (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "51CWS",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 1590220, 1700020],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32751"
+      },
+      "note": "archive: p_028b96b84e2d7def (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "51CWS",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 1590220, 1700020],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32751"
+      },
+      "note": "archive: p_028b96b84e2d7def (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "51DVG",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 2590240, 2700040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32751"
+      },
+      "note": "archive: p_c53c2e043d55ae21 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "51DVG",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 2590240, 2700040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32751"
+      },
+      "note": "archive: p_c53c2e043d55ae21 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "51DVG",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 2590240, 2700040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32751"
+      },
+      "note": "archive: p_c53c2e043d55ae21 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "52DEM",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 2590240, 2700040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32752"
+      },
+      "note": "archive: p_26670e2129d63e98 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "52DEM",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 2590240, 2700040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32752"
+      },
+      "note": "archive: p_26670e2129d63e98 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "52DEM",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 2590240, 2700040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32752"
+      },
+      "note": "archive: p_26670e2129d63e98 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "53DMG",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 2590240, 2700040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32753"
+      },
+      "note": "archive: p_808847f76475e948 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "53DMG",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 2590240, 2700040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32753"
+      },
+      "note": "archive: p_808847f76475e948 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "53DMG",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 2590240, 2700040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32753"
+      },
+      "note": "archive: p_808847f76475e948 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "54DVL",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 2490220, 2600020],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32754"
+      },
+      "note": "archive: p_d25985580433b5cd (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "54DVL",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 2490220, 2600020],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32754"
+      },
+      "note": "archive: p_d25985580433b5cd (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "54DVL",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 2490220, 2600020],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32754"
+      },
+      "note": "archive: p_d25985580433b5cd (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "54DVM",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 2590240, 2700040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32754"
+      },
+      "note": "archive: p_729ab0247f537be9 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "54DVM",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 2590240, 2700040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32754"
+      },
+      "note": "archive: p_729ab0247f537be9 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "54DVM",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 2590240, 2700040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32754"
+      },
+      "note": "archive: p_729ab0247f537be9 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "54DWL",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 2490220, 2600020],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32754"
+      },
+      "note": "archive: p_d53bfb39d8540c64 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "54DWL",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 2490220, 2600020],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32754"
+      },
+      "note": "archive: p_d53bfb39d8540c64 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "54DWL",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 2490220, 2600020],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32754"
+      },
+      "note": "archive: p_d53bfb39d8540c64 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "55DDF",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 2490220, 2600020],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32755"
+      },
+      "note": "archive: p_ad25d119a49c21d9 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "55DDF",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 2490220, 2600020],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32755"
+      },
+      "note": "archive: p_ad25d119a49c21d9 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "55DDF",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 2490220, 2600020],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32755"
+      },
+      "note": "archive: p_ad25d119a49c21d9 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "55DFF",
+        "res": 10
+      },
+      "expected": {
+        "extent": [600000, 709800, 2490220, 2600020],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32755"
+      },
+      "note": "archive: p_d0c88c7398d06ef6 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "55DFF",
+        "res": 20
+      },
+      "expected": {
+        "extent": [600000, 709800, 2490220, 2600020],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32755"
+      },
+      "note": "archive: p_d0c88c7398d06ef6 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "55DFF",
+        "res": 60
+      },
+      "expected": {
+        "extent": [600000, 709800, 2490220, 2600020],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32755"
+      },
+      "note": "archive: p_d0c88c7398d06ef6 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "55DFG",
+        "res": 10
+      },
+      "expected": {
+        "extent": [600000, 709800, 2590240, 2700040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32755"
+      },
+      "note": "archive: p_d5d86d53538b4bdd (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "55DFG",
+        "res": 20
+      },
+      "expected": {
+        "extent": [600000, 709800, 2590240, 2700040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32755"
+      },
+      "note": "archive: p_d5d86d53538b4bdd (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "55DFG",
+        "res": 60
+      },
+      "expected": {
+        "extent": [600000, 709800, 2590240, 2700040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32755"
+      },
+      "note": "archive: p_d5d86d53538b4bdd (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "55GDN",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 5190220, 5300020],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32755"
+      },
+      "note": "archive: p_53a1cac127c33bd2 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "55GDN",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 5190220, 5300020],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32755"
+      },
+      "note": "archive: p_53a1cac127c33bd2 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "55GDN",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 5190220, 5300020],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32755"
+      },
+      "note": "archive: p_53a1cac127c33bd2 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "56DPH",
+        "res": 10
+      },
+      "expected": {
+        "extent": [600000, 709800, 2190220, 2300020],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32756"
+      },
+      "note": "archive: p_e66366c07a34cdc2 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "56DPH",
+        "res": 20
+      },
+      "expected": {
+        "extent": [600000, 709800, 2190220, 2300020],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32756"
+      },
+      "note": "archive: p_e66366c07a34cdc2 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "56DPH",
+        "res": 60
+      },
+      "expected": {
+        "extent": [600000, 709800, 2190220, 2300020],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32756"
+      },
+      "note": "archive: p_e66366c07a34cdc2 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "56DPJ",
+        "res": 10
+      },
+      "expected": {
+        "extent": [600000, 709800, 2290240, 2400040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32756"
+      },
+      "note": "archive: p_a3b4fca825dd4846 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "56DPJ",
+        "res": 20
+      },
+      "expected": {
+        "extent": [600000, 709800, 2290240, 2400040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32756"
+      },
+      "note": "archive: p_a3b4fca825dd4846 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "56DPJ",
+        "res": 60
+      },
+      "expected": {
+        "extent": [600000, 709800, 2290240, 2400040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32756"
+      },
+      "note": "archive: p_a3b4fca825dd4846 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "57DVD",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 2290240, 2400040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32757"
+      },
+      "note": "archive: p_65d0de33f950aee8 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "57DVD",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 2290240, 2400040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32757"
+      },
+      "note": "archive: p_65d0de33f950aee8 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "57DVD",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 2290240, 2400040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32757"
+      },
+      "note": "archive: p_65d0de33f950aee8 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "57FVV",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 3890200, 4000000],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32757"
+      },
+      "note": "archive: p_bab2c6cc19165683 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "57FVV",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 3890200, 4000000],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32757"
+      },
+      "note": "archive: p_bab2c6cc19165683 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "57FVV",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 3890200, 4000000],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32757"
+      },
+      "note": "archive: p_bab2c6cc19165683 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "57FWV",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 3890200, 4000000],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32757"
+      },
+      "note": "archive: p_40482be52af575c2 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "57FWV",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 3890200, 4000000],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32757"
+      },
+      "note": "archive: p_40482be52af575c2 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "57FWV",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 3890200, 4000000],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32757"
+      },
+      "note": "archive: p_40482be52af575c2 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "58CDC",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 1690240, 1800040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32758"
+      },
+      "note": "archive: p_c2502db7a5cc3339 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "58CDC",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 1690240, 1800040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32758"
+      },
+      "note": "archive: p_c2502db7a5cc3339 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "58CDC",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 1690240, 1800040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32758"
+      },
+      "note": "archive: p_c2502db7a5cc3339 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "58CEA",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 1490200, 1600000],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32758"
+      },
+      "note": "archive: p_122ad0dd5820fac8 (red band)",
+      "known_difference": {
+        "value": {
+          "error": "outside_domain"
+        },
+        "reason": "produced by ESA (in the archive) but missing from the published valid list the spec uses as its domain"
+      }
+    },
+    {
+      "op": "tile_footprint",
+      "input": {
+        "id": "58CEA",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 1490200, 1600000],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32758"
+      },
+      "note": "archive: p_122ad0dd5820fac8 (red band) - footprint only, without the domain check"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "58CEA",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 1490200, 1600000],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32758"
+      },
+      "note": "archive: p_122ad0dd5820fac8 (rededge1 band)",
+      "known_difference": {
+        "value": {
+          "error": "outside_domain"
+        },
+        "reason": "produced by ESA (in the archive) but missing from the published valid list the spec uses as its domain"
+      }
+    },
+    {
+      "op": "tile_footprint",
+      "input": {
+        "id": "58CEA",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 1490200, 1600000],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32758"
+      },
+      "note": "archive: p_122ad0dd5820fac8 (rededge1 band) - footprint only, without the domain check"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "58CEA",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 1490200, 1600000],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32758"
+      },
+      "note": "archive: p_122ad0dd5820fac8 (coastal band)",
+      "known_difference": {
+        "value": {
+          "error": "outside_domain"
+        },
+        "reason": "produced by ESA (in the archive) but missing from the published valid list the spec uses as its domain"
+      }
+    },
+    {
+      "op": "tile_footprint",
+      "input": {
+        "id": "58CEA",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 1490200, 1600000],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32758"
+      },
+      "note": "archive: p_122ad0dd5820fac8 (coastal band) - footprint only, without the domain check"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "58CEC",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 1690240, 1800040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32758"
+      },
+      "note": "archive: p_75d942bbaab0d372 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "58CEC",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 1690240, 1800040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32758"
+      },
+      "note": "archive: p_75d942bbaab0d372 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "58CEC",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 1690240, 1800040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32758"
+      },
+      "note": "archive: p_75d942bbaab0d372 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "58CEU",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 1290220, 1400020],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32758"
+      },
+      "note": "archive: p_b5010d05f583cb24 (red band)",
+      "known_difference": {
+        "value": {
+          "error": "outside_domain"
+        },
+        "reason": "produced by ESA (in the archive) but missing from the published valid list the spec uses as its domain"
+      }
+    },
+    {
+      "op": "tile_footprint",
+      "input": {
+        "id": "58CEU",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 1290220, 1400020],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32758"
+      },
+      "note": "archive: p_b5010d05f583cb24 (red band) - footprint only, without the domain check"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "58CEU",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 1290220, 1400020],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32758"
+      },
+      "note": "archive: p_b5010d05f583cb24 (rededge1 band)",
+      "known_difference": {
+        "value": {
+          "error": "outside_domain"
+        },
+        "reason": "produced by ESA (in the archive) but missing from the published valid list the spec uses as its domain"
+      }
+    },
+    {
+      "op": "tile_footprint",
+      "input": {
+        "id": "58CEU",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 1290220, 1400020],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32758"
+      },
+      "note": "archive: p_b5010d05f583cb24 (rededge1 band) - footprint only, without the domain check"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "58CEU",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 1290220, 1400020],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32758"
+      },
+      "note": "archive: p_b5010d05f583cb24 (coastal band)",
+      "known_difference": {
+        "value": {
+          "error": "outside_domain"
+        },
+        "reason": "produced by ESA (in the archive) but missing from the published valid list the spec uses as its domain"
+      }
+    },
+    {
+      "op": "tile_footprint",
+      "input": {
+        "id": "58CEU",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 1290220, 1400020],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32758"
+      },
+      "note": "archive: p_b5010d05f583cb24 (coastal band) - footprint only, without the domain check"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "58CEV",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 1390240, 1500040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32758"
+      },
+      "note": "archive: p_c477fe3e48964e06 (red band)",
+      "known_difference": {
+        "value": {
+          "error": "outside_domain"
+        },
+        "reason": "produced by ESA (in the archive) but missing from the published valid list the spec uses as its domain"
+      }
+    },
+    {
+      "op": "tile_footprint",
+      "input": {
+        "id": "58CEV",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 1390240, 1500040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32758"
+      },
+      "note": "archive: p_c477fe3e48964e06 (red band) - footprint only, without the domain check"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "58CEV",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 1390240, 1500040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32758"
+      },
+      "note": "archive: p_c477fe3e48964e06 (rededge1 band)",
+      "known_difference": {
+        "value": {
+          "error": "outside_domain"
+        },
+        "reason": "produced by ESA (in the archive) but missing from the published valid list the spec uses as its domain"
+      }
+    },
+    {
+      "op": "tile_footprint",
+      "input": {
+        "id": "58CEV",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 1390240, 1500040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32758"
+      },
+      "note": "archive: p_c477fe3e48964e06 (rededge1 band) - footprint only, without the domain check"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "58CEV",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 1390240, 1500040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32758"
+      },
+      "note": "archive: p_c477fe3e48964e06 (coastal band)",
+      "known_difference": {
+        "value": {
+          "error": "outside_domain"
+        },
+        "reason": "produced by ESA (in the archive) but missing from the published valid list the spec uses as its domain"
+      }
+    },
+    {
+      "op": "tile_footprint",
+      "input": {
+        "id": "58CEV",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 1390240, 1500040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32758"
+      },
+      "note": "archive: p_c477fe3e48964e06 (coastal band) - footprint only, without the domain check"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "58CFE",
+        "res": 10
+      },
+      "expected": {
+        "extent": [600000, 709800, 1890220, 2000020],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32758"
+      },
+      "note": "archive: p_c6efcc27f20c65f0 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "58CFE",
+        "res": 20
+      },
+      "expected": {
+        "extent": [600000, 709800, 1890220, 2000020],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32758"
+      },
+      "note": "archive: p_c6efcc27f20c65f0 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "58CFE",
+        "res": 60
+      },
+      "expected": {
+        "extent": [600000, 709800, 1890220, 2000020],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32758"
+      },
+      "note": "archive: p_c6efcc27f20c65f0 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "58DEG",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 2090200, 2200000],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32758"
+      },
+      "note": "archive: p_979e2568cb1e56bd (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "58DEG",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 2090200, 2200000],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32758"
+      },
+      "note": "archive: p_979e2568cb1e56bd (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "58DEG",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 2090200, 2200000],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32758"
+      },
+      "note": "archive: p_979e2568cb1e56bd (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "58DFF",
+        "res": 10
+      },
+      "expected": {
+        "extent": [600000, 709800, 1990240, 2100040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32758"
+      },
+      "note": "archive: p_51ae1b46f1927d65 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "58DFF",
+        "res": 20
+      },
+      "expected": {
+        "extent": [600000, 709800, 1990240, 2100040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32758"
+      },
+      "note": "archive: p_51ae1b46f1927d65 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "58DFF",
+        "res": 60
+      },
+      "expected": {
+        "extent": [600000, 709800, 1990240, 2100040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32758"
+      },
+      "note": "archive: p_51ae1b46f1927d65 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "58FGG",
+        "res": 10
+      },
+      "expected": {
+        "extent": [699960, 809760, 4090240, 4200040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32758"
+      },
+      "note": "archive: p_12007f5004749436 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "58FGG",
+        "res": 20
+      },
+      "expected": {
+        "extent": [699960, 809760, 4090240, 4200040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32758"
+      },
+      "note": "archive: p_12007f5004749436 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "58FGG",
+        "res": 60
+      },
+      "expected": {
+        "extent": [699960, 809760, 4090240, 4200040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32758"
+      },
+      "note": "archive: p_12007f5004749436 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "59CMP",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 1290220, 1400020],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32759"
+      },
+      "note": "archive: p_d6d7403e82ecf1e8 (red band)",
+      "known_difference": {
+        "value": {
+          "error": "outside_domain"
+        },
+        "reason": "produced by ESA (in the archive) but missing from the published valid list the spec uses as its domain"
+      }
+    },
+    {
+      "op": "tile_footprint",
+      "input": {
+        "id": "59CMP",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 1290220, 1400020],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32759"
+      },
+      "note": "archive: p_d6d7403e82ecf1e8 (red band) - footprint only, without the domain check"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "59CMP",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 1290220, 1400020],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32759"
+      },
+      "note": "archive: p_d6d7403e82ecf1e8 (rededge1 band)",
+      "known_difference": {
+        "value": {
+          "error": "outside_domain"
+        },
+        "reason": "produced by ESA (in the archive) but missing from the published valid list the spec uses as its domain"
+      }
+    },
+    {
+      "op": "tile_footprint",
+      "input": {
+        "id": "59CMP",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 1290220, 1400020],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32759"
+      },
+      "note": "archive: p_d6d7403e82ecf1e8 (rededge1 band) - footprint only, without the domain check"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "59CMP",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 1290220, 1400020],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32759"
+      },
+      "note": "archive: p_d6d7403e82ecf1e8 (coastal band)",
+      "known_difference": {
+        "value": {
+          "error": "outside_domain"
+        },
+        "reason": "produced by ESA (in the archive) but missing from the published valid list the spec uses as its domain"
+      }
+    },
+    {
+      "op": "tile_footprint",
+      "input": {
+        "id": "59CMP",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 1290220, 1400020],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32759"
+      },
+      "note": "archive: p_d6d7403e82ecf1e8 (coastal band) - footprint only, without the domain check"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "59CMQ",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 1390240, 1500040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32759"
+      },
+      "note": "archive: p_03b006ba7a61dc77 (red band)",
+      "known_difference": {
+        "value": {
+          "error": "outside_domain"
+        },
+        "reason": "produced by ESA (in the archive) but missing from the published valid list the spec uses as its domain"
+      }
+    },
+    {
+      "op": "tile_footprint",
+      "input": {
+        "id": "59CMQ",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 1390240, 1500040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32759"
+      },
+      "note": "archive: p_03b006ba7a61dc77 (red band) - footprint only, without the domain check"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "59CMQ",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 1390240, 1500040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32759"
+      },
+      "note": "archive: p_03b006ba7a61dc77 (rededge1 band)",
+      "known_difference": {
+        "value": {
+          "error": "outside_domain"
+        },
+        "reason": "produced by ESA (in the archive) but missing from the published valid list the spec uses as its domain"
+      }
+    },
+    {
+      "op": "tile_footprint",
+      "input": {
+        "id": "59CMQ",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 1390240, 1500040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32759"
+      },
+      "note": "archive: p_03b006ba7a61dc77 (rededge1 band) - footprint only, without the domain check"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "59CMQ",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 1390240, 1500040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32759"
+      },
+      "note": "archive: p_03b006ba7a61dc77 (coastal band)",
+      "known_difference": {
+        "value": {
+          "error": "outside_domain"
+        },
+        "reason": "produced by ESA (in the archive) but missing from the published valid list the spec uses as its domain"
+      }
+    },
+    {
+      "op": "tile_footprint",
+      "input": {
+        "id": "59CMQ",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 1390240, 1500040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32759"
+      },
+      "note": "archive: p_03b006ba7a61dc77 (coastal band) - footprint only, without the domain check"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "59CMR",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 1490200, 1600000],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32759"
+      },
+      "note": "archive: p_73aa766394dd8e19 (red band)",
+      "known_difference": {
+        "value": {
+          "error": "outside_domain"
+        },
+        "reason": "produced by ESA (in the archive) but missing from the published valid list the spec uses as its domain"
+      }
+    },
+    {
+      "op": "tile_footprint",
+      "input": {
+        "id": "59CMR",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 1490200, 1600000],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32759"
+      },
+      "note": "archive: p_73aa766394dd8e19 (red band) - footprint only, without the domain check"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "59CMR",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 1490200, 1600000],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32759"
+      },
+      "note": "archive: p_73aa766394dd8e19 (rededge1 band)",
+      "known_difference": {
+        "value": {
+          "error": "outside_domain"
+        },
+        "reason": "produced by ESA (in the archive) but missing from the published valid list the spec uses as its domain"
+      }
+    },
+    {
+      "op": "tile_footprint",
+      "input": {
+        "id": "59CMR",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 1490200, 1600000],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32759"
+      },
+      "note": "archive: p_73aa766394dd8e19 (rededge1 band) - footprint only, without the domain check"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "59CMR",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 1490200, 1600000],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32759"
+      },
+      "note": "archive: p_73aa766394dd8e19 (coastal band)",
+      "known_difference": {
+        "value": {
+          "error": "outside_domain"
+        },
+        "reason": "produced by ESA (in the archive) but missing from the published valid list the spec uses as its domain"
+      }
+    },
+    {
+      "op": "tile_footprint",
+      "input": {
+        "id": "59CMR",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 1490200, 1600000],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32759"
+      },
+      "note": "archive: p_73aa766394dd8e19 (coastal band) - footprint only, without the domain check"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "59CMU",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 1790200, 1900000],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32759"
+      },
+      "note": "archive: p_1747a6cc3b123b31 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "59CMU",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 1790200, 1900000],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32759"
+      },
+      "note": "archive: p_1747a6cc3b123b31 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "59CMU",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 1790200, 1900000],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32759"
+      },
+      "note": "archive: p_1747a6cc3b123b31 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "59DMA",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 1990240, 2100040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32759"
+      },
+      "note": "archive: p_bc0589029eadedb4 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "59DMA",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 1990240, 2100040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32759"
+      },
+      "note": "archive: p_bc0589029eadedb4 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "59DMA",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 1990240, 2100040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32759"
+      },
+      "note": "archive: p_bc0589029eadedb4 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "59FLB",
+        "res": 10
+      },
+      "expected": {
+        "extent": [300000, 409800, 4090240, 4200040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32759"
+      },
+      "note": "archive: p_189b06b5151ab262 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "59FLB",
+        "res": 20
+      },
+      "expected": {
+        "extent": [300000, 409800, 4090240, 4200040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32759"
+      },
+      "note": "archive: p_189b06b5151ab262 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "59FLB",
+        "res": 60
+      },
+      "expected": {
+        "extent": [300000, 409800, 4090240, 4200040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32759"
+      },
+      "note": "archive: p_189b06b5151ab262 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "7CDS",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 1590220, 1700020],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32707"
+      },
+      "note": "archive: p_70157acbf0953a81 (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "7CDS",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 1590220, 1700020],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32707"
+      },
+      "note": "archive: p_70157acbf0953a81 (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "7CDS",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 1590220, 1700020],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32707"
+      },
+      "note": "archive: p_70157acbf0953a81 (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "7CET",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 1690240, 1800040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32707"
+      },
+      "note": "archive: p_7f09e16a7e2c888c (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "7CET",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 1690240, 1800040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32707"
+      },
+      "note": "archive: p_7f09e16a7e2c888c (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "7CET",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 1690240, 1800040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32707"
+      },
+      "note": "archive: p_7f09e16a7e2c888c (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "8CMC",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 1690240, 1800040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32708"
+      },
+      "note": "archive: p_81f48e69d28190bf (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "8CMC",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 1690240, 1800040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32708"
+      },
+      "note": "archive: p_81f48e69d28190bf (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "8CMC",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 1690240, 1800040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32708"
+      },
+      "note": "archive: p_81f48e69d28190bf (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "9CVT",
+        "res": 10
+      },
+      "expected": {
+        "extent": [399960, 509760, 1690240, 1800040],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32709"
+      },
+      "note": "archive: p_70370e4626960dcd (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "9CVT",
+        "res": 20
+      },
+      "expected": {
+        "extent": [399960, 509760, 1690240, 1800040],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32709"
+      },
+      "note": "archive: p_70370e4626960dcd (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "9CVT",
+        "res": 60
+      },
+      "expected": {
+        "extent": [399960, 509760, 1690240, 1800040],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32709"
+      },
+      "note": "archive: p_70370e4626960dcd (coastal band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "9CWU",
+        "res": 10
+      },
+      "expected": {
+        "extent": [499980, 609780, 1790200, 1900000],
+        "dim": [10980, 10980],
+        "crs_authority": "EPSG:32709"
+      },
+      "note": "archive: p_2abfda1fdce357db (red band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "9CWU",
+        "res": 20
+      },
+      "expected": {
+        "extent": [499980, 609780, 1790200, 1900000],
+        "dim": [5490, 5490],
+        "crs_authority": "EPSG:32709"
+      },
+      "note": "archive: p_2abfda1fdce357db (rededge1 band)"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "9CWU",
+        "res": 60
+      },
+      "expected": {
+        "extent": [499980, 609780, 1790200, 1900000],
+        "dim": [1830, 1830],
+        "crs_authority": "EPSG:32709"
+      },
+      "note": "archive: p_2abfda1fdce357db (coastal band)"
+    },
+    {
+      "op": "tile_at_lonlat",
+      "input": {
+        "lon": 73.5,
+        "lat": -53.1
+      },
+      "expected": {
+        "id": "43FCB"
+      },
+      "note": "GeographicLib mgrs_fwd(precision = 0) gives 43FCB; Sentinel-2 writes the zone unpadded"
+    },
+    {
+      "op": "tile_at_lonlat",
+      "input": {
+        "lon": 158.87,
+        "lat": -54.62
+      },
+      "expected": {
+        "id": "57FVV"
+      },
+      "note": "GeographicLib mgrs_fwd(precision = 0) gives 57FVV; Sentinel-2 writes the zone unpadded"
+    },
+    {
+      "op": "tile_at_lonlat",
+      "input": {
+        "lon": 77.97,
+        "lat": -68.58
+      },
+      "expected": {
+        "id": "43DFD"
+      },
+      "note": "GeographicLib mgrs_fwd(precision = 0) gives 43DFD; Sentinel-2 writes the zone unpadded"
+    },
+    {
+      "op": "tile_at_lonlat",
+      "input": {
+        "lon": 147.33,
+        "lat": -42.88
+      },
+      "expected": {
+        "id": "55GEN"
+      },
+      "note": "GeographicLib mgrs_fwd(precision = 0) gives 55GEN; Sentinel-2 writes the zone unpadded"
+    },
+    {
+      "op": "tile_at_lonlat",
+      "input": {
+        "lon": 2.35,
+        "lat": 48.86
+      },
+      "expected": {
+        "id": "31UDQ"
+      },
+      "note": "GeographicLib mgrs_fwd(precision = 0) gives 31UDQ; Sentinel-2 writes the zone unpadded"
+    },
+    {
+      "op": "tile_at_lonlat",
+      "input": {
+        "lon": -0.1,
+        "lat": 51.5
+      },
+      "expected": {
+        "id": "30UYC"
+      },
+      "note": "GeographicLib mgrs_fwd(precision = 0) gives 30UYC; Sentinel-2 writes the zone unpadded"
+    },
+    {
+      "op": "tile_at_lonlat",
+      "input": {
+        "lon": 5.5,
+        "lat": 60
+      },
+      "expected": {
+        "id": "32VLM"
+      },
+      "note": "GeographicLib mgrs_fwd(precision = 0) gives 32VLM; Sentinel-2 writes the zone unpadded"
+    },
+    {
+      "op": "tile_at_lonlat",
+      "input": {
+        "lon": 20,
+        "lat": 75
+      },
+      "expected": {
+        "id": "33XXD"
+      },
+      "note": "GeographicLib mgrs_fwd(precision = 0) gives 33XXD; Sentinel-2 writes the zone unpadded"
+    },
+    {
+      "op": "tile_at_lonlat",
+      "input": {
+        "lon": -77.04,
+        "lat": 38.9
+      },
+      "expected": {
+        "id": "18SUJ"
+      },
+      "note": "GeographicLib mgrs_fwd(precision = 0) gives 18SUJ; Sentinel-2 writes the zone unpadded"
+    },
+    {
+      "op": "tile_at_lonlat",
+      "input": {
+        "lon": -70.6,
+        "lat": -33.4
+      },
+      "expected": {
+        "id": "19HCD"
+      },
+      "note": "GeographicLib mgrs_fwd(precision = 0) gives 19HCD; Sentinel-2 writes the zone unpadded"
+    },
+    {
+      "op": "tile_at_lonlat",
+      "input": {
+        "lon": 179.9,
+        "lat": -16.5
+      },
+      "expected": {
+        "id": "60KZG"
+      },
+      "note": "GeographicLib mgrs_fwd(precision = 0) gives 60KZG; Sentinel-2 writes the zone unpadded"
+    },
+    {
+      "op": "tile_at_lonlat",
+      "input": {
+        "lon": -179.9,
+        "lat": -16.5
+      },
+      "expected": {
+        "id": "1KAB"
+      },
+      "note": "GeographicLib mgrs_fwd(precision = 0) gives 01KAB; Sentinel-2 writes the zone unpadded"
+    },
+    {
+      "op": "tile_at_lonlat",
+      "input": {
+        "lon": 10,
+        "lat": 0.0001
+      },
+      "expected": {
+        "id": "32NPF"
+      },
+      "note": "GeographicLib mgrs_fwd(precision = 0) gives 32NPF; Sentinel-2 writes the zone unpadded"
+    },
+    {
+      "op": "tile_at_lonlat",
+      "input": {
+        "lon": 10,
+        "lat": -0.0001
+      },
+      "expected": {
+        "id": "32MPE"
+      },
+      "note": "GeographicLib mgrs_fwd(precision = 0) gives 32MPE; Sentinel-2 writes the zone unpadded"
+    },
+    {
+      "op": "tile_at_lonlat",
+      "input": {
+        "lon": 30,
+        "lat": 83.9
+      },
+      "expected": {
+        "id": "35XNP"
+      },
+      "note": "GeographicLib mgrs_fwd(precision = 0) gives 35XNP; Sentinel-2 writes the zone unpadded"
+    },
+    {
+      "op": "tile_at_lonlat",
+      "input": {
+        "lon": -60,
+        "lat": -79.9
+      },
+      "expected": {
+        "id": "21CVM"
+      },
+      "note": "GeographicLib mgrs_fwd(precision = 0) gives 21CVM; Sentinel-2 writes the zone unpadded"
+    },
+    {
+      "op": "square_centre",
+      "input": {
+        "id": "43FCB"
+      },
+      "expected": {
+        "x": 350000,
+        "y": 4150000,
+        "crs_authority": "EPSG:32743"
+      },
+      "note": "GeographicLib mgrs_rev: centre of the 100 km square, in its zone CRS"
+    },
+    {
+      "op": "square_centre",
+      "input": {
+        "id": "57FVV"
+      },
+      "expected": {
+        "x": 450000,
+        "y": 3950000,
+        "crs_authority": "EPSG:32757"
+      },
+      "note": "GeographicLib mgrs_rev: centre of the 100 km square, in its zone CRS"
+    },
+    {
+      "op": "square_centre",
+      "input": {
+        "id": "43DFD"
+      },
+      "expected": {
+        "x": 650000,
+        "y": 2350000,
+        "crs_authority": "EPSG:32743"
+      },
+      "note": "GeographicLib mgrs_rev: centre of the 100 km square, in its zone CRS"
+    },
+    {
+      "op": "square_centre",
+      "input": {
+        "id": "55GEN"
+      },
+      "expected": {
+        "x": 550000,
+        "y": 5250000,
+        "crs_authority": "EPSG:32755"
+      },
+      "note": "GeographicLib mgrs_rev: centre of the 100 km square, in its zone CRS"
+    },
+    {
+      "op": "square_centre",
+      "input": {
+        "id": "31UDQ"
+      },
+      "expected": {
+        "x": 450000,
+        "y": 5450000,
+        "crs_authority": "EPSG:32631"
+      },
+      "note": "GeographicLib mgrs_rev: centre of the 100 km square, in its zone CRS"
+    },
+    {
+      "op": "square_centre",
+      "input": {
+        "id": "30UYC"
+      },
+      "expected": {
+        "x": 750000,
+        "y": 5750000,
+        "crs_authority": "EPSG:32630"
+      },
+      "note": "GeographicLib mgrs_rev: centre of the 100 km square, in its zone CRS"
+    },
+    {
+      "op": "square_centre",
+      "input": {
+        "id": "32VLM"
+      },
+      "expected": {
+        "x": 350000,
+        "y": 6650000,
+        "crs_authority": "EPSG:32632"
+      },
+      "note": "GeographicLib mgrs_rev: centre of the 100 km square, in its zone CRS"
+    },
+    {
+      "op": "square_centre",
+      "input": {
+        "id": "33XXD"
+      },
+      "expected": {
+        "x": 650000,
+        "y": 8350000,
+        "crs_authority": "EPSG:32633"
+      },
+      "note": "GeographicLib mgrs_rev: centre of the 100 km square, in its zone CRS"
+    },
+    {
+      "op": "square_centre",
+      "input": {
+        "id": "18SUJ"
+      },
+      "expected": {
+        "x": 350000,
+        "y": 4350000,
+        "crs_authority": "EPSG:32618"
+      },
+      "note": "GeographicLib mgrs_rev: centre of the 100 km square, in its zone CRS"
+    },
+    {
+      "op": "square_centre",
+      "input": {
+        "id": "19HCD"
+      },
+      "expected": {
+        "x": 350000,
+        "y": 6350000,
+        "crs_authority": "EPSG:32719"
+      },
+      "note": "GeographicLib mgrs_rev: centre of the 100 km square, in its zone CRS"
+    },
+    {
+      "op": "square_centre",
+      "input": {
+        "id": "60KZG"
+      },
+      "expected": {
+        "x": 850000,
+        "y": 8150000,
+        "crs_authority": "EPSG:32760"
+      },
+      "note": "GeographicLib mgrs_rev: centre of the 100 km square, in its zone CRS"
+    },
+    {
+      "op": "square_centre",
+      "input": {
+        "id": "01KAB"
+      },
+      "expected": {
+        "x": 150000,
+        "y": 8150000,
+        "crs_authority": "EPSG:32701"
+      },
+      "note": "GeographicLib mgrs_rev: centre of the 100 km square, in its zone CRS"
+    },
+    {
+      "op": "square_centre",
+      "input": {
+        "id": "32NPF"
+      },
+      "expected": {
+        "x": 650000,
+        "y": 50000,
+        "crs_authority": "EPSG:32632"
+      },
+      "note": "GeographicLib mgrs_rev: centre of the 100 km square, in its zone CRS"
+    },
+    {
+      "op": "square_centre",
+      "input": {
+        "id": "32MPE"
+      },
+      "expected": {
+        "x": 650000,
+        "y": 9950000,
+        "crs_authority": "EPSG:32732"
+      },
+      "note": "GeographicLib mgrs_rev: centre of the 100 km square, in its zone CRS"
+    },
+    {
+      "op": "square_centre",
+      "input": {
+        "id": "35XNP"
+      },
+      "expected": {
+        "x": 550000,
+        "y": 9350000,
+        "crs_authority": "EPSG:32635"
+      },
+      "note": "GeographicLib mgrs_rev: centre of the 100 km square, in its zone CRS"
+    },
+    {
+      "op": "square_centre",
+      "input": {
+        "id": "21CVM"
+      },
+      "expected": {
+        "x": 450000,
+        "y": 1150000,
+        "crs_authority": "EPSG:32721"
+      },
+      "note": "GeographicLib mgrs_rev: centre of the 100 km square, in its zone CRS"
+    },
+    {
+      "op": "square_centre",
+      "input": {
+        "id": "43DDE"
+      },
+      "expected": {
+        "x": 450000,
+        "y": 2450000,
+        "crs_authority": "EPSG:32743"
+      },
+      "note": "GeographicLib mgrs_rev: centre of the 100 km square, in its zone CRS"
+    },
+    {
+      "op": "square_centre",
+      "input": {
+        "id": "32VKM"
+      },
+      "expected": {
+        "x": 250000,
+        "y": 6650000,
+        "crs_authority": "EPSG:32632"
+      },
+      "note": "GeographicLib mgrs_rev: centre of the 100 km square, in its zone CRS"
+    },
+    {
+      "op": "square_centre",
+      "input": {
+        "id": "33XVG"
+      },
+      "expected": {
+        "x": 450000,
+        "y": 8650000,
+        "crs_authority": "EPSG:32633"
+      },
+      "note": "GeographicLib mgrs_rev: centre of the 100 km square, in its zone CRS"
+    },
+    {
+      "op": "square_centre",
+      "input": {
+        "id": "01CDN"
+      },
+      "expected": {
+        "x": 450000,
+        "y": 1250000,
+        "crs_authority": "EPSG:32701"
+      },
+      "note": "GeographicLib mgrs_rev: centre of the 100 km square, in its zone CRS"
+    },
+    {
+      "op": "square_centre",
+      "input": {
+        "id": "60CWT"
+      },
+      "expected": {
+        "x": 550000,
+        "y": 1250000,
+        "crs_authority": "EPSG:32760"
+      },
+      "note": "GeographicLib mgrs_rev: centre of the 100 km square, in its zone CRS"
+    },
+    {
+      "op": "domain_size",
+      "input": {},
+      "expected": {
+        "count": 28696
+      },
+      "note": "rows in starc's valid_mgrs_sentinel2.parquet (from ESA's tiling grid KML)"
+    },
+    {
+      "op": "in_domain",
+      "input": {
+        "id": "43DDE"
+      },
+      "expected": {
+        "value": true
+      }
+    },
+    {
+      "op": "in_domain",
+      "input": {
+        "id": "01CDN"
+      },
+      "expected": {
+        "value": false
+      }
+    },
+    {
+      "op": "in_domain",
+      "input": {
+        "id": "99ZZZ"
+      },
+      "expected": {
+        "value": false
+      }
+    },
+    {
+      "op": "in_domain",
+      "input": {
+        "id": "43DZZ"
+      },
+      "expected": {
+        "value": false
+      }
+    }
+  ]
+}

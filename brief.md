@@ -36,7 +36,7 @@ UTM is a family with 120 instances. A single LAEA for one site is a family with 
 
 ## The spec (strawman)
 
-> **Superseded by `schema/crsgrid.schema.json` (v0.1 draft), with `examples/aatgrid.json` as the first worked case.** The main change: aatgrid v0.3 has no fixed levels. The invariant is `tile_px` (720), so tile size is `720 × res` for *any* resolution, and nesting is the ratio of two resolutions when it is an integer. The schema therefore has `tiling: {tile_px}` or `{tile_size}`, a listed (optionally open) set of resolutions, and optional resolution names (`L1 = 60`) instead of a `levels` list. The ID encodes the resolution (`43S_R0060_0006_0094`). Below is the original sketch, for the record.
+> **Superseded by `schema/crsgrid.schema.json` (v0.1 draft)**, worked through four test grids in `examples/`; see [What the test grids taught](#what-the-test-grids-taught) below. Below is the original sketch, for the record.
 
 ```yaml
 crsgrid: 0.1
@@ -64,6 +64,31 @@ provenance:
 ```
 
 Spec is canonicalisable (sorted keys, normalised CRS) → stable hash → a grid has a fingerprint you can put in file metadata and check later ("is this COG on grid `aat-utm@3f9a…`?").
+
+## What the test grids taught
+
+Four grids are expressed as specs, each with fixtures from an independent oracle, and `tools/check_fixtures.py` reproduces them from the spec alone (0 failures; every known difference is recorded in the fixture with its reason).
+
+| grid | oracle | cases | what it forced into the schema |
+|---|---|---|---|
+| aatgrid | aatgrid's own R functions | 44 | no fixed levels: `tile_px` invariant (tile = 720 × res for any res), nesting = resolution ratio; resolution in the ID |
+| Equi7Grid | upstream test suite (269fdb6) | 16 | `instances` table (named family), `assign: polygons`, named `tile_sizes`, coordinate-coded IDs (`{xmin/100000:03}`, `!sign=N,S`), polygon domain + per-instance `min_corner` |
+| Sentinel-2 MGRS | 132 real L2A footprints (starc store) + GeographicLib | 468 | `footprint` separate from the lattice cell (pad + snap one corner), named ID `codec: mgrs`, `assign: utm_standard`, `!map=` templates, enumerated `domain.list` |
+| NSIDC polar stereo | NSIDC guide, Tables 5–7 | 27 | untiled grids (one raster per instance and resolution), per-instance `domain.extent` |
+
+Findings worth keeping:
+
+- **Lattices live in CRS units, everywhere so far.** Equi7's continents share one lattice at CRS (0, 0); per-instance limits belong in the domain.
+- **"Funny" parameters are often derived from data.** Equi7's five-decimal false eastings put each zone's projected bbox at exactly 0. The auto-parameter lint should *explain* such values (derived from bounds) as well as flag them.
+- **Authority codes and PROJ strings for "the same" CRS can disagree.** EPSG:27701–27707 round Equi7's false origins (under 1 mm). The known-CRS lint reports the difference rather than equating them.
+- **Same numbers, different datum = different grid.** NSIDC's grid numbers under Hughes 1980 (EPSG:3411) and WGS 84 (3413) put corners ~0.001° (~100 m) apart. The published corners are the Hughes values.
+- **"Deprecated" needs a source.** NSIDC supersedes 3411/3412 for its products; EPSG (v11.022) does not deprecate them. Specs record the steward's guidance (`superseded_by`).
+- **Overlapping tiles are a footprint, not a lattice.** Sentinel-2 tiles are 100 km MGRS cells whose 109.8 km footprints have the upper-left snapped outward to the 60 m lattice (anchored at the equator, so 40 mod 60 in the south). Not "padded 4900 m on every side", as one comment in starc says.
+- **Published tile lists lag production.** 10 Antarctic tiles (band C) exist in the Sentinel-2 archive but not in the valid list used as the domain.
+- **ID conventions differ between stewards of the same scheme.** Sentinel-2 writes zones unpadded (`8CMC`), MGRS/GeographicLib pads (`08CMC`); the spec makes one canonical and parses the rest.
+- **Distortion needs a definition.** crsgrid uses the ellipsoidal maximum length scale (Tissot semi-major axis). Equi7's spherical k is 8.6e-4 lower at its Atlantic edge, where it reaches 14.4% (k ≈ 1.144 at 29°W 24°N): the horrific angular width.
+- **Oracle tolerances are part of the oracle.** Upstream Equi7 asserts with numpy's default rtol 1e-7, about 0.5 m at x ≈ 5e6; fixtures record tolerances, not just values.
+- **Rust has no maintained GeographicLib MGRS.** `geographiclib-rs` (georust) is geodesic-only; `geoconvert` (partial GeoConvert port) is dormant since 2024-01; `mgrs-convert` is new and unproven. The 100 km codec is small, so crsgrid implements it and keeps GeographicLib (R `geographiclib`) as the oracle.
 
 ## Getting to a spec: interpretation + proposal
 
@@ -218,8 +243,8 @@ It changes often and has many heuristics, so you don't want four copies drifting
 
 ## Open questions
 
-1. Family parameter types beyond integer zone: continuous params snapped to a step (lon_0 every 10°)? Arbitrary lists of named instances (Equi7's continents)?
-2. How to express "same lattice across instances" when instances have different false eastings: lattice always in CRS units, or relative to a per-instance origin?
+1. Family parameter types beyond integer zone: continuous params snapped to a step (lon_0 every 10°)? (Named instances are now an `instances` table, from Equi7.)
+2. ~~Same lattice across instances with different false eastings: CRS units or per-instance origin?~~ Lattice in CRS units, for both aatgrid and Equi7. Per-instance limits go in the domain (`min_corner`), not the origin.
 3. Row direction and level naming: pick one default and make it explicit, or follow TMS (top-left origin, zoom 0 = coarsest)? vaster already uses row 0 at the top.
 4. ID scheme: human-readable (aatgrid style), compact hierarchical, or both (alias)?
 5. Where does the distortion envelope come from by default: a scale-factor threshold, or "the AOI plus X%"?

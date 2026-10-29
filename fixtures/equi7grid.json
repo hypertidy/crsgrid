@@ -1,0 +1,281 @@
+{
+  "spec": "examples/equi7grid.json",
+  "generator": "transcribed by hand from upstream tests",
+  "oracle": {
+    "package": "equi7grid 1.1.1 test suite (TUW-GEO/Equi7Grid 269fdb6, tests/test_equi7grid.py)",
+    "proj": "unknown (upstream CI); values asserted with numpy assert_allclose defaults (rtol 1e-7) unless noted"
+  },
+  "cases": [
+    {
+      "op": "lonlat_to_xy",
+      "input": {
+        "lon": 15.1,
+        "lat": 45.3
+      },
+      "expected": {
+        "instance": "EU",
+        "x": 5138743.127891,
+        "y": 1307029.157093
+      },
+      "source": "tests/test_equi7grid.py::test_lonlatxy_doubles_get_rpts",
+      "tolerance": {
+        "x": 0.513874313,
+        "y": 0.130702916
+      },
+      "tolerance_note": "upstream assert_allclose default rtol=1e-7"
+    },
+    {
+      "op": "lonlat_to_xy",
+      "input": {
+        "lon": -178.5,
+        "lat": 67.75
+      },
+      "expected": {
+        "instance": "AS",
+        "x": 7048122.707876,
+        "y": 9238361.594967
+      },
+      "source": "tests/test_equi7grid.py::test_lonlatxy_antimeridian",
+      "tolerance": {
+        "x": 0.704812271,
+        "y": 0.923836159
+      },
+      "note": "far-east Siberia: west of the antimeridian but in Asia",
+      "tolerance_note": "upstream assert_allclose default rtol=1e-7"
+    },
+    {
+      "op": "lonlat_to_xy",
+      "input": {
+        "lon": -178.0,
+        "lat": 51.75
+      },
+      "expected": {
+        "instance": "NA",
+        "x": 3887311.532849,
+        "y": 7756934.345841
+      },
+      "source": "tests/test_equi7grid.py::test_lonlatxy_antimeridian",
+      "tolerance": {
+        "x": 0.388731153,
+        "y": 0.775693435
+      },
+      "note": "far-west Aleutians",
+      "tolerance_note": "upstream assert_allclose default rtol=1e-7"
+    },
+    {
+      "op": "lonlat_to_xy",
+      "input": {
+        "lon": 173.0,
+        "lat": 53.0
+      },
+      "expected": {
+        "instance": "NA",
+        "x": 3865149.386282,
+        "y": 8432250.89933
+      },
+      "source": "tests/test_equi7grid.py::test_lonlatxy_antimeridian",
+      "tolerance": {
+        "x": 0.386514939,
+        "y": 0.84322509
+      },
+      "note": "far-east Aleutians: east longitude but in North America",
+      "tolerance_note": "upstream assert_allclose default rtol=1e-7"
+    },
+    {
+      "op": "xy_to_lonlat",
+      "input": {
+        "instance": "EU",
+        "x": 5138743.127891,
+        "y": 1307029.157093
+      },
+      "expected": {
+        "lon": 15.1,
+        "lat": 45.3
+      },
+      "source": "tests/test_equi7grid.py::test_xylonlat_doubles",
+      "tolerance": {
+        "lon": 1.51e-06,
+        "lat": 4.53e-06
+      },
+      "tolerance_note": "upstream assert_allclose default rtol=1e-7"
+    },
+    {
+      "op": "tile_at_lonlat",
+      "input": {
+        "lon": 18.507,
+        "lat": 44.571,
+        "tiling": "T6"
+      },
+      "expected": {
+        "id": "EU_E048N012T6"
+      },
+      "source": "tests/test_equi7grid.py::test_lonlat2rc_in_tile"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "EU_E048N012T6",
+        "res": 500
+      },
+      "expected": {
+        "extent": [
+          4800000,
+          5400000,
+          1200000,
+          1800000
+        ],
+        "dim": [
+          1200,
+          1200
+        ]
+      },
+      "source": "tests/test_equi7grid.py::test_tile_extents",
+      "note": "upstream asserts (xmin, ymin, xmax, ymax); reordered"
+    },
+    {
+      "op": "tile_extent",
+      "input": {
+        "id": "EU_E042N006T6",
+        "res": 500
+      },
+      "expected": {
+        "extent": [
+          4200000,
+          4800000,
+          600000,
+          1200000
+        ],
+        "dim": [
+          1200,
+          1200
+        ]
+      },
+      "source": "tests/test_equi7grid.py::test_decode_tilename",
+      "note": "upstream asserts the lower-left corner (4200000, 600000) and 500 m pixels"
+    },
+    {
+      "op": "parse",
+      "input": {
+        "id": "EU_E011N023T6"
+      },
+      "expected": {
+        "error": "not_aligned"
+      },
+      "source": "tests/test_equi7grid.py::test_invalid_tilename",
+      "note": "1100 km is not a multiple of 600 km"
+    },
+    {
+      "op": "parse",
+      "input": {
+        "id": "EU_E240N006T6"
+      },
+      "expected": {
+        "error": "outside_domain"
+      },
+      "source": "tests/test_equi7grid.py::test_decode_tilename",
+      "note": "aligned but far outside the EU zone"
+    },
+    {
+      "op": "children",
+      "input": {
+        "id": "EU_E042N006T6",
+        "tiling": "T3"
+      },
+      "expected": {
+        "count": 4,
+        "ids": [
+          "EU_E042N006T3",
+          "EU_E042N009T3",
+          "EU_E045N006T3",
+          "EU_E045N009T3"
+        ]
+      },
+      "source": "tests/test_equi7grid.py::test_find_overlapping_tilenames",
+      "note": "compared as sets"
+    },
+    {
+      "op": "parent",
+      "input": {
+        "id": "EU_E041N011T1",
+        "tiling": "T3"
+      },
+      "expected": {
+        "id": "EU_E039N009T3"
+      },
+      "source": "tests/test_equi7grid.py::test_find_overlapping_tilenames"
+    },
+    {
+      "op": "parent",
+      "input": {
+        "id": "EU_E044N015T1",
+        "tiling": "T6"
+      },
+      "expected": {
+        "id": "EU_E042N012T6"
+      },
+      "source": "tests/test_equi7grid.py::test_find_overlapping_tilenames",
+      "note": "upstream goes T1 -> T3 -> T6; nesting is exact so the direct parent must agree"
+    },
+    {
+      "op": "tiles_covering_lonlat_bbox",
+      "input": {
+        "bbox": [
+          16,
+          48,
+          18,
+          50
+        ],
+        "tiling": "T6"
+      },
+      "expected": {
+        "ids": [
+          "EU_E048N012T6",
+          "EU_E048N018T6",
+          "EU_E054N012T6",
+          "EU_E054N018T6"
+        ]
+      },
+      "source": "tests/test_equi7grid.py::test_tiles_sorted"
+    },
+    {
+      "op": "tiles_covering_lonlat_bbox",
+      "input": {
+        "bbox": [
+          -179.9,
+          -89.9,
+          179.9,
+          89.9
+        ],
+        "tiling": "T6"
+      },
+      "expected": {
+        "count": 1801
+      },
+      "source": "tests/test_equi7grid.py::test_find_all_tiles_with_global_bbox",
+      "note": "every T6 tile intersecting any zone (cover_land=False)"
+    },
+    {
+      "op": "scale_factor",
+      "input": {
+        "lon": -29.1,
+        "lat": 24
+      },
+      "expected": {
+        "instance": "AF",
+        "k": 1.1432971727108836
+      },
+      "source": "tests/test_equi7grid.py::test_calc_length_distortion_on_ellipsoid",
+      "tolerance": {
+        "k": 1e-06
+      },
+      "note": "upstream uses k = c/sin(c) on the sphere; asserted to 6 decimals. Africa's zone reaching to 29W, 24N is the horrific angular width: 14% scale error",
+      "known_difference": {
+        "value": {
+          "instance": "AF",
+          "k": 1.1441588598608865
+        },
+        "reason": "Upstream's k = c/sin(c) is a spherical approximation (sphere of radius a). crsgrid defines distortion as the ellipsoidal maximum length scale (Tissot semi-major axis, PROJ get_factors), here 1.144159; the Tissot semi-minor axis is 1.000000, confirming radial distances are true. Difference 8.6e-4."
+      }
+    }
+  ]
+}

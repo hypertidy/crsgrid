@@ -4,123 +4,298 @@
   "title": "crsgrid spec",
   "description": "A portable grid spec: a family of CRS instances sharing one lattice, plus its domain and ID scheme. Version 0.1 (draft).",
   "type": "object",
-  "required": ["crsgrid", "name", "family", "lattice", "ids"],
+  "required": [
+    "crsgrid",
+    "name",
+    "family",
+    "lattice",
+    "ids"
+  ],
   "additionalProperties": false,
   "properties": {
-    "crsgrid": { "const": "0.1", "description": "Spec version." },
-    "name": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$", "description": "Short machine name; used with the hash as name@hash." },
-    "title": { "type": "string" },
-    "description": { "type": "string" },
-    "family": { "$ref": "#/$defs/family" },
-    "lattice": { "$ref": "#/$defs/lattice" },
-    "domain": { "$ref": "#/$defs/domain" },
-    "ids": { "$ref": "#/$defs/ids" },
+    "crsgrid": {
+      "const": "0.1",
+      "description": "Spec version."
+    },
+    "name": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$",
+      "description": "Short machine name; used with the hash as name@hash."
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "family": {
+      "$ref": "#/$defs/family"
+    },
+    "lattice": {
+      "$ref": "#/$defs/lattice"
+    },
+    "domain": {
+      "$ref": "#/$defs/domain"
+    },
+    "ids": {
+      "$ref": "#/$defs/ids"
+    },
     "alignment": {
       "type": "array",
       "description": "Informational: how this grid relates to other known grids. Checked by the alignment lint.",
-      "items": { "$ref": "#/$defs/alignment" }
+      "items": {
+        "$ref": "#/$defs/alignment"
+      }
     },
-    "provenance": { "$ref": "#/$defs/provenance" }
+    "provenance": {
+      "$ref": "#/$defs/provenance"
+    }
   },
-
   "$defs": {
     "template": {
       "type": "string",
-      "description": "Template string. {name} substitutes a parameter or field; {name:0N} zero-pads an integer to width N, the sign counting toward the width (C printf %0Nd). Literal braces are not allowed."
+      "description": "Template string. A field is {name}, optionally {name/D} (value divided by D, which must give an integer), then :0N to zero-pad to width N (the sign counts toward the width, C printf %0Nd), then !sign=P,M to write the letter P for values >= 0 or M for negative values followed by the absolute value (e.g. {ymin/100000:03!sign=N,S} gives N012 or S006). Alternatively !map=K1:V1,K2:V2 replaces the value by a lookup (e.g. {hemisphere!map=N:6,S:7}); an empty V is allowed. Numbers from JSON print in shortest round-trip form. Literal braces are not allowed."
     },
-
     "family": {
       "type": "object",
-      "description": "A parameterised CRS. A single-CRS grid is a family with no params and one instance.",
-      "required": ["crs"],
+      "description": "A parameterised CRS. Instances come from params (a formula family such as UTM zones, with instance_key) or from an instances table (a named family such as Equi7's continents). A single-CRS grid is a family with one instance.",
+      "required": [
+        "crs"
+      ],
       "additionalProperties": false,
       "properties": {
-        "crs": { "$ref": "#/$defs/crs" },
+        "crs": {
+          "$ref": "#/$defs/crs"
+        },
         "params": {
           "type": "object",
           "description": "Free parameters of the family, keyed by name.",
-          "additionalProperties": { "$ref": "#/$defs/param" }
+          "additionalProperties": {
+            "$ref": "#/$defs/param"
+          }
         },
         "instance_key": {
           "$ref": "#/$defs/template",
-          "description": "Template giving each instance's key, e.g. \"{zone:02}S\". Required when params is non-empty."
+          "description": "Template giving each instance's key from params, e.g. \"{zone:02}S\". Not used with an instances table, whose keys are the instance keys."
         },
-        "assign": { "$ref": "#/$defs/assign" }
+        "assign": {
+          "$ref": "#/$defs/assign"
+        },
+        "instances": {
+          "type": "object",
+          "minProperties": 1,
+          "description": "Named instances keyed by instance key. Each value is a table of attributes usable as template fields (CRS parameters, polygon URLs).",
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": {
+              "type": [
+                "number",
+                "string"
+              ]
+            }
+          }
+        }
       }
     },
-
     "crs": {
       "type": "object",
       "description": "At least one of projjson, proj, authority. For a family, proj and authority are templates over the family params; projjson is only allowed for a family with no params. Hosts resolve templates to PROJJSON for each instance.",
       "minProperties": 1,
       "additionalProperties": false,
       "properties": {
-        "projjson": { "type": "object", "description": "Canonical CRS (single-instance grids)." },
-        "proj": { "$ref": "#/$defs/template", "description": "PROJ string or template; also the hint for proj4rs/proj4js." },
-        "authority": { "$ref": "#/$defs/template", "description": "Authority code or template, e.g. \"EPSG:327{zone:02}\"." }
+        "projjson": {
+          "type": "object",
+          "description": "Canonical CRS (single-instance grids)."
+        },
+        "proj": {
+          "$ref": "#/$defs/template",
+          "description": "PROJ string or template; also the hint for proj4rs/proj4js."
+        },
+        "authority": {
+          "$ref": "#/$defs/template",
+          "description": "Authority code or template, e.g. \"EPSG:327{zone:02}\"."
+        }
       }
     },
-
     "param": {
       "type": "object",
-      "required": ["type"],
+      "required": [
+        "type"
+      ],
       "additionalProperties": false,
       "properties": {
-        "type": { "enum": ["integer", "number", "string"] },
+        "type": {
+          "enum": [
+            "integer",
+            "number",
+            "string"
+          ]
+        },
         "range": {
-          "type": "array", "items": { "type": "number" }, "minItems": 2, "maxItems": 2,
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2,
           "description": "Inclusive [min, max]."
         },
-        "step": { "type": "number", "exclusiveMinimum": 0, "description": "Allowed values are range[0] + k*step." },
-        "values": { "type": "array", "minItems": 1, "description": "Enumerated allowed values (e.g. named continents)." },
-        "description": { "type": "string" }
+        "step": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "description": "Allowed values are range[0] + k*step."
+        },
+        "values": {
+          "type": "array",
+          "minItems": 1,
+          "description": "Enumerated allowed values (e.g. named continents)."
+        },
+        "description": {
+          "type": "string"
+        }
       }
     },
-
     "assign": {
       "description": "How a lon/lat point picks its primary instance. Other instances may still represent it (instances overlap).",
       "oneOf": [
         {
           "type": "object",
-          "required": ["method"],
+          "required": [
+            "method"
+          ],
           "additionalProperties": false,
-          "properties": { "method": { "const": "single" } }
+          "properties": {
+            "method": {
+              "const": "single"
+            }
+          }
         },
         {
           "type": "object",
           "description": "param = floor((lon - lon_start) / width) + first, lon wrapped to [lon_start, lon_start + 360).",
-          "required": ["method", "param", "lon_start", "width", "first"],
+          "required": [
+            "method",
+            "param",
+            "lon_start",
+            "width",
+            "first"
+          ],
           "additionalProperties": false,
           "properties": {
-            "method": { "const": "lon_bands" },
-            "param": { "type": "string" },
-            "lon_start": { "type": "number" },
-            "width": { "type": "number", "exclusiveMinimum": 0 },
-            "first": { "type": "integer" }
+            "method": {
+              "const": "lon_bands"
+            },
+            "param": {
+              "type": "string"
+            },
+            "lon_start": {
+              "type": "number"
+            },
+            "width": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "first": {
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "description": "The primary instance is the first, in order (default: table order), whose polygon contains the point.",
+          "required": [
+            "method",
+            "source"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "method": {
+              "const": "polygons"
+            },
+            "source": {
+              "$ref": "#/$defs/template",
+              "description": "Per-instance URL of a vector source (e.g. GeoParquet) holding the instance's zone polygon."
+            },
+            "crs": {
+              "type": "string",
+              "default": "OGC:CRS84",
+              "description": "CRS of the polygons."
+            },
+            "order": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "description": "UTM zone and hemisphere of a point by the standard rule (zone = floor((lon + 180) / 6) + 1, hemisphere from the sign of lat), including the Norway (32V) and Svalbard (31X-37X) exceptions, as GeographicLib UTMUPS::StandardZone.",
+          "required": [
+            "method",
+            "zone",
+            "hemisphere"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "method": {
+              "const": "utm_standard"
+            },
+            "zone": {
+              "type": "string",
+              "description": "Param receiving the zone number."
+            },
+            "hemisphere": {
+              "type": "string",
+              "description": "Param receiving N or S."
+            }
           }
         }
       ]
     },
-
     "lattice": {
       "type": "object",
       "description": "Shared by every instance, in CRS units. All of origin, resolutions and tile_size must be integer multiples of quantum; runtimes do index arithmetic in integer quanta.",
-      "required": ["units", "quantum", "origin", "index", "tiling", "resolutions"],
+      "required": [
+        "units",
+        "quantum",
+        "origin",
+        "index",
+        "resolutions"
+      ],
       "additionalProperties": false,
       "properties": {
-        "units": { "type": "string", "description": "CRS linear unit, e.g. \"m\"." },
-        "quantum": { "type": "number", "exclusiveMinimum": 0, "description": "Smallest lattice unit, in CRS units." },
+        "units": {
+          "type": "string",
+          "description": "CRS linear unit, e.g. \"m\"."
+        },
+        "quantum": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "description": "Smallest lattice unit, in CRS units."
+        },
         "origin": {
-          "type": "array", "items": { "type": "number" }, "minItems": 2, "maxItems": 2,
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2,
           "description": "[x0, y0]: the corner of tile (col 0, row 0) at every resolution."
         },
         "index": {
           "type": "object",
-          "required": ["row_direction"],
+          "required": [
+            "row_direction"
+          ],
           "additionalProperties": false,
           "properties": {
             "row_direction": {
-              "enum": ["up", "down"],
+              "enum": [
+                "up",
+                "down"
+              ],
               "description": "up: row increases with y, tile row r covers [y0 + r*t, y0 + (r+1)*t). down: row increases as y decreases, covering (y0 - (r+1)*t, y0 - r*t]."
             },
             "edge_rule": {
@@ -129,46 +304,143 @@
               "description": "A point on a shared edge belongs to the tile with the larger index along each axis (floor)."
             },
             "negative": {
-              "type": "boolean", "default": true,
+              "type": "boolean",
+              "default": true,
               "description": "Whether negative col/row are valid tiles. If false, the origin is the domain's lower-left (row_direction up) or upper-left (down) limit."
             }
           }
         },
         "tiling": {
-          "description": "Exactly one invariant fixes tile size: a constant pixel count (tile_size = tile_px * res) or a constant ground size (tile_px = tile_size / res).",
+          "description": "What fixes tile size: a constant pixel count (tile_size = tile_px * res, the resolution picks the tile size), one constant ground size, or several named ground sizes (the tiling name picks the tile size; resolution is separate and must divide it). Optional: without tiling the grid is untiled, i.e. each instance at each resolution is one raster covering domain.extent, and IDs name an instance and resolution only.",
           "oneOf": [
             {
-              "type": "object", "required": ["tile_px"], "additionalProperties": false,
-              "properties": { "tile_px": { "type": "integer", "minimum": 1 } }
+              "type": "object",
+              "required": [
+                "tile_px"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "tile_px": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              }
             },
             {
-              "type": "object", "required": ["tile_size"], "additionalProperties": false,
-              "properties": { "tile_size": { "type": "number", "exclusiveMinimum": 0 } }
+              "type": "object",
+              "required": [
+                "tile_size"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "tile_size": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "tile_sizes"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "tile_sizes": {
+                  "type": "object",
+                  "minProperties": 1,
+                  "additionalProperties": {
+                    "type": "number",
+                    "exclusiveMinimum": 0
+                  },
+                  "description": "Named tile sizes in CRS units, coarsest first, e.g. {\"T6\": 600000}. Nesting between two is their ratio when it is an integer."
+                }
+              }
             }
           ]
         },
         "resolutions": {
           "type": "object",
-          "required": ["listed"],
+          "required": [
+            "listed"
+          ],
           "additionalProperties": false,
           "properties": {
             "listed": {
-              "type": "array", "items": { "type": "number", "exclusiveMinimum": 0 }, "minItems": 1, "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              },
+              "minItems": 1,
+              "uniqueItems": true,
               "description": "Resolutions the grid advertises, coarsest first."
             },
             "open": {
-              "type": "boolean", "default": false,
+              "type": "boolean",
+              "default": false,
               "description": "If true, any positive multiple of quantum is a valid resolution, not only those listed."
             },
             "names": {
-              "type": "object", "additionalProperties": { "type": "number" },
+              "type": "object",
+              "additionalProperties": {
+                "type": "number"
+              },
               "description": "Optional names for resolutions (legacy level names), e.g. {\"L1\": 60}."
+            }
+          }
+        },
+        "footprint": {
+          "type": "object",
+          "additionalProperties": false,
+          "description": "A tile's footprint when it is not just its lattice cell (overlapping tiles). The cell is padded, then the corner named by snap.corner is moved outward onto the snap lattice and the padded size is kept. Without footprint, footprint = cell.",
+          "properties": {
+            "pad": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 4,
+              "maxItems": 4,
+              "description": "[left, right, bottom, top] padding in CRS units."
+            },
+            "snap": {
+              "type": "object",
+              "required": [
+                "step",
+                "origin",
+                "corner"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "step": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "origin": {
+                  "type": "array",
+                  "minItems": 2,
+                  "maxItems": 2,
+                  "items": {
+                    "type": [
+                      "number",
+                      "string"
+                    ]
+                  },
+                  "description": "Numbers or templates, e.g. [0, \"{hemisphere!map=N:0,S:10000000}\"]."
+                },
+                "corner": {
+                  "enum": [
+                    "top_left",
+                    "bottom_left"
+                  ]
+                }
+              }
             }
           }
         }
       }
     },
-
     "domain": {
       "type": "object",
       "description": "Where the grid is meant to be used. Tiles outside it are still well defined.",
@@ -177,69 +449,172 @@
         "instances": {
           "type": "object",
           "description": "Subset of family params in use, same shape as family.params (range/values).",
-          "additionalProperties": { "$ref": "#/$defs/param" }
+          "additionalProperties": {
+            "$ref": "#/$defs/param"
+          }
         },
         "lonlat_extent": {
-          "type": "array", "items": { "type": "number" }, "minItems": 4, "maxItems": 4,
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 4,
+          "maxItems": 4,
           "description": "[lon_min, lon_max, lat_min, lat_max], lon_min > lon_max means it crosses the antimeridian."
         },
         "extent": {
-          "type": "array", "items": { "type": "number" }, "minItems": 4, "maxItems": 4,
-          "description": "[xmin, xmax, ymin, ymax] in CRS units, the same for every instance. Must be aligned to the coarsest listed resolution's tiles."
+          "type": "array",
+          "items": {
+            "type": [
+              "number",
+              "string"
+            ]
+          },
+          "minItems": 4,
+          "maxItems": 4,
+          "description": "[xmin, xmax, ymin, ymax] in CRS units. Items are numbers or templates resolving to numbers (per-instance extents from an instances table, e.g. \"{xmin}\"). Must be aligned to the coarsest listed resolution (and to tiles, if tiled)."
         },
         "envelope": {
           "type": "object",
           "additionalProperties": false,
           "properties": {
-            "max_scale_factor": { "type": "number", "exclusiveMinimum": 1, "description": "Usable where the point scale factor k <= this." },
-            "lat_max": { "type": "number" },
-            "lat_min": { "type": "number" }
+            "max_scale_factor": {
+              "type": "number",
+              "exclusiveMinimum": 1,
+              "description": "Usable where the point scale factor k <= this."
+            },
+            "lat_max": {
+              "type": "number"
+            },
+            "lat_min": {
+              "type": "number"
+            }
+          }
+        },
+        "polygons": {
+          "$ref": "#/$defs/template",
+          "description": "Per-instance URL of the polygon a tile must intersect to exist (e.g. a published zone). Same form as assign.source."
+        },
+        "min_corner": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": [
+              "number",
+              "string"
+            ]
+          },
+          "description": "[x, y]: a tile exists only if its xmin >= x and ymin >= y. Each item is a number or a template resolving to one (e.g. \"{min_y}\" from an instances table)."
+        },
+        "list": {
+          "type": "object",
+          "required": [
+            "source"
+          ],
+          "additionalProperties": false,
+          "description": "The tiles that exist are exactly those whose IDs are in a published list.",
+          "properties": {
+            "source": {
+              "type": "string",
+              "description": "URL of a table of IDs (Parquet, CSV)."
+            },
+            "column": {
+              "type": "string",
+              "description": "Column holding the IDs."
+            },
+            "origin": {
+              "type": "string",
+              "description": "Where the list comes from, if the source is a copy."
+            }
           }
         }
       }
     },
-
     "ids": {
       "type": "object",
-      "required": ["template"],
+      "required": [
+        "template"
+      ],
       "additionalProperties": false,
       "properties": {
         "template": {
           "$ref": "#/$defs/template",
-          "description": "Fields: {instance}, {res} (resolution in CRS units; must be an integer to appear in an ID), {name} (resolution name), {col}, {row}, plus any family param."
+          "description": "Fields: {instance}, {res} (resolution in CRS units; integer to appear in an ID), {name} (resolution name), {tiling} (tile-size name), {col}, {row} (tile indices), {xmin}, {ymin} (tile corner in CRS units), plus any param or instance-table attribute. An ID must determine the instance, the tile size (via res or tiling) and the tile (via col/row or xmin/ymin)."
         },
         "parse_aliases": {
-          "type": "array", "items": { "$ref": "#/$defs/template" },
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/template"
+          },
           "description": "Older templates accepted when parsing, never produced."
         },
-        "separator": { "type": "string", "description": "Optional: character no field value may contain, for unambiguous parsing." }
+        "separator": {
+          "type": "string",
+          "description": "Optional: character no field value may contain, for unambiguous parsing."
+        },
+        "codec": {
+          "enum": [
+            "mgrs"
+          ],
+          "description": "A named algorithm supplying ID fields a template can't express. mgrs: from a tile in a UTM instance (100 km cells, origin (0, 0)) gives {band} (latitude band C-X, of the point or, decoding, resolved with the 2000 km row-letter cycle), {e100k} and {n100k} (100 km column and row letters, sets by zone mod 3 and zone parity), with GeographicLib MGRS as the reference implementation. IDs are then not unique per tile: a cell crossing a band boundary has one ID per band."
+        }
       }
     },
-
     "alignment": {
       "type": "object",
-      "required": ["target"],
+      "required": [
+        "target"
+      ],
       "additionalProperties": false,
       "properties": {
-        "target": { "type": "string", "description": "Known grid name, or a crsgrid name@hash." },
-        "resolutions": { "type": "array", "items": { "type": "number" } },
+        "target": {
+          "type": "string",
+          "description": "Known grid name, or a crsgrid name@hash."
+        },
+        "resolutions": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
         "offset": {
-          "type": "array", "items": { "type": "number" }, "minItems": 2, "maxItems": 2,
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2,
           "description": "[dx, dy] in CRS units from this grid's pixel lattice to the target's; [0, 0] means coincident."
         },
-        "where": { "type": "string", "description": "Condition, e.g. \"southern zones\"." },
-        "note": { "type": "string" }
+        "where": {
+          "type": "string",
+          "description": "Condition, e.g. \"southern zones\"."
+        },
+        "note": {
+          "type": "string"
+        }
       }
     },
-
     "provenance": {
       "type": "object",
       "additionalProperties": true,
       "properties": {
-        "source": { "type": "string" },
-        "version": { "type": "string" },
-        "derived_from": { "type": "string" },
-        "notes": { "type": "array", "items": { "type": "string" } }
+        "source": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "derived_from": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
       }
     }
   }

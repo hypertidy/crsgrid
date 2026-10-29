@@ -1,0 +1,103 @@
+{
+  "crsgrid": "0.1",
+  "name": "nsidc-polar-stereo",
+  "title": "NSIDC polar stereographic sea ice grids (25, 12.5, 6.25 km)",
+  "description": "One raster per hemisphere on a shared 6.25 km-aligned lattice; untiled. Instances for the original Hughes 1980 CRSs (EPSG:3411/3412, deprecated) and their WGS 84 successors (EPSG:3413/3976), with the same grid numbers.",
+  "family": {
+    "crs": {
+      "authority": "EPSG:{epsg}"
+    },
+    "instances": {
+      "north": {
+        "epsg": 3411,
+        "lat_0": 90,
+        "lat_ts": 70,
+        "lon_0": -45,
+        "xmin": -3850000,
+        "xmax": 3750000,
+        "ymin": -5350000,
+        "ymax": 5850000,
+        "superseded_by": "north-wgs84"
+      },
+      "south": {
+        "epsg": 3412,
+        "lat_0": -90,
+        "lat_ts": -70,
+        "lon_0": 0,
+        "xmin": -3950000,
+        "xmax": 3950000,
+        "ymin": -3950000,
+        "ymax": 4350000,
+        "superseded_by": "south-wgs84"
+      },
+      "north-wgs84": {
+        "epsg": 3413,
+        "lat_0": 90,
+        "lat_ts": 70,
+        "lon_0": -45,
+        "xmin": -3850000,
+        "xmax": 3750000,
+        "ymin": -5350000,
+        "ymax": 5850000
+      },
+      "south-wgs84": {
+        "epsg": 3976,
+        "lat_0": -90,
+        "lat_ts": -70,
+        "lon_0": 0,
+        "xmin": -3950000,
+        "xmax": 3950000,
+        "ymin": -3950000,
+        "ymax": 4350000
+      }
+    },
+    "assign": {
+      "method": "single"
+    }
+  },
+  "lattice": {
+    "units": "m",
+    "quantum": 1,
+    "origin": [
+      0,
+      0
+    ],
+    "index": {
+      "row_direction": "down",
+      "edge_rule": "half_open",
+      "negative": true
+    },
+    "resolutions": {
+      "listed": [
+        25000,
+        12500,
+        6250
+      ],
+      "open": true
+    }
+  },
+  "domain": {
+    "extent": [
+      "{xmin}",
+      "{xmax}",
+      "{ymin}",
+      "{ymax}"
+    ]
+  },
+  "ids": {
+    "template": "{instance}_{res}m"
+  },
+  "provenance": {
+    "source": "https://nsidc.org/data/user-resources/help-center/guide-nsidcs-polar-stereographic-projection",
+    "derived_from": "Tables 5-7 of the NSIDC guide (grid dimensions, corner coordinates) and its projection parameters",
+    "notes": [
+      "Extents are the published grid corners, which are outer pixel edges (304 x 25 km = 7600 km = 3850 + 3750 km).",
+      "Hughes 1980 instances, as PROJ strings: +proj=stere +lat_0={lat_0} +lat_ts={lat_ts} +lon_0={lon_0} +k=1 +x_0=0 +y_0=0 +a=6378273 +b=6356889.449 +units=m +no_defs, with lat_0/lat_ts/lon_0 from the instance table.",
+      "assign is 'single' as a placeholder: the hemisphere instance is chosen by the user (or by the sign of lat); the north and south grids overlap nowhere, but each datum pair overlaps completely.",
+      "The ID template is crsgrid's own; NSIDC names grids by product (psn25 / pss25 files), not by a scheme.",
+      "Distinctive for crsgrid: an untiled grid (the common 'one CRS, one extent, one resolution' case), per-instance extents, and deprecated EPSG codes the linter should point at their successors.",
+      "superseded_by records NSIDC's guidance that new products use EPSG:3413/3976. EPSG itself has not deprecated 3411/3412 (EPSG v11.022, PROJ 9.5.1 and 9.8.1), so a lint should say 'superseded by NSIDC', not 'deprecated'.",
+      "The same grid numbers in the two datums are different grids: the published corner coordinates are the Hughes 1980 values, and under WGS 84 the corners move by about 0.001 degree (roughly 100 m). An alignment lint must not report a 3411 grid and a 3413 grid as aligned."
+    ]
+  }
+}
