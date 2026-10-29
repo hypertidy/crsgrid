@@ -1,0 +1,20 @@
+Package: crsgrid
+Title: Portable Grid Specs for Any CRS
+Version: 0.0.0.9000
+Authors@R: person("Michael", "Sumner", email = "mdsumner@gmail.com", role = c("aut", "cre"))
+Description: Reads crsgrid specs (a family of CRS instances sharing one
+    lattice, with a domain and an ID scheme) and implements the portable
+    operations: tile at a point, tile extent, IDs, parents and children,
+    and domain checks. Reference R runtime, held to the JSON fixtures in
+    the crsgrid repository.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Imports:
+    gdalraster,
+    jsonlite
+Suggests:
+    arrow,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Roxygen: list(markdown = TRUE)
+Config/roxygen2/version: 8.1.0

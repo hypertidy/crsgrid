@@ -132,6 +132,12 @@ Still to come: ID width vs index range, the proposer's rounding suggestions, a l
 
 Lessons: on a polar map lon_0 only rotates (it is set to 0, with the "AOI upright" value offered); known-CRS matching must respect the property (an equal-area CRS once "won" a conformal request); the spherical centroid is not the minimax centre (a rounded centre beat it for Europe, and 3035's 52°N beats both), so a minimax centre search is a natural next step.
 
+## R runtime (first cut)
+
+`r/` is an R package, `crsgrid`, built on gdalraster (transforms, GEOS predicates on WKB) and jsonlite, with arrow for Parquet lists and polygons, following aatgrid's house style (index-first, no terra/sf). It implements the op table (`tile_at`, `tile_at_lonlat`, `tile_extent`, `tile_id`, `parse_tile_id`, `tile_children`, `tile_parent`, `in_domain`, `tiles_covering_lonlat_bbox`) over every schema feature the seven test grids use: template grammar, ID field expressions, instance tables and formula families, `lon_bands` / `utm_standard` / polygon assignment, the MGRS codec, footprints, point registration, x-scale bands, unit scale, and list/extent/polygon/min-corner domains. `check_fixtures()` reproduces the Python reader's results on every fixture case (0 failures, the same known differences); `R CMD check` is clean.
+
+Two things the port checked independently: `tissot()` computes the Tissot axes by finite differences of the forward projection with ellipsoid radii (no PROJ factors) and agrees with PROJ's `get_factors` to 1e-6 at Equi7's 14% edge; and `crs_is_deprecated()` reads EPSG's own flag via `srs_info_from_db()`, confirming 3411/3412 are not deprecated there. One R-specific trap: `$` partially matches (`tiling$tile_size` silently returns `tile_sizes`), so the spec reader uses `[[ ]]` and the fixtures run with `warnPartialMatchDollar`.
+
 ## Getting to a spec: interpretation + proposal
 
 Inputs, roughly in order of ambition:
