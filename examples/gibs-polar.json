@@ -1,0 +1,85 @@
+{
+  "crsgrid": "0.1",
+  "name": "gibs-polar",
+  "title": "NASA GIBS polar WMTS tile matrices (EPSG:3031, EPSG:3413)",
+  "description": "One quadtree per pole: 512 px tiles from the top-left corner (-4194304, 4194304), cell 8192 m / 2^z. The named matrix sets (1km, 500m, 250m, 31.25m) are depth limits on this ladder.",
+  "family": {
+    "crs": {
+      "authority": "EPSG:{epsg}"
+    },
+    "instances": {
+      "epsg3031": {
+        "epsg": 3031,
+        "zmax": 5
+      },
+      "epsg3413": {
+        "epsg": 3413,
+        "zmax": 8
+      }
+    },
+    "assign": {
+      "method": "single"
+    }
+  },
+  "lattice": {
+    "units": "m",
+    "quantum": 1,
+    "origin": [
+      -4194304,
+      4194304
+    ],
+    "index": {
+      "row_direction": "down",
+      "edge_rule": "half_open",
+      "negative": false
+    },
+    "tiling": {
+      "tile_px": 512
+    },
+    "resolutions": {
+      "listed": [
+        8192,
+        4096,
+        2048,
+        1024,
+        512,
+        256,
+        128,
+        64,
+        32
+      ],
+      "names": {
+        "0": 8192,
+        "1": 4096,
+        "2": 2048,
+        "3": 1024,
+        "4": 512,
+        "5": 256,
+        "6": 128,
+        "7": 64,
+        "8": 32
+      }
+    }
+  },
+  "domain": {
+    "extent": [
+      -4194304,
+      4194304,
+      -4194304,
+      4194304
+    ]
+  },
+  "ids": {
+    "template": "{instance}/{name}/{row}/{col}"
+  },
+  "provenance": {
+    "source": "https://gibs.earthdata.nasa.gov/wmts/epsg3031/best/wmts.cgi?SERVICE=WMTS&REQUEST=GetCapabilities (and epsg3413)",
+    "derived_from": "TileMatrixSet definitions in the capabilities documents, tools/fixtures-wmts.py",
+    "notes": [
+      "The matrix set names are nominal: '250m' has 256 m cells at its deepest level, '31.25m' has 32 m (the cells are 8192 / 2^z exactly). A spec should carry the numbers, not the names.",
+      "EPSG:3031 matrices go to z = 5 (256 m), EPSG:3413 to z = 8 (32 m); recorded as zmax in the instance table, not yet enforced by the schema.",
+      "The domain is the full matrix (+-4194304 m, 2^(z+1) tiles a side); which tiles hold imagery depends on the layer.",
+      "rema-ovr's explorer uses this grid as its display tile matrix in EPSG:3031 (256 px tiles there, the same lattice)."
+    ]
+  }
+}

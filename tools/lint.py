@@ -173,7 +173,7 @@ def same_numbers_different_crs(g):
     for i, (ka, ca) in enumerate(insts):
         for kb, cb in insts[i + 1:]:
             ea, eb = g.domain_extent(ca), g.domain_extent(cb)
-            if ea != eb or g.crs(ca) == g.crs(cb):
+            if ea != eb or g.crs(ca) == g.crs(cb) or not datum_only(g.crs(ca), g.crs(cb)):
                 continue
             tr = pyproj.Transformer.from_crs(g.crs(ca), g.crs(cb), always_xy=True)
             d = max(math.hypot(*(p - q for p, q in zip(tr.transform(x, y), (x, y))))
@@ -183,6 +183,15 @@ def same_numbers_different_crs(g):
                                f"a point at a grid corner moves up to {d:.1f} m between them, so their pixels are not aligned.",
                                "don't mix data on these two grids without resampling"))
     return out
+
+
+DATUM_KEYS = {"datum", "ellps", "towgs84", "a", "b", "rf", "f", "R", "nadgrids", "no_defs", "type"}
+
+
+def datum_only(a, b):
+    """True when two projected CRSs share method and parameters and differ only in datum/ellipsoid."""
+    pa, pb = ({k: v for k, v in c.to_dict().items() if k not in DATUM_KEYS} for c in (a, b))
+    return pa == pb
 
 
 @lint
@@ -296,6 +305,40 @@ def negative_ids(g):
 
 
 @lint
+def declared_alignment(g):
+    """Each declared alignment entry must match the offset computed from both specs."""
+    from align import align
+    out = []
+    for a in g.spec.get("alignment", []):
+        target = Path(g.path).parent / f"{a['target']}.json"
+        if not target.exists():
+            out.append(finding("alignment-unchecked", "info", f"alignment -> {a['target']}",
+                               "no spec of that name next to this one, so the declared offset can't be checked."))
+            continue
+        for r in a.get("resolutions") or g.spec["lattice"]["resolutions"]["listed"]:
+            res = align(g.path, target, res_a=[r], res_b=a.get("target_resolutions") or [r])
+            w = a.get("where", "")
+            if "southern" in w:
+                res = [x for x in res if x["a"].endswith("S")]
+            elif "northern" in w:
+                res = [x for x in res if x["a"].endswith("N")]
+            elif w:
+                res = [x for x in res if x["a"] == w]
+            got = {tuple(x["offset"]) for x in res if x.get("same_crs")}
+            want = tuple(float(v) for v in a.get("offset", [0, 0]))
+            rb = a.get("target_resolutions")
+            at = f"{r}" + (f" vs {rb[0]}..{rb[-1]}" if rb else "")
+            if got == {want}:
+                out.append(finding("alignment-verified", "info", f"alignment -> {a['target']} at {at}",
+                                   f"offset {list(want)} confirmed for {len({(x['a'], x['b']) for x in res})} instance pair(s)"
+                                   + (f" x {len(rb)} target resolutions." if rb else ".")))
+            else:
+                out.append(finding("alignment-mismatch", "error", f"alignment -> {a['target']} at {at}",
+                                   f"declared offset {list(want)}, computed {sorted(got)}."))
+    return out
+
+
+@lint
 def domain_pinning(g):
     dl = g.spec.get("domain", {}).get("list")
     if not dl:
@@ -311,6 +354,7 @@ def domain_pinning(g):
 def run(path):
     spec = json.loads(Path(path).read_text())
     g = Grid(spec)
+    g.path = str(path)
     found = []
     for fn in LINTS:
         try:

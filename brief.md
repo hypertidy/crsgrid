@@ -67,7 +67,7 @@ Spec is canonicalisable (sorted keys, normalised CRS) → stable hash → a grid
 
 ## What the test grids taught
 
-Six grids are expressed as specs, each with fixtures from an independent oracle, and `tools/check_fixtures.py` reproduces them from the spec alone (0 failures; every known difference is recorded in the fixture with its reason).
+Seven grids are expressed as specs, each with fixtures from an independent oracle, and `tools/check_fixtures.py` reproduces them from the spec alone (0 failures; every known difference is recorded in the fixture with its reason).
 
 | grid | oracle | cases | what it forced into the schema |
 |---|---|---|---|
@@ -76,6 +76,7 @@ Six grids are expressed as specs, each with fixtures from an independent oracle,
 | Sentinel-2 MGRS | 132 real L2A footprints (starc store) + GeographicLib | 468 | `footprint` separate from the lattice cell (pad + snap one corner), named ID `codec: mgrs`, `assign: utm_standard`, `!map=` templates, enumerated `domain.list` |
 | NSIDC polar stereo | NSIDC guide, Tables 5–7 | 27 | untiled grids (one raster per instance and resolution), per-instance `domain.extent` |
 | REMA v2 2 m (PGC) | placement of all 5788 tiles in the rema-ovr VRT | 244 | symmetric overlap (`footprint.pad` 100 m), hierarchical IDs via `ids.fields` / `ids.recover` expressions, VRT-listed domain |
+| NASA GIBS polar WMTS | GetCapabilities (3031, 3413) | 60 | a quadtree basemap ladder (512 px, 8192 m / 2^z) to align against; tiled `domain.extent` enforced |
 | Copernicus GLO-30 (OpenTopography) | placement of all 26475 tiles in the COP30 VRT | 211 | `unit_scale` (lattice in arcseconds), `registration: point`, `x_scale` bands by latitude |
 
 Findings worth keeping:
@@ -109,8 +110,11 @@ Findings worth keeping:
 | `res-not-cell` | Sentinel-2 | 60 m divides the 109.8 km footprint but not the 100 km cell |
 | `max-scale` | Equi7 | maximum length scale per continent over its zone: 15.5% (EU) to 92.1% (OC, on its Pacific boundary) |
 | `unpinned-domain` | COP30 | the tile list is a live URL |
+| `alignment-verified` / `alignment-mismatch` | aatgrid, Sentinel-2, REMA | each declared `alignment` entry checked against `tools/align.py`: aatgrid↔S2 (0, 0) at 10/20 m and (−20, +20) at 60 m in all 60 southern zones; REMA 2 m pixels nest every GIBS 3031 level. A wrong declaration is reported as an error |
 
-Still to come: alignment between two specs (aatgrid vs Sentinel-2 at 60 m, NSIDC vs a GIBS polar matrix), ID width vs index range, the proposer's rounding suggestions, and a land-only variant of `max-scale`.
+`tools/align.py A.json B.json` compares pixel lattices directly (pairing instances by CRS): ratio, offset modulo the finer resolution, and whether tiles nest. Findings so far: aatgrid 20 m pixels nest inside Sentinel-2 60 m pixels even though the two 60 m lattices are offset; NSIDC 25 km never aligns with GIBS 3413 (ratios like 3.05, and even the 32 m level is offset 16 m); same-datum-only CRS differences (NSIDC Hughes vs WGS 84) are reported with their ground gap.
+
+Still to come: ID width vs index range, the proposer's rounding suggestions, a land-only variant of `max-scale`, and matrix-set names that misstate their cell size (GIBS "250m" is 256 m).
 
 ## Getting to a spec: interpretation + proposal
 

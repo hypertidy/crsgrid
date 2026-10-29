@@ -70,5 +70,30 @@
       "The PGC 10 m and 32 m mosaics tile by 100 km supertile instead (IDs {super_row}_{super_col}): 10 m tiles are 10020 px (100 m pad), 32 m tiles 3131 px, a 96 m pad, because 32 m does not divide 100 m. Some edge tiles are half height. Not expressed here: one spec per tiling for now.",
       "The supertile/subtile split is expressed as ID field expressions over a 50 km lattice; nesting the 100 km supertile as its own tiling would also work."
     ]
-  }
+  },
+  "alignment": [
+    {
+      "target": "gibs-polar",
+      "resolutions": [
+        2
+      ],
+      "target_resolutions": [
+        8192,
+        4096,
+        2048,
+        1024,
+        512,
+        256,
+        128,
+        64,
+        32
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "where": "",
+      "note": "every GIBS EPSG:3031 pixel is a whole block of REMA 2 m pixels (the origins differ by 1094304 m, a multiple of 2); the tiles don't nest (REMA 50 km cells with 100 m pads vs 512-pixel GIBS tiles)"
+    }
+  ]
 }

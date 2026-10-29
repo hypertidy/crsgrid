@@ -670,13 +670,14 @@
       "properties": {
         "target": {
           "type": "string",
-          "description": "Known grid name, or a crsgrid name@hash."
+          "description": "Name of another crsgrid spec (found next to this one, as <name>.json), or a known grid name."
         },
         "resolutions": {
           "type": "array",
           "items": {
             "type": "number"
-          }
+          },
+          "description": "This grid's resolutions the entry applies to (and the target's too, unless target_resolutions is given)."
         },
         "offset": {
           "type": "array",
@@ -685,14 +686,21 @@
           },
           "minItems": 2,
           "maxItems": 2,
-          "description": "[dx, dy] in CRS units from this grid's pixel lattice to the target's; [0, 0] means coincident."
+          "description": "[dx, dy] in CRS units: target's pixel lattice minus this grid's, modulo the resolution, in (-r/2, r/2]; [0, 0] means coincident. Checked by the alignment lint (tools/align.py)."
         },
         "where": {
           "type": "string",
-          "description": "Condition, e.g. \"southern zones\"."
+          "description": "Which instances it applies to: 'southern zones' / 'northern zones' (UTM families), or an instance key."
         },
         "note": {
           "type": "string"
+        },
+        "target_resolutions": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "description": "The target's resolutions, when they differ from this grid's (e.g. a 2 m grid whose pixels nest inside a basemap's 256 m pixels)."
         }
       }
     },

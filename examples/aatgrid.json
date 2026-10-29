@@ -69,7 +69,7 @@
   },
   "alignment": [
     {
-      "target": "sentinel-2-mgrs",
+      "target": "s2mgrs",
       "resolutions": [
         10,
         20
@@ -81,7 +81,7 @@
       "note": "S2 10 m and 20 m pixel lattices coincide with aatgrid's (verified against 132 MGRS codes, aatgrid R/mgrs.R)."
     },
     {
-      "target": "sentinel-2-mgrs",
+      "target": "s2mgrs",
       "resolutions": [
         60
       ],

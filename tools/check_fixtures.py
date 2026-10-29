@@ -393,6 +393,11 @@ class Grid:
         if "list" in dom and t.get("id") is not None:
             if t["id"] not in domain_ids(dom["list"]):
                 raise SpecError("outside_domain")
+        if "extent" in dom and "tiling" in self.spec["lattice"]:
+            dx0, dx1, dy0, dy1 = self.domain_extent(t["ctx"])
+            x0, x1, y0, y1 = self.extent(t["col"], t["row"], t["ts"])
+            if x0 >= dx1 or x1 <= dx0 or y0 >= dy1 or y1 <= dy0:
+                raise SpecError("outside_domain")
         if "min_corner" in dom:
             mx, my = (float(fmt(v, t["ctx"])) if isinstance(v, str) else v for v in dom["min_corner"])
             xmin, _, ymin, _ = self.extent(t["col"], t["row"], t["ts"])
